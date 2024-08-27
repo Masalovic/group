@@ -1,0 +1,31 @@
+.marquee-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    white-space: nowrap;
+}
+
+.marquee {
+    display: inline-block;
+    font-size: 180px;
+    animation: marquee 10s linear infinite;
+
+    span {
+        color: $textPrimary;
+        font-family: $primaryFont;
+        font-weight: 800;
+    }
+
+    .blue-hyphen {
+        color: $textSecondary;
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(40%); /* Start from the right end of the screen */
+    }
+    100% {
+        transform: translateX(-100%); /* Stay off the left end of the screen */
+    }
+}

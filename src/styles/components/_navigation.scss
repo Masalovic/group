@@ -1,0 +1,123 @@
+.navigation {
+    position: fixed;
+    top: 0;
+    width: 99%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+
+    &.scrolled {
+        background-color: black;
+    }
+
+    .navigation-container {
+        margin: 0 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+
+        .mobile {
+            display: none;
+        }
+
+        .nav-box-logo {
+            display: flex;
+            align-items: center;
+
+            img {
+                height: 70px;
+            }
+        }
+
+        .nav-box-sections {
+            display: flex;
+            justify-content: space-between;
+            gap: 3rem;
+
+            .nav-link {
+                text-decoration: none;
+                color: $textPrimary;
+                font-size: 18px;
+                font-family: $primaryFont;
+            }
+        }
+
+        .nav-box-languages {
+            display: flex;
+            gap: 2rem;
+
+            button {
+                background-color: transparent;
+                border: none;
+                height: 60px;
+
+                img {
+                    height: 30px;
+                }
+            }
+        }
+
+        .nav-box-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 20px;
+            cursor: pointer;
+
+            .burger-icon {
+                width: 30px; /* Adjust size as needed */
+                height: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navigation {
+        .navigation-container {
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 0;
+            background-color: black;
+            width: 100;
+            padding: 1rem 2rem;
+
+            .mobile {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+
+                .nav-box-logo {
+                    display: flex;
+                }
+            }
+
+            .nav-box-logo {
+                display: none;
+            }
+
+            .nav-box-sections {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 2rem;
+                padding: 2rem 0;
+
+                &.open {
+                    display: flex;
+                }
+            }
+
+            .nav-box-languages {
+                display: none;
+            }
+
+            .nav-box-toggle {
+                background-color: transparent;
+                border: none;
+                display: flex !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+import React from "react";
+import ReactGA from 'react-ga4';
+import HomeSection from "./sections/HomeSection";
+import AboutSection from "./sections/AboutSection";
+import ServiceSection from "./sections/ServiceSection";
+import ContactSection from "./sections/ContactSection";
+import PortfolioSection from "./sections/PortfolioSection";
+import Navigation from "../components/molecules/Navigation";
+import homeDataSr from "../assets/sr.json";
+import homeDataEn from "../assets/en.json";
+
+class MainPage extends React.PureComponent {
+    state = {
+        language: 'sr', // Default language is Serbian
+    };
+
+    switchLanguage = (lang) => {
+        this.setState({ language: lang });
+    };
+
+    render() {
+        ReactGA.send({
+            hitType: "pageview",
+            page: '/',
+            title: 'Home'
+        });
+
+        const data = this.state.language === 'sr' ? homeDataSr : homeDataEn;
+
+        return (
+            <div className="main-screen">
+                <Navigation data={data} onLanguageChange={this.switchLanguage} />
+                <section>
+                    <HomeSection data={data} />
+                </section>
+                <section>
+                    <AboutSection data={data} />
+                </section>
+                <section>
+                    <PortfolioSection data={data} />
+                </section>
+                <section>
+                    <ServiceSection data={data} />
+                </section>
+                <section>
+                    <ContactSection data={data} />
+                </section>
+            </div>
+        );
+    }
+}
+
+export default MainPage;

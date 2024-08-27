@@ -1,0 +1,37 @@
+.service-card {
+    display: flex;
+    flex-direction: column;
+    background-color: $secondaryColor;
+    padding: 2rem;
+    width: 25%;
+
+    .top-container {
+        border-bottom: 1px solid $textLightContrast;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+        flex: 1;
+
+        img {
+            width: 50%;
+            height: auto;
+        }
+
+        .card-title {
+            @include card-title;
+        }
+    }
+
+    .bottom-container {
+        @include card-details;
+        padding-top: 2rem;
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .service-card {
+        width: 100vw !important;
+    }
+}

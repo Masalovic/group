@@ -1,0 +1,17 @@
+@import "./config/reset";
+@import "./config/constants";
+@import "./config/mixins";
+
+@import "./screen/mainScreen.scss";
+
+@import "./section/homeSection.scss";
+@import "./section/aboutSection.scss";
+@import "./section/serviceSection.scss";
+@import "./section/contactSection.scss";
+@import "./section/portfolioSection.scss";
+
+@import "./components/navigation";
+@import "./components/serviceCard";
+@import "./components/contactForm";
+@import "./components/logoList";
+@import "./components/marqueeText";

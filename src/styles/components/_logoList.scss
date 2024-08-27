@@ -1,0 +1,19 @@
+.logo-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .logo-wrapper {
+        // background-color: $secondaryColor;
+
+        img {
+            width: 150px;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .logo-list {
+        flex-wrap: wrap;
+    }
+}
