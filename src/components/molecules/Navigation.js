@@ -46,6 +46,14 @@ const Navigation = ({ data, onLanguageChange }) => {
                             {item.name}
                         </a>
                     ))}
+                    <div className="nav-box-languages">
+                        <button onClick={() => onLanguageChange('sr')}>
+                            <img src={sr} alt="Serbian" />
+                        </button>
+                        <button onClick={() => onLanguageChange('en')}>
+                            <img src={uk} alt="English" />
+                        </button>
+                    </div>
                 </div>
                 <div className="nav-box-languages">
                     <button onClick={() => onLanguageChange('sr')}>

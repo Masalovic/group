@@ -83,5 +83,9 @@
       "message": "Poruka",
       "button": "Pošalji Poruku"
     }
+  },
+  "footer": {
+    "list": ["Dizajn", "Development", "SEO", "Marketing"],
+    "text": "© 2024 Vortex-MK. Sva prava zadržana."
   }
 }

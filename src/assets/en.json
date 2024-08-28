@@ -83,5 +83,9 @@
       "message": "Message",
       "button": "Send Message"
     }
+  },
+  "footer": {
+    "list": ["Design", "Development", "SEO", "Marketing"],
+    "text": "© 2024 Vortex-MK. All rights reserved."
   }
 }

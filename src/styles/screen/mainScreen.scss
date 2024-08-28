@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    background-color: red;
+    // overflow-y: scroll;
+    // overflow-x: hidden;
+    background-color: $primaryColor;
 }

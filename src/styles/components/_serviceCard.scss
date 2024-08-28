@@ -32,6 +32,8 @@
 
 @media screen and (max-width: 550px) {
     .service-card {
-        width: 100vw !important;
+        width: 50vw; /* Make each card full width */
+        flex-shrink: 0; /* Prevent cards from shrinking */
+        scroll-snap-align: start; /* Ensure each card snaps to start */
     }
 }

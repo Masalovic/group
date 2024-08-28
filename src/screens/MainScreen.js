@@ -8,6 +8,7 @@ import PortfolioSection from "./sections/PortfolioSection";
 import Navigation from "../components/molecules/Navigation";
 import homeDataSr from "../assets/sr.json";
 import homeDataEn from "../assets/en.json";
+import Footer from "../components/molecules/Footer";
 
 class MainPage extends React.PureComponent {
     state = {
@@ -45,6 +46,7 @@ class MainPage extends React.PureComponent {
                 <section>
                     <ContactSection data={data} />
                 </section>
+                <Footer data={data} />
             </div>
         );
     }
