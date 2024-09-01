@@ -7,7 +7,9 @@ const HomeSection = ({ data }) => {
                 <h1 className="home-title">{data.home.title}</h1>
                 <h3 className="home-subtitle">{data.home.subtitle}</h3>
                 <p className="home-text">{data.home.text}</p>
-                <button className="home-button">{data.home.button}</button>
+                <a href="/#contact">
+                    <button className="home-button">{data.home.button}</button>
+                </a>
             </div>
         </div>
     );
