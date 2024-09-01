@@ -1,21 +1,28 @@
 // App.js
-import { useEffect } from 'react';
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import MainPage from '../../screens/MainScreen';
-import ReactGA from 'react-ga4';
+import MainPage from "../../screens/MainScreen";
+import ReactGA from "react-ga4";
+// import AboutSection from "../../screens/sections/AboutSection";
+// import PortfolioSection from "../../screens/sections/PortfolioSection";
+// import ServiceSection from "../../screens/sections/ServiceSection";
+// import ContactSection from "../../screens/sections/ContactSection";
 
 const TrackPageView = () => {
   const location = useLocation();
 
   useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
+    ReactGA.send({
+      hitType: "pageview",
+      page: location.pathname + location.search,
+    });
   }, [location]);
 
   return null;
 };
 
 export default function App() {
-  ReactGA.initialize('G-9XB8PJEDC6');
+  ReactGA.initialize("G-9XB8PJEDC6");
 
   return (
     <BrowserRouter>

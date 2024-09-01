@@ -1,19 +1,26 @@
 .logo-list {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 
-    .logo-wrapper {
-        // background-color: $secondaryColor;
+  .logo-wrapper {
+    // background-color: $secondaryColor;
 
-        img {
-            width: 150px;
-        }
+    img {
+      width: 150px;
     }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .logo-list .logo-wrapper img {
+    width: 120px;
+  }
 }
 
 @media screen and (max-width: 550px) {
-    .logo-list {
-        flex-wrap: wrap;
-    }
+  .logo-list {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
 }

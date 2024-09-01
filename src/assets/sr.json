@@ -25,7 +25,7 @@
     "title": "vortex",
     "subtitle": "Digitalni Marketing",
     "text": "Bez obzira da li želite da poboljšate vidljivost brenda, privučete kupce ili povećate prodaju, mi pružamo prilagođena rešenja koja su u skladu sa vašim jedinstvenim ciljevima.",
-    "button": "kontakt"
+    "button": "Kontakt"
   },
   "about": {
     "title": "o nama",
@@ -44,25 +44,25 @@
     "subtitle3": "iz naše ponude",
     "cardList": [
       {
-        "title": "Dizajn & Razvoj",
-        "text": "Naše usluge web i grafičkog dizajna osiguravaju da vaš sajt i vizuelni identitet budu prepoznatljivi, moderni i funkcionalni, stvarajući najbolji prvi utisak za vaše korisnike."
+        "title": "Dizajn\n& Razvoj",
+        "text": "Usluge web i grafičkog dizajna osiguravaju da vaš sajt i vizuelni identitet budu prepoznatljivi, moderni i funkcionalni, stvarajući najbolji prvi utisak za vaše korisnike."
       },
       {
-        "title": "SEO Proces",
+        "title": "SEO\nProces",
         "text": "SEO strategije su osmišljene da poboljšaju rangiranje vašeg sajta i usmere organski saobraćaj na vašu web adresu, osiguravajući da budete lako pronađeni."
       },
       {
-        "title": "Upravljanje Društvenim Mrežama",
+        "title": "Upravljanje\nDruštvenim Mrežama",
         "text": "Naše usluge na društvenim mrežama pomažu vam da povećate svoj doseg i angažovanje korisnika putem ciljanog sadržaja i plaćenog oglašavanja."
       },
       {
-        "title": "Mobilne Aplikacije & Analitika",
-        "text": "Pravimo prilagođene mobilne aplikacije koje pružaju besprekorno iskustvo na svim uređajima, dok analitika podataka pretvara složene informacije u praktične uvide za optimizaciju vaših strategija."
+        "title": "Mobilne Aplikacije\n& Analitika",
+        "text": "Mobilne aplikacije koje pružaju besprekorno iskustvo na svim uređajima. Analitika podataka pretvara složene informacije u praktične uvide za optimizaciju vaših strategija."
       }
     ],
     "quotation": [
       "Odvajamo vreme da razumemo vaše poslovanje, izazove i ciljeve i prilagođavamo svoj pristup vašim jedinstvenim potrebama. Svaki projekat koji preduzmemo je prilika da napravimo razliku, a mi smo posvećeni pružanju izuzetnih rezultata.",
-      "Hvala vam što smatrate da je Vortek-MK vaš digitalni marketinški partner. Radujemo se što ćemo vam pomoći da postignete svoje ciljeve digitalnog marketinga."
+      "Hvala vam što smatrate da je Vortek-MK vaš digitalni marketinški partner. Radujemo se što ćemo vam pomoći da postignete svoje ciljeve!"
     ]
   },
   "contact": {
@@ -70,7 +70,7 @@
     "subtitle1": "Bez obzira da li imate projekat na umu,",
     "subtitle2": "potreban vam je savet",
     "subtitle3": "ili samo želite da saznate više o tome šta možemo da uradimo za vaše poslovanje, naš tim je tu",
-    "subtitle4": "da vam pomogne",
+    "subtitle4": "da vam pomogne.",
     "infoCard": {
       "cardTitle": "Kontakt Podaci",
       "phoneNumber": "123412341234",

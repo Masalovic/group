@@ -1,39 +1,60 @@
 .service-card {
+  display: flex;
+  flex-direction: column;
+  background-color: $secondaryColor;
+  padding: 2rem;
+  width: 25%;
+
+  .top-container {
+    border-bottom: 1px solid $textLightContrast;
     display: flex;
     flex-direction: column;
-    background-color: $secondaryColor;
-    padding: 2rem;
-    width: 25%;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    flex: 1;
+    gap: 16px;
+
+    img {
+      width: 50%;
+      height: auto;
+    }
+
+    .card-title {
+      @include card-title;
+    }
+  }
+
+  .bottom-container {
+    @include card-details;
+    padding-top: 1rem;
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .service-card {
+    padding: 1.2rem;
 
     .top-container {
-        border-bottom: 1px solid $textLightContrast;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-bottom: 2rem;
-        flex: 1;
+      padding-bottom: 1rem;
+      justify-content: space-evenly;
 
-        img {
-            width: 50%;
-            height: auto;
-        }
-
-        .card-title {
-            @include card-title;
-        }
+      .card-title {
+        font-size: 14px;
+        font-weight: 600;
+      }
     }
 
     .bottom-container {
-        @include card-details;
-        padding-top: 2rem;
-        flex: 1;
+      font-size: 14px;
     }
+  }
 }
 
 @media screen and (max-width: 550px) {
-    .service-card {
-        width: 50vw; /* Make each card full width */
-        flex-shrink: 0; /* Prevent cards from shrinking */
-        scroll-snap-align: start; /* Ensure each card snaps to start */
-    }
+  .service-card {
+    width: 50vw; /* Make each card full width */
+    flex-shrink: 0; /* Prevent cards from shrinking */
+    scroll-snap-align: start; /* Ensure each card snaps to start */
+  }
 }
