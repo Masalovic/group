@@ -6,19 +6,19 @@
     },
     {
       "name": "About Us",
-      "path": "/about"
+      "path": "/#about"
     },
     {
       "name": "Portfolio",
-      "path": "/portfolio"
+      "path": "/#portfolio"
     },
     {
       "name": "Services",
-      "path": "/services"
+      "path": "/#services"
     },
     {
       "name": "Contact",
-      "path": "/contact"
+      "path": "/#contact"
     }
   ],
   "home": {

@@ -31,19 +31,19 @@ class MainPage extends React.PureComponent {
         return (
             <div className="main-screen">
                 <Navigation data={data} onLanguageChange={this.switchLanguage} />
-                <section>
+                <section id="home">
                     <HomeSection data={data} />
                 </section>
-                <section>
+                <section id="about">
                     <AboutSection data={data} />
                 </section>
-                <section>
+                <section id="portfolio">
                     <PortfolioSection data={data} />
                 </section>
-                <section>
+                <section id="services">
                     <ServiceSection data={data} />
                 </section>
-                <section>
+                <section id="contact">
                     <ContactSection data={data} />
                 </section>
                 <Footer data={data} />

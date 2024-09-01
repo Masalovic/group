@@ -6,19 +6,19 @@
     },
     {
       "name": "O Nama",
-      "path": "/about"
+      "path": "/#about"
     },
     {
       "name": "Portfolio",
-      "path": "/portfolio"
+      "path": "/#portfolio"
     },
     {
       "name": "Usluge",
-      "path": "/services"
+      "path": "/#services"
     },
     {
       "name": "Kontakt",
-      "path": "/contact"
+      "path": "/#contact"
     }
   ],
   "home": {
