@@ -3,10 +3,11 @@
   top: 0;
   width: 100vw;
   z-index: 1000;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
   &.scrolled {
     background-color: black;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow when scrolling */
   }
 
   .navigation-container {
@@ -26,6 +27,11 @@
 
       img {
         height: 70px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1); /* Slight zoom on logo hover */
+        }
       }
     }
 
@@ -37,11 +43,27 @@
       .nav-link {
         text-decoration: none;
         color: $textPrimary;
-        font-size: 18px;
-        font-family: $primaryFont;
+        font-size: 14px;
+        font-family: $secondaryFont;
+        position: relative;
 
-        &:hover {
-          color: $textSecondary;
+        // &:hover {
+        //   color: $textLightContrast;
+        // }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -3px;
+          width: 0;
+          height: 0.8px;
+          background-color: $textSecondary;
+          transition: width 0.3s ease;
+        }
+
+        &:hover::after {
+          width: 100%;
         }
       }
 
@@ -60,6 +82,11 @@
         border: none;
         height: 60px;
         cursor: pointer;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: rotate(10deg);
+        }
 
         img {
           height: 30px;
@@ -73,9 +100,14 @@
       justify-content: space-between;
       height: 20px;
       cursor: pointer;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: rotate(90deg);
+      }
 
       .burger-icon {
-        width: 30px; /* Adjust size as needed */
+        width: 30px;
         height: 30px;
       }
     }

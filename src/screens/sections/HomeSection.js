@@ -1,17 +1,49 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
 
 const HomeSection = ({ data }) => {
-    return (
-        <div className="home-section">
-            <div className="home-container">
-                <h1 className="home-title">{data.home.title}</h1>
-                <h3 className="home-subtitle">{data.home.subtitle}</h3>
-                <p className="home-text">{data.home.text}</p>
-                <a href="/#contact">
-                    <button className="home-button">{data.home.button}</button>
-                </a>
-            </div>
-        </div>
-    );
-}
+  useEffect(() => {
+    // Initialize Lenis
+    const lenis = new Lenis({
+      duration: 1.2, // Scrolling duration
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Smooth easing
+      direction: "vertical", // Vertical scroll
+      smooth: true, // Enable smooth scrolling
+    });
+
+    // Update scroll position on animation frame
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // Clean up on component unmount
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
+  const handleScrollToContact = (e) => {
+    e.preventDefault(); // Prevent default anchor behavior
+    const target = document.querySelector("#contact");
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <div className="home-section">
+      <div className="depth-layer"></div>
+      <div className="home-container">
+        <h3 className="home-subtitle">{data.home.subtitle}</h3>
+        <p className="home-text">{data.home.text}</p>
+        <a href="/#contact" onClick={handleScrollToContact}>
+          <button className="home-button">{data.home.button}</button>
+        </a>
+      </div>
+    </div>
+  );
+};
+
 export default HomeSection;

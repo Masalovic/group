@@ -1,3 +1,5 @@
+@use "../config/base" as *;
+
 .contact-section {
   width: 100%;
   // height: 100vh;
@@ -18,7 +20,7 @@
       align-items: center;
 
       .contact-title {
-        @include custom-h2($textLightContrast);
+        // color: $textLightColor;
         margin-bottom: 3rem;
       }
 
@@ -32,7 +34,6 @@
         text-align: center;
 
         .contact-subtitle {
-          @include custom-h3($textPrimary);
           text-transform: none;
           font-weight: 600;
           font-size: 25px;
@@ -63,7 +64,6 @@
         height: 19rem;
 
         .contact-title {
-          @include custom-h3($textPrimary);
           text-transform: none;
           font-weight: 600;
           font-size: 25px;
@@ -80,7 +80,6 @@
           }
 
           .contact-information {
-            @include custom-h3($textPrimary);
             text-transform: none;
             font-size: 18px;
             font-weight: 300;

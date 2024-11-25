@@ -1,3 +1,5 @@
+@use "../config/base" as *;
+
 .service-section {
   width: 100%;
   background-color: $primaryColor;
@@ -18,7 +20,6 @@
       align-items: center;
 
       .service-title {
-        @include custom-h2($textLightContrast);
         margin-bottom: 3rem;
       }
 
@@ -31,10 +32,7 @@
         margin-bottom: 3rem;
 
         .service-subtitle {
-          @include custom-h3($textPrimary);
-          &.colored {
-            color: $textSecondary;
-          }
+          color: brown;
         }
       }
     }
@@ -64,7 +62,6 @@
         gap: 1rem;
 
         .quotation-text {
-          @include card-details;
           font-size: 30px;
           line-height: 50px;
         }

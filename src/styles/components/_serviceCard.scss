@@ -20,12 +20,10 @@
     }
 
     .card-title {
-      @include card-title;
     }
   }
 
   .bottom-container {
-    @include card-details;
     padding-top: 1rem;
     flex: 1;
   }
