@@ -40,9 +40,9 @@
   z-index: 3;
 
   .home-subtitle {
-    color: $textSecondary;
+    color: $textTertiary;
     font-family: $primaryFont;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 60px;
     text-transform: uppercase;
   }
@@ -50,15 +50,15 @@
   .home-text {
     font-size: 18px;
     color: $textPrimary;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
     font-family: $secondaryFont;
     font-style: italic;
-    letter-spacing: 1px;
   }
 
   .home-button {
     font-family: $secondaryFont;
+    font-weight: 200;
     color: $textPrimary;
     font-size: 14px;
     background-color: $textSecondary;

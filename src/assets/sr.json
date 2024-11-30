@@ -1,3 +1,4 @@
+
 {
   "navbar": [
     {
@@ -28,44 +29,54 @@
     "text": "Izgradite brend koji se ističe, angažujte nove klijente i unapredite svoj posao uz marketing rešenja prilagođena vašim potrebama.",
     "button": "Zakažite besplatne konsultacije"
   },
-  "about": {
-    "title": "o nama",
-    "subtitle1": "posvećeni vašem",
-    "subtitle2": "uspehu i postizanju poslovnih ciljeva",
-    "text1": "Ćao! Mi smo agencija koja se bavi digitalnim marketingom, izgrađena na posvećenosti, kreativnosti i inovacijama. Naše putovanje je počelo sa jednostavnom misijom: da pomognemo preduzećima da napreduju u digitalnom svetu.",
-    "text2": "Blisko sarađujemo sa našim klijentima kako bismo razumeli njihove potrebe, izazove i ciljeve. Ovaj pristup partnerstvu nam omogućava da kreiramo prilagođene strategije koje ne samo da ispunjavaju, već i prevazilaze očekivanja. Sa posvećenošću i fokusom na rezultate, mi smo tu da pretvorimo vašu viziju u stvarnost."
-  },
   "portfolio": {
     "marquee": "Dizajn - Development - SEO Proces"
   },
   "services": {
     "title": "usluge",
-    "subtitle1": "digitalna",
-    "subtitle2": "rešenja",
-    "subtitle3": "iz naše ponude",
+    "subtitle1": "Digitalna rešenja iz naše ponude",
     "cardList": [
       {
-        "title": "Dizajn\n& Razvoj",
-        "text": "Usluge web i grafičkog dizajna osiguravaju da vaš sajt i vizuelni identitet budu prepoznatljivi, moderni i funkcionalni, stvarajući najbolji prvi utisak za vaše korisnike."
+        "title": "Razvoj Brenda",
+        "text": "Od kreiranja logotipa, osmišljavanja upečatljivih poruka koje želite da prenesete svojim klijentima i osvežavanje zastarelog brendiranja do kreiranja preciznog marketing plana."
       },
       {
-        "title": "SEO\nProces",
-        "text": "SEO strategije su osmišljene da poboljšaju rangiranje vašeg sajta i usmere organski saobraćaj na vašu web adresu, osiguravajući da budete lako pronađeni."
+        "title": "Istraživanje Tržišta",
+        "text": "Pružamo uvid u ponašanje potrošača, konkurenciju i tržišne trendove, kako bi napravili najefikasnije marketing kampanje."
       },
       {
-        "title": "Upravljanje\nDruštvenim Mrežama",
-        "text": "Naše usluge na društvenim mrežama pomažu vam da povećate svoj doseg i angažovanje korisnika putem ciljanog sadržaja i plaćenog oglašavanja."
+        "title": "Digitalni Marketing",
+        "text": "Stvaramo pozitivnu digitalnu prisutnost i veću vidljivost na svim platformama. Vođenjem društvenih mreža, kreiranjem i promovisanjem kvalitetnog sadržaja, organski i putem PPC oglasa povezujemo Vas sa novim klijentima i otvaramo nova tržišta."
       },
       {
-        "title": "Mobilne Aplikacije\n& Analitika",
-        "text": "Mobilne aplikacije koje pružaju besprekorno iskustvo na svim uređajima. Analitika podataka pretvara složene informacije u praktične uvide za optimizaciju vaših strategija."
+        "title": "Offline Marketing",
+        "text": "Povećavamo vidljivost Vašeg brenda kroz marketing događaja, štampane kampanje i direktni kontakt sa klijentima."
+      },
+      {
+        "title": "Analitika Performansi",
+        "text": "Pratimo i unapređujemo kampanje; uz pomoć dobijenih podataka vršimo A/B testiranje i pravimo detaljne izveštaje."
       }
-    ],
-    "quotation": [
-      "Odvajamo vreme da razumemo vaše poslovanje, izazove i ciljeve i prilagođavamo svoj pristup vašim jedinstvenim potrebama. Svaki projekat koji preduzmemo je prilika da napravimo razliku, a mi smo posvećeni pružanju izuzetnih rezultata.",
-      "Hvala vam što smatrate da je Vortek-MK vaš digitalni marketinški partner. Radujemo se što ćemo vam pomoći da postignete svoje ciljeve!"
     ]
+  
   },
+  "about": {
+    "intro": "Mi smo tim stručnjaka posvećen tome da vaš brend izvuče maksimum iz svake marketing prilike. Kombinujemo kreativne ideje, dubinsku analizu tržišta i najnovije tehnologije kako bismo isporučili kampanje koje postižu rezultate.",
+    "subtitle": "Zašto izabrati nas?",
+    "reasons": [
+      {
+        "title": "Prilagođena Rešenja",
+        "text": "Svaki brend je jedinstven, pa su i naše strategije kreirane da zadovolje Vaše specifične potrebe. Pružamo potpun uvid u svaki korak, uz redovne povratne informacije i prilagođavanje vašim ciljevima."
+      },
+      {
+        "title": "Transparentan Proces",
+        "text": "Pružamo potpun uvid u svaki korak, uz redovne povratne informacije i prilagođavanje vašim ciljevima. Svaki brend je jedinstven, pa su i naše strategije kreirane da zadovolje Vaše specifične potrebe."
+      },
+      {
+        "title": "Rezultati Na Prvom Mestu",
+        "text": "Uspeh Vašeg brenda je naš prioritet i činimo sve kako bismo ga ostvarili. Svaki brend je jedinstven, pa su i naše strategije kreirane da zadovolje Vaše specifične potrebe."
+      }
+    ]
+    },
   "contact": {
     "title": "kontakt",
     "subtitle1": "Bez obzira da li imate projekat na umu,",

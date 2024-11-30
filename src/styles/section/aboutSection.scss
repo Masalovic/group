@@ -1,101 +1,48 @@
-@use "../config/base" as *;
-
 .about-section {
-  width: 100%;
-  height: 100vh;
-  background-color: $primaryColor;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  height: 200vh; // Ensure enough space for scrolling
+  padding: 10%;
+  width: 100vw;
 
-  .about-container {
+  .subtitle-container {
+    position: sticky;
+    top: 20%; // Ensures the subtitle stays visible when scrolling
+    align-self: flex-start; // Keeps the subtitle aligned at the top
+    width: 50%;
+    font-family: "Oswald", sans-serif;
+    font-size: 40px;
+    color: $textPrimary;
+    text-transform: uppercase;
+    border-right: 2px solid $textSecondary;
+  }
+
+  .reasons-container {
     display: flex;
-    align-items: stretch;
-    justify-content: space-around;
-    margin: 0 10%;
-    gap: 6rem;
+    width: 50%;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 50px; // Space before the reasons start appearing
 
-    .about-text {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      width: 100%;
-      line-height: normal;
+    .reason {
+      background-color: transparent;
+      padding: 2rem;
+      opacity: 0; // Initially hidden
+      transform: translateY(50px); // Slide up effect
+      transition: transform 0.3s ease, opacity 0.3s ease;
 
-      .about-title {
+      h3 {
+        font-family: "Oswald", sans-serif;
+        font-size: 1.75rem;
+        color: $textSecondary;
+        margin-bottom: 1rem;
       }
 
-      .about-subtitle {
-        &.colored {
-          color: $textSecondary;
-        }
-      }
-
-      .about-text {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: center;
-        text-align: start;
-
-        &.colored {
-          color: $textTertiary;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1150px) {
-  .about-section .about-container {
-    align-items: center;
-    gap: 4rem;
-
-    img {
-      width: 45%;
-    }
-    .about-text {
-      .about-title,
-      .about-subtitle {
-        font-size: 32px;
-      }
-
-      .about-text {
-        padding-top: 10px;
-        font-size: 16px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .about-section {
-    .about-container {
-      img {
-        display: none;
-      }
-
-      .about-text {
-        width: 100%;
-
-        .about-subtitle {
-          font-size: 40px;
-
-          &.colored {
-            color: $textSecondary;
-          }
-        }
-
-        .about-text {
-          // font-size: 35px;
-          margin-top: 3rem;
-          line-height: 22px;
-
-          &.colored {
-            color: $textTertiary;
-          }
-        }
+      p {
+        font-family: "Lato", sans-serif;
+        font-size: 1.125rem;
+        line-height: 1.6;
+        color: $textLightContrast;
       }
     }
   }
