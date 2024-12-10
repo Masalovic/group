@@ -3,9 +3,9 @@
 .service-card {
   flex-shrink: 0;
   width: 550px;
-  height: 450px;
+  height: 400px;
   background-color: #1e1e1e;
-  padding: 4rem;
+  padding: 2%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   scroll-snap-align: start; /* Snap to the viewport start */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -69,10 +69,11 @@
 
     .card-title {
       font-family: $secondaryFont;
-      font-size: 46px;
+      font-size: 40px;
+      letter-spacing: 1px;
       font-weight: 800;
       text-transform: uppercase;
-      color: $textPrimary;
+      color: $textSecondary;
     }
   }
 
@@ -86,7 +87,7 @@
       font-size: 22px;
       letter-spacing: 0.4px;
       line-height: 28px;
-      color: $textLightContrast;
+      color: $textPrimary;
     }
   }
 }
