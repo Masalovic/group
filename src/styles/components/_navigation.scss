@@ -15,7 +15,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.4rem 6rem;
+    padding: 0.4rem 9.4rem;
+    overflow: hidden;
 
     .mobile {
       display: none;
@@ -26,7 +27,7 @@
       align-items: center;
 
       img {
-        height: 50px;
+        height: 35px;
         transition: transform 0.3s ease;
 
         &:hover {
@@ -43,7 +44,8 @@
       .nav-link {
         text-decoration: none;
         color: $textPrimary;
-        font-size: 14px;
+        font-size: 18px;
+        letter-spacing: 1px;
         font-family: $secondaryFont;
         position: relative;
 

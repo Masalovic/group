@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "../../assets/images/Vortex-Logo.png";
+import logo from "../../assets/images/logo.png";
 import sr from "../../assets/icons/sr.png";
 import uk from "../../assets/icons/uk.png";
 import AOS from "aos";
