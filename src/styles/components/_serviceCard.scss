@@ -4,17 +4,10 @@
   flex-shrink: 0;
   width: 550px;
   height: 400px;
-  background-color: #1e1e1e;
   padding: 2%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  scroll-snap-align: start; /* Snap to the viewport start */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  scroll-snap-align: start;
   position: relative;
-
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  }
+  transform: translateZ(0);
 
   &:nth-child(1) {
     background: url("../../assets/images/Brending.png");
@@ -53,9 +46,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity as needed */
-    z-index: 1; /* Ensure it stays below the content */
-    pointer-events: none; /* Allow clicks to pass through to the content */
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
   }
 
   .top-container,
@@ -64,9 +56,6 @@
     z-index: 2;
   }
   .top-container {
-    // border-bottom: 1px solid $textLightContrast;
-    // padding-bottom: 2rem;
-
     .card-title {
       font-family: $secondaryFont;
       font-size: 40px;

@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-const ServiceCard = ({ title, text, backgroundImage }) => {
+const ServiceCard = ({ title, text }) => {
   return (
-    <div className="service-card">
+    <div className="service-card" style={{ overflow: "hidden" }}>
       <div className="top-container">
         <p className="card-title">{title}</p>
       </div>
@@ -12,12 +11,6 @@ const ServiceCard = ({ title, text, backgroundImage }) => {
       </div>
     </div>
   );
-};
-
-ServiceCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  backgroundImage: PropTypes.string.isRequired,
 };
 
 export default ServiceCard;
