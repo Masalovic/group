@@ -7,8 +7,6 @@ import takeuchi from "../../assets/images/logoTakeuchi.png";
 import divia from "../../assets/images/logoDivia.png";
 import LogoList from "../../components/atoms/LogoList";
 import MarqueeText from "../../components/atoms/MarqueeText";
-import rakac from "../../assets/images/portfolioBcg.png";
-import rakacMob from "../../assets/images/portfolioBcgMobile.png";
 
 const PortfolioSection = ({ data }) => {
   const logos = [bozic, bosch, muro, markovic, takeuchi, divia];
@@ -17,9 +15,10 @@ const PortfolioSection = ({ data }) => {
       <div className="portfolio-container">
         <MarqueeText text={data.portfolio.marquee} />
         <div className="portfolio-photos">
-          <img src={rakac} alt="portfolio bcg" className="portfolio" />
-          <img src={rakacMob} alt="portfolio bcg" className="portfolio mob" />
+          {/* <img src={rakac} alt="portfolio bcg" className="portfolio" />
+          <img src={rakacMob} alt="portfolio bcg" className="portfolio mob" /> */}
         </div>
+
         <LogoList logos={logos} />
       </div>
     </div>

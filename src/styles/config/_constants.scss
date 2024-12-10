@@ -1,11 +1,16 @@
 $textPrimary: #ffffff;
-$textSecondary: #049ab4;
-$textTertiary: #62e8ffce;
-$textLightContrast: #d2d2d2;
+$textSecondary: #00b2df;
+$textTertiary: #196688;
+$textLightContrast: #a8b1c0;
+$gradient: radial-gradient(circle, #ffff, #00b2df, #22304b);
 
 $primaryColor: #000000;
-$secondaryColor: #1e1e1e;
+$secondaryColor: #22304b;
 
-$primaryFont: "Oswald", sans-serif;
-$secondaryFont: "Lato", sans-serif;
-$tertiaryFont: "Merriweather", serif;
+$primaryFont: "Open Sans", sans-serif;
+$secondaryFont: "Barlow Condensed", sans-serif;
+$tertiaryFont: "PT Sans", sans-serif;
+
+// $primaryFont: "Oswald", sans-serif;
+// $secondaryFont: "Lato", sans-serif;
+// $tertiaryFont: "Noto Serif Display", serif;

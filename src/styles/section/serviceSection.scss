@@ -29,22 +29,23 @@
         width: 70%;
 
         .service-subtitle {
-          font-weight: 300;
-          font-size: 50px;
+          font-weight: 600;
+          font-size: 30px;
+          color: $textSecondary;
         }
 
         .service-description {
-          font-family: $tertiaryFont;
-          font-size: 15px;
-          color: $textLightContrast;
+          font-family: $secondaryFont;
+          font-size: 20px;
+          color: $textPrimary;
           margin: 0.8rem 0;
           width: 74%;
-          font-weight: 200;
+          font-weight: 300;
         }
 
         .subtitle-line {
           height: 1px;
-          background-color: $textSecondary;
+          background-color: $textTertiary;
           margin-top: 0.5rem;
           width: 78%;
         }

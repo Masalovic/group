@@ -22,7 +22,7 @@ const ServiceSection = ({ data }) => {
       scrollTrigger: {
         trigger: section,
         start: "top top",
-        end: () => `+=${container.scrollWidth}`, // Match the horizontal scroll length
+        end: () => `+=${container.scrollWidth * 0.3}`, // Match the horizontal scroll length
         scrub: true, // Smooth scrolling
         pin: true, // Pin the section
         anticipatePin: 1, // Avoid content shifting

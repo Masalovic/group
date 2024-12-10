@@ -68,11 +68,11 @@
     // padding-bottom: 2rem;
 
     .card-title {
-      font-family: $primaryFont;
-      font-size: 40px;
-      font-weight: bold;
+      font-family: $secondaryFont;
+      font-size: 46px;
+      font-weight: 800;
       text-transform: uppercase;
-      color: $textSecondary;
+      color: $textPrimary;
     }
   }
 
@@ -82,10 +82,11 @@
 
     .card-details {
       font-family: $secondaryFont;
-      font-size: 18px;
+      font-weight: 200;
+      font-size: 22px;
       letter-spacing: 0.4px;
       line-height: 28px;
-      color: $textPrimary;
+      color: $textLightContrast;
     }
   }
 }

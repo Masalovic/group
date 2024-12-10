@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import Lenis from "@studio-freight/lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -9,75 +8,75 @@ const AboutSection = ({ data }) => {
   const sectionRef = useRef(null);
   const subtitleRef = useRef(null);
   const reasonsRef = useRef(null);
+  const ballRef = useRef(null);
+  const lineRef = useRef(null);
 
   useEffect(() => {
-    // Initialize Lenis for smooth scrolling
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smooth: true,
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    // GSAP ScrollTrigger Setup
+    const section = sectionRef.current;
     const reasons = reasonsRef.current;
+    const ball = ballRef.current;
+    const line = lineRef.current;
 
-    if (!reasons) return;
+    if (!section || !reasons || !ball || !line) return;
 
-    // Add individual triggers for each reason
+    const reasonsCount = reasons.children.length;
+
+    // Animate the reasons individually
     Array.from(reasons.children).forEach((reason, index) => {
       gsap.fromTo(
         reason,
-        { opacity: 0, y: 50 }, // Start hidden and offset downward
+        { opacity: 0, y: 50 },
         {
           opacity: 1,
           y: 0,
           scrollTrigger: {
             trigger: reason,
-            start: `top+=${index * 0} center`, // Offset each reason’s trigger
-            end: `+=50`, // Spread the animation across a long scroll
-            scrub: 1.5, // Smooth, slow scrub
+            start: `top+=${index * 50} center`,
+            end: `+=100`,
+            scrub: 1.5,
           },
         }
       );
     });
-    // const section = sectionRef.current;
-    // const subtitle = subtitleRef.current;
-    // const reasons = reasonsRef.current;
 
-    // if (!section || !subtitle || !reasons) return;
-
-    // gsap.set(reasons.children, { y: 50, opacity: 0 }); // Initial state for reasons
-
-    // // Animate reasons appearing when subtitle reaches the top
-    // gsap.to(reasons.children, {
-    //   y: 0,
-    //   opacity: 1,
-    //   stagger: 0.2,
-    //   scrollTrigger: {
-    //     trigger: subtitle,
-    //     start: "top 10%", // Trigger animation when subtitle reaches 20% of the viewport
-    //     end: "bottom bottom", // Animation ends when reasons scroll out of view
-    //     scrub: true,
-    //   },
-    // });
+    // Animate the ball and line
+    gsap.to(ball, {
+      y: () => `${line.offsetHeight - ball.offsetHeight}px`, // Move ball down to bottom of the line
+      scrollTrigger: {
+        trigger: section,
+        start: "top top",
+        end: () => `bottom+=${window.innerHeight}`,
+        scrub: 1,
+        onUpdate: (self) => {
+          // Calculate the progress of the ball
+          const progress = self.progress;
+          const remaining = Math.max(1 - progress, 0);
+          line.style.height = `${remaining * 100}%`; // Shrink line height
+          line.style.transform = `translateY(${(1 - remaining) * 100}%)`; // Adjust the bottom alignment
+          if (progress >= 1) {
+            ball.style.opacity = 0; // Hide ball at the end
+          } else {
+            ball.style.opacity = 1; // Keep ball visible
+          }
+        },
+      },
+    });
 
     return () => {
-      lenis.destroy(); // Cleanup Lenis
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill()); // Cleanup GSAP triggers
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
   return (
     <div className="about-section" ref={sectionRef}>
       {/* Sticky Subtitle */}
-      <div className="subtitle-container" ref={subtitleRef}>
+      <div className="subtitle-container">
         <h2>{data.about.subtitle}</h2>
+        <p>{data.about.text}</p>
+        {/* Vertical Line */}
+        <div className="vertical-line" ref={lineRef}></div>
+        {/* Moving Ball */}
+        <div className="ball" ref={ballRef}></div>
       </div>
 
       {/* Reasons */}

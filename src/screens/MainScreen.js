@@ -5,6 +5,9 @@ import AboutSection from "./sections/AboutSection";
 import ServiceSection from "./sections/ServiceSection";
 import ContactSection from "./sections/ContactSection";
 import PortfolioSection from "./sections/PortfolioSection";
+
+import Workflow from "./sections/Workflow";
+
 import Navigation from "../components/molecules/Navigation";
 import homeDataSr from "../assets/sr.json";
 import homeDataEn from "../assets/en.json";
@@ -42,6 +45,10 @@ class MainPage extends React.PureComponent {
         </section>
         <section id="portfolio">
           <PortfolioSection data={data} />
+        </section>
+
+        <section id="workflow">
+          <Workflow />
         </section>
 
         <section id="contact">
