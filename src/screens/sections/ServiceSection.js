@@ -61,7 +61,7 @@ const ServiceSection = ({ data }) => {
               unapredite svoj posao uz marketing rešenja prilagođena vašim
               potrebama.
             </p>
-            <div className="subtitle-line"></div>
+            {/* <div className="subtitle-line"></div> */}
           </div>
         </div>
 

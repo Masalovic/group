@@ -17,36 +17,37 @@
     padding-top: 4rem;
 
     .service-text {
+      height: 240px;
       .subtitle-container {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
         margin-bottom: 3rem;
-        width: 70%;
+        width: 60%;
 
         .service-subtitle {
           font-weight: 600;
-          font-size: 30px;
+          font-size: 70px;
           color: $textPrimary;
-          font-family: $primaryFont;
+          font-family: $secondaryFont;
         }
 
         .service-description {
-          font-family: $secondaryFont;
-          font-size: 20px;
+          font-family: $primaryFont;
+          font-size: 24px;
+          font-style: italic;
           color: $textLightContrast;
           margin: 0.8rem 0;
-          width: 74%;
           font-weight: 300;
         }
 
-        .subtitle-line {
-          height: 1px;
-          background-color: $textSecondary;
-          margin-top: 0.5rem;
-          width: 78%;
-        }
+        // .subtitle-line {
+        //   height: 1px;
+        //   background-color: $textSecondary;
+        //   margin-top: 0.5rem;
+        //   width: 78%;
+        // }
       }
     }
 

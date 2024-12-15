@@ -3,18 +3,17 @@
 .about-section {
   display: flex;
   flex-direction: row;
-  height: 170vh; // Ensure enough space for scrolling
+  height: 170vh;
   padding: 8rem;
   width: 100vw;
   gap: 6rem;
-  position: relative; // Required for absolute positioning of elements
+  position: relative;
 
   .subtitle-container {
     position: sticky;
-    top: 26%; // Ensures the subtitle stays visible when scrolling
-    align-self: flex-start; // Keeps the subtitle aligned at the top
+    top: 25%;
+    align-self: flex-start;
     width: 40%;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -22,8 +21,8 @@
     h2 {
       font-family: $secondaryFont;
       font-size: 50px;
-      font-weight: 600;
-      color: $textSecondary;
+      font-weight: 400;
+      color: $textTertiary;
       text-transform: uppercase;
       margin-bottom: 2rem;
     }
@@ -31,8 +30,9 @@
     p {
       font-family: $secondaryFont;
       font-size: 30px;
-      line-height: 1.2;
+      line-height: 1.4;
       font-weight: 200;
+      font-style: italic;
       color: $textLightContrast;
       width: 90%;
       margin-bottom: 2rem;
@@ -42,24 +42,22 @@
       position: absolute;
       margin-left: 2rem;
       top: 0;
-      left: calc(
-        100% - 1rem
-      ); // Aligns the line to the right edge of the subtitle
+      left: calc(100% - 1rem);
       width: 4px;
-      height: 100%; // Full height initially
-      background: $textTertiary;
-      z-index: -1; // Places the line behind text
+      height: 90%;
+      background: $textTertiaryTransparent;
+      z-index: -1;
     }
 
     .ball {
       position: absolute;
       top: 0;
-      left: calc(100% + 0.2rem); // Aligns the ball with the line
+      left: calc(100% + 0.2rem);
       width: 30px;
       height: 30px;
       border-radius: 50%;
       background: $gradient;
-      z-index: 1; // Places the ball above everything else
+      z-index: 1;
       transform: translateY(0);
     }
   }
@@ -69,26 +67,28 @@
     width: 50%;
     flex-direction: column;
     gap: 2rem;
-    margin-top: 50px; // Space before the reasons start appearing
+    margin-top: 50px;
 
     .reason {
       background-color: transparent;
       padding: 2rem;
-      opacity: 0; // Initially hidden
-      transform: translateY(50px); // Slide up effect
+      opacity: 0;
+      transform: translateY(50px);
       transition: transform 0.3s ease, opacity 0.3s ease;
 
       h3 {
         font-family: $secondaryFont;
         font-size: 40px;
-        color: $textSecondary;
+        letter-spacing: 1px;
+        color: $textPrimary;
         margin-bottom: 2rem;
       }
 
       p {
-        font-family: $tertiaryFont;
-        font-size: 18px;
-        line-height: 1.6;
+        font-family: $primaryFont;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.3;
         color: $textLightContrast;
       }
     }

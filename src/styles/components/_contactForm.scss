@@ -1,39 +1,61 @@
+@use "../config/base" as *;
+
 .form-container {
-  width: 100%;
+  width: 50%;
 
   .form {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    justify-content: space-between;
     gap: 2rem;
 
     .input {
       height: 30px;
       padding: 8px;
-      background-color: $secondaryColor;
-      color: $textLightContrast;
-      color: $textLightContrast;
       font-size: 14px;
-      border: 2px solid #282727;
+      border: none;
+      background: transparent;
+      border-bottom: 1px solid $textTertiary;
+      font-family: $primaryFont;
     }
 
     .submit-button {
-      height: 40px;
-      background-color: $textSecondary;
+      font-family: $primaryFont;
+      font-weight: 300;
       color: $textPrimary;
-      font-size: 14px;
-      letter-spacing: 0.5px;
-      word-spacing: 4px;
+      font-size: 15px;
+      background-color: lighten($textTertiaryTransparent, 15%);
+      border: none;
+      padding: 0.6rem 1.4rem;
+      width: auto;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    /* Hover Effect */
+    .submit-button:hover {
+      background-color: $textTertiaryTransparent;
+      color: $primaryFont;
+      transform: scale(1.02);
     }
 
     .textarea {
-      height: 110px;
+      height: 30px;
+      background: transparent;
       padding: 8px;
-      background-color: $secondaryColor;
-      color: $textLightContrast;
-      border: 2px solid #282727;
+      border: none;
       font-size: 14px;
+      overflow: hidden;
+      resize: none;
+      border-bottom: 1px solid $textTertiary;
+      font-family: $primaryFont;
     }
   }
 }

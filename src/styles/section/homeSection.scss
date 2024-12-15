@@ -35,34 +35,32 @@
 .home-container {
   display: flex;
   flex-direction: column;
-  width: 44%;
+  width: 40%;
   margin: 10%;
   z-index: 3;
 
   .home-subtitle {
     color: $textPrimary;
-    font-family: $primaryFont;
-    font-weight: 800;
-    font-size: 50px;
+    font-family: $secondaryFont;
+    font-weight: 600;
+    font-size: 80px;
     text-transform: capitalize;
   }
 
   .home-text {
-    font-size: 22px;
+    font-size: 24px;
     color: $textLightContrast;
     margin-top: 1rem;
     margin-bottom: 3rem;
-    font-family: $secondaryFont;
-    font-weight: 400;
-    letter-spacing: 1px;
-    width: 90%;
+    font-family: $primaryFont;
+    font-weight: 300;
   }
 
   .home-button {
-    font-family: $tertiaryFont;
-    font-weight: 200;
+    font-family: $primaryFont;
+    font-weight: 300;
     color: $textPrimary;
-    font-size: 14px;
+    font-size: 15px;
     background-color: lighten($textTertiaryTransparent, 15%);
 
     border: none;

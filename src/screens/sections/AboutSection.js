@@ -6,7 +6,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const AboutSection = ({ data }) => {
   const sectionRef = useRef(null);
-  const subtitleRef = useRef(null);
   const reasonsRef = useRef(null);
   const ballRef = useRef(null);
   const lineRef = useRef(null);
@@ -19,8 +18,6 @@ const AboutSection = ({ data }) => {
 
     if (!section || !reasons || !ball || !line) return;
 
-    const reasonsCount = reasons.children.length;
-
     // Animate the reasons individually
     Array.from(reasons.children).forEach((reason, index) => {
       gsap.fromTo(
@@ -31,7 +28,7 @@ const AboutSection = ({ data }) => {
           y: 0,
           scrollTrigger: {
             trigger: reason,
-            start: `top+=${index * 50} center`,
+            start: `top+=${index * 40} center`,
             end: `+=100`,
             scrub: 1.5,
           },
@@ -50,9 +47,7 @@ const AboutSection = ({ data }) => {
         onUpdate: (self) => {
           // Calculate the progress of the ball
           const progress = self.progress;
-          const remaining = Math.max(1 - progress, 0);
-          line.style.height = `${remaining * 100}%`; // Shrink line height
-          line.style.transform = `translateY(${(1 - remaining) * 100}%)`; // Adjust the bottom alignment
+
           if (progress >= 1) {
             ball.style.opacity = 0; // Hide ball at the end
           } else {

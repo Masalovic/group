@@ -2,9 +2,9 @@
 
 .service-card {
   flex-shrink: 0;
-  width: 550px;
-  height: 400px;
-  padding: 2%;
+  width: 600px;
+  height: 330px;
+  padding: 1.5%;
   scroll-snap-align: start;
   position: relative;
   transform: translateZ(0);
@@ -58,11 +58,11 @@
   .top-container {
     .card-title {
       font-family: $secondaryFont;
-      font-size: 40px;
+      font-size: 50px;
       letter-spacing: 1px;
-      font-weight: 800;
-      text-transform: uppercase;
-      color: $textSecondary;
+      font-weight: 600;
+
+      color: $textTertiary;
     }
   }
 
@@ -72,9 +72,8 @@
 
     .card-details {
       font-family: $secondaryFont;
-      font-weight: 200;
-      font-size: 22px;
-      letter-spacing: 0.4px;
+      font-weight: 300;
+      font-size: 24px;
       line-height: 28px;
       color: $textPrimary;
     }
