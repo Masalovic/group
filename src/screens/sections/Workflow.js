@@ -68,7 +68,7 @@ const Workflow = () => {
         onUpdate: (self) => {
           const progress = self.progress; // Progress from 0 to 1
           const ballX = progress * totalLineWidth; // Map progress to line width
-          ball.style.transform = `translateX(${ballX}px)`; // Update ball position
+          ball.style.transform = `translate(${ballX}px, -50%)`; // Update ball position
         },
       },
     });
@@ -100,13 +100,21 @@ const Workflow = () => {
           id="worm-ball"
           ref={ballRef}
           style={{
-            width: "30px",
-            height: "30px",
+            width: "50px",
+            height: "50px",
             borderRadius: "50%",
-            background: "radial-gradient(circle, #ffff, #00b2df, #22304b)",
+            background: `
+      radial-gradient(circle at 30% 30%, #ffffff 10%, rgba(0, 178, 223, 0.6) 40%, rgba(35, 48, 75, 0.8) 80%, rgba(0, 0, 0, 0.8) 100%),
+      radial-gradient(circle at 70% 70%, rgba(0, 72, 255, 0.5), transparent)
+    `,
+            boxShadow: `
+      0px 0px 15px 10px rgba(0, 124, 255, 0.35), 
+      inset 0px 0px 10px 5px rgba(255, 255, 255, 0.6)
+    `,
             position: "absolute",
-            top: "35%",
+            top: "70px",
             left: "0",
+            transform: "translate(-50%, -50%)",
           }}
         ></div>
       </div>

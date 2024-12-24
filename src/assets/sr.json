@@ -1,4 +1,3 @@
-
 {
   "navbar": [
     {
@@ -17,14 +16,12 @@
       "name": "Projekti",
       "path": "/#portfolio"
     },
-    
     {
       "name": "Kontakt",
       "path": "/#contact"
     }
   ],
   "home": {
-    "title": "vortex",
     "subtitle": "Ostvarite svoje poslovne ciljeve",
     "text": "Izgradite brend koji se ističe, angažujte nove klijente i unapredite svoj posao uz marketing rešenja prilagođena vašim potrebama.",
     "button": "Zakažite besplatne konsultacije"
@@ -32,9 +29,28 @@
   "portfolio": {
     "marquee": "Dizajn - Development - SEO - Marketing"
   },
+  "about": {
+    "subtitle": "Ko Smo Mi?",
+    "text": "Universe Force je tim koji rešava probleme, stratezi i tehnološki entuzijasti koji veruju da svaki posao zaslužuje alate i stručnost za napredovanje. Radimo sa vama na rešavanju izazova, pojednostavljivanju poslovanja i otvaranju novih mogućnosti za rast. Sa dugogodišnjim iskustvom u poslovnom razvoju, marketingu i IT uslugama, razumemo prave izazove sa kojima se preduzeća suočavaju. Bilo da se radi o usavršavanju vaše strategije, poboljšanju efikasnosti ili nadogradnji vaše tehnologije, mi smo tu da stvari učinimo jednostavnijim i boljim.",
+    "reasons": [
+      {
+        "title": "Jednostavnost",
+        "text": "Držimo stvari jednostavnim: bez žargona, bez prekomernih komplikacija — samo jasna, efikasna rešenja."
+      },
+      {
+        "title": "Jedinstvenost",
+        "text": "Sve prilagođavamo vašim potrebama, tako da dobijate upravo ono što odgovara vašem poslu."
+      },
+      {
+        "title": "Podrška",
+        "text": "Uz vas smo na svakom koraku, nudeći smernice i podršku kad god vam zatreba."
+      }
+    ]
+  },
   "services": {
     "title": "usluge",
-    "subtitle1": "Digitalna rešenja iz naše ponude",
+    "subtitle": "Digitalna rešenja iz naše ponude",
+    "description": "Tehnologiju činimo jednostavnom, bezbednom i efikasnom za vaše poslovanje. Od postavljanja sistema do kreiranja prilagođenih alata, rešavamo sve vaše IT potrebe kako biste se mogli fokusirati na razvoj vašeg poslovanja.",
     "cardList": [
       {
         "title": "Razvoj Brenda",
@@ -57,37 +73,15 @@
         "text": "Pratimo i unapređujemo kampanje; uz pomoć dobijenih podataka vršimo A/B testiranje i pravimo detaljne izveštaje."
       }
     ]
-  
   },
-  "about": {
-    "subtitle": "Zašto izabrati nas?",
-    "text": "Mi smo tim stručnjaka posvećen tome da vaš brend izvuče maksimum iz svake marketing prilike. Kombinujemo kreativne ideje, dubinsku analizu tržišta i najnovije tehnologije kako bismo isporučili kampanje koje postižu rezultate.",
-    "reasons": [
-      {
-        "title": "Prilagođena Rešenja",
-        "text": "Svaki brend je jedinstven, pa su i naše strategije kreirane da zadovolje Vaše specifične potrebe. Pružamo potpun uvid u svaki korak, uz redovne povratne informacije i prilagođavanje vašim ciljevima."
-      },
-      {
-        "title": "Transparentan Proces",
-        "text": "Pružamo potpun uvid u svaki korak, uz redovne povratne informacije i prilagođavanje vašim ciljevima. Svaki brend je jedinstven, pa su i naše strategije kreirane da zadovolje Vaše specifične potrebe."
-      },
-      {
-        "title": "Rezultati Na Prvom Mestu",
-        "text": "Uspeh Vašeg brenda je naš prioritet i činimo sve kako bismo ga ostvarili. Svaki brend je jedinstven, pa su i naše strategije kreirane da zadovolje Vaše specifične potrebe."
-      }
-    ]
-    },
   "contact": {
-    "title": "kontakt",
-    "subtitle1": "Bez obzira da li imate projekat na umu,",
-    "subtitle2": "potreban vam je savet",
-    "subtitle3": "ili samo želite da saznate više o tome šta možemo da uradimo za vaše poslovanje, naš tim je tu",
-    "subtitle4": "da vam pomogne.",
+    "title": "Kontakt",
+    "description": "Otkrijte kako možemo transformisati vaš brend i pomoći vam da postignete poslovne ciljeve. Naša prva konsultacija je potpuno besplatna!",
     "infoCard": {
       "cardTitle": "Kontakt Podaci",
       "phoneNumber": "060 0000000",
       "email": "office@vortex-mk.com",
-      "location": "Srbija"
+      "location": "Vojvode Mišića 18, Novi Sad, Srbija"
     },
     "form": {
       "name": "Ime",
@@ -97,7 +91,70 @@
     }
   },
   "footer": {
-    "list": ["Dizajn", "Development", "SEO", "Marketing"],
-    "text": "© 2024 Vortex-MK. Sva prava zadržana."
+    "moto": "Transformisanje Brendova, Izgradnja Budućnosti.",
+    "copy": "© 2024 UniverseForce. Sva prava zadržana.",
+    "contact": [
+      {
+        "title": "Kontakt",
+        "phone": "060 0000000",
+        "email": "office@universeforcegroup.com",
+        "address": "Vojvode Mišića, Beograd, Srbija"
+      },
+      {
+        "title": "Brzi Linkovi",
+        "links": [
+          {
+            "name": "Početna",
+            "path": "/"
+          },
+          {
+            "name": "Usluge",
+            "path": "/#services"
+          },
+          {
+            "name": "O Nama",
+            "path": "/#about"
+          },
+          {
+            "name": "Projekti",
+            "path": "/#portfolio"
+          },
+          {
+            "name": "Kontakt",
+            "path": "/#contact"
+          }
+        ]
+      },
+      {
+        "title": "Pratite Nas",
+        "socialIcons": [
+          {
+            "img": "FacebookIcon",
+            
+            "alt": "Facebook"
+          },
+          {
+            "img": "LinkedInIcon",
+            "url": "https://www.linkedin.com/company/universe-force-entertainment/",
+            "alt": "LinkedIn"
+          },
+          {
+            "img": "instagramIcon",
+            "url": "https://www.instagram.com/vortex_mk/",
+            "alt": "Instagram"
+          },
+          {
+            "img": "WhatsAppIcon",
+            "url": "https://wa.me/066380847",
+            "alt": "WhatsApp"
+          },
+          {
+            "img": "EmailIcon",
+            "url": "mailto:office@universeforcegroup.com",
+            "alt": "Email"
+          }
+        ]
+      }
+    ]
   }
 }

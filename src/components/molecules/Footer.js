@@ -1,75 +1,67 @@
 import React from "react";
 import logo from "../../assets/images/logo.png";
-import facebookIcon from "../../assets/icons/ovalFacebook.png";
-import instagramIcon from "../../assets/icons/ovalInsta.png";
-import emailIcon from "../../assets/icons/ovalMessage.png";
+import FacebookIcon from "../../assets/icons/Facebook.svg";
+import InstagramIcon from "../../assets/icons/Instagram.png";
+import LinkedInIcon from "../../assets/icons/LinkedIn.svg";
+import WhatsAppIcon from "../../assets/icons/WhatsApp.png";
+import EmailIcon from "../../assets/icons/Email.png";
+import { Link } from "react-router-dom";
 
 const Footer = ({ data }) => {
-  const contactDetails = [
-    { text: data.contact.infoCard.phoneNumber },
-    { text: data.contact.infoCard.email },
-    { text: data.contact.infoCard.location },
-  ];
+  const { contact: footerContact, moto, copy } = data.footer;
 
-  const socialIcons = [
-    {
-      img: facebookIcon,
-      url: "https://www.facebook.com/profile.php?id=100090554024215",
-      alt: "Facebook",
-    },
-    {
-      img: instagramIcon,
-      url: "https://www.instagram.com/vortex_mk/",
-      alt: "Instagram",
-    },
-    {
-      img: emailIcon,
-      url: "mailto:office@vortex-mk.com",
-      alt: "Email",
-    },
-  ];
+  // Extract specific contact sections
+  const [contactInfo, quickLinks, socialMedia] = footerContact;
 
-  const navLinks = ["Početna", "Usluge", "O Nama", "Projekti", "Kontakt"];
+  // Map social media icons to their respective images
+  const socialIcons = socialMedia.socialIcons.map((icon) => ({
+    ...icon,
+    img:
+      icon.alt === "Facebook"
+        ? FacebookIcon
+        : icon.alt === "Instagram"
+        ? InstagramIcon
+        : icon.alt === "LinkedIn"
+        ? LinkedInIcon
+        : icon.alt === "WhatsApp"
+        ? WhatsAppIcon
+        : EmailIcon,
+  }));
 
   return (
     <footer className="footer-container">
-      {/* Top Section */}
       <div className="footer-top">
-        {/* Logo and Moto */}
+        {/* Brand Section */}
         <div className="footer-brand">
           <img src={logo} alt="Logo" className="footer-logo" />
-          <p className="footer-moto">
-            "Transforming Brands, Building Futures."
-          </p>
+          <p className="footer-moto">{moto}</p>
         </div>
 
-        {/* Navigation Links */}
+        {/* Contact Details Section */}
+        <div className="footer-contact">
+          <h4 className="footer-title">{contactInfo.title}</h4>
+          <p className="footer-contact-text">{contactInfo.phone}</p>
+          <p className="footer-contact-text">{contactInfo.email}</p>
+          <p className="footer-contact-text">{contactInfo.address}</p>
+        </div>
+
+        {/* Navigation Links Section */}
         <div className="footer-nav">
-          <h4 className="footer-title">Brzi Linkovi</h4>
+          <h4 className="footer-title">{quickLinks.title}</h4>
           <ul className="footer-links">
-            {navLinks.map((link, index) => (
+            {quickLinks.links.map((link, index) => (
               <li key={index} className="footer-link-item">
-                <a href={`#${link.toLowerCase().replace(/\s+/g, "")}`}>
-                  {link}
-                </a>
+                <Link to={link.path} className="footer-link">
+                  {link.name}
+                </Link>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Contact Details */}
-        <div className="footer-contact">
-          <h4 className="footer-title">Kontakt</h4>
-          {contactDetails.map((item, index) => (
-            <p key={index} className="footer-contact-text">
-              {item.text}
-            </p>
-          ))}
-        </div>
-
-        {/* Social Media */}
+        {/* Social Media Section */}
         <div className="footer-social">
-          <h4 className="footer-title">Pratite Nas</h4>
+          <h4 className="footer-title">{socialMedia.title}</h4>
           <div className="social-icons">
             {socialIcons.map((icon, index) => (
               <a
@@ -88,10 +80,7 @@ const Footer = ({ data }) => {
 
       {/* Bottom Section */}
       <div className="footer-bottom">
-        <p className="footer-copy">
-          &copy; {new Date().getFullYear()} Vortex Digital Agency. Sva prava
-          zadržana.
-        </p>
+        <p className="footer-copy">{copy}</p>
       </div>
     </footer>
   );

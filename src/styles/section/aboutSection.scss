@@ -4,92 +4,61 @@
   display: flex;
   flex-direction: row;
   height: 170vh;
-  padding: 8rem;
-  width: 100vw;
-  gap: 6rem;
+  padding: 10%;
+  gap: 15%;
   position: relative;
 
   .subtitle-container {
-    position: sticky;
-    top: 25%;
-    align-self: flex-start;
     width: 40%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    position: relative; // Fixed pinning behavior
+    top: 0;
 
     h2 {
-      font-family: $secondaryFont;
+      font-family: $primaryFont;
       font-size: 50px;
-      font-weight: 400;
-      color: $textTertiary;
-      text-transform: uppercase;
-      margin-bottom: 2rem;
+      font-weight: 800;
+      color: $textSecondary;
+      margin-bottom: 1.5rem;
     }
 
     p {
-      font-family: $secondaryFont;
-      font-size: 30px;
-      line-height: 1.4;
-      font-weight: 200;
+      font-family: $primaryFont;
+      font-size: 20px;
+      font-weight: 300;
+      color: $textPrimary;
+      line-height: 1.6;
       font-style: italic;
-      color: $textLightContrast;
-      width: 90%;
-      margin-bottom: 2rem;
-    }
-
-    .vertical-line {
-      position: absolute;
-      margin-left: 2rem;
-      top: 0;
-      left: calc(100% - 1rem);
-      width: 4px;
-      height: 90%;
-      background: $textTertiaryTransparent;
-      z-index: -1;
-    }
-
-    .ball {
-      position: absolute;
-      top: 0;
-      left: calc(100% + 0.2rem);
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: $gradient;
-      z-index: 1;
-      transform: translateY(0);
     }
   }
 
   .reasons-container {
     display: flex;
-    width: 50%;
     flex-direction: column;
-    gap: 2rem;
-    margin-top: 50px;
+    width: 45%;
+    gap: 8rem;
 
     .reason {
-      background-color: transparent;
-      padding: 2rem;
       opacity: 0;
       transform: translateY(50px);
-      transition: transform 0.3s ease, opacity 0.3s ease;
+      transition: transform 0.5s ease, opacity 0.5s ease;
 
       h3 {
-        font-family: $secondaryFont;
-        font-size: 40px;
-        letter-spacing: 1px;
+        font-family: $primaryFont;
+        font-size: 30px;
+        text-transform: capitalize;
         color: $textPrimary;
-        margin-bottom: 2rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
       }
 
       p {
-        font-family: $primaryFont;
+        font-family: $secondaryFont;
         font-size: 20px;
-        font-weight: 300;
-        line-height: 1.3;
         color: $textLightContrast;
+        line-height: 1.4;
+        font-weight: 300;
       }
     }
   }

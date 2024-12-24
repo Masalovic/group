@@ -3,8 +3,7 @@
 .footer-container {
   background-color: #1d1d1d;
   color: $textPrimary;
-  padding: 2rem 1.5rem;
-
+  padding: 2.5rem 1.5rem;
   display: flex;
   flex-direction: column;
 
@@ -14,9 +13,9 @@
     align-items: flex-start;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 1200px;
-    margin-bottom: 2rem;
-    gap: 4rem;
+    max-width: 1400px;
+    margin-bottom: 1rem;
+    gap: 5rem;
     padding: 0 4rem;
 
     .footer-brand,
@@ -25,15 +24,14 @@
     .footer-social {
       flex: 1;
       text-align: left;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
 
       .footer-title {
-        font-size: 28px;
-        letter-spacing: 1px;
+        font-size: 22px;
         font-family: $secondaryFont;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
         color: $textSecondary;
-        font-weight: 600;
+        font-weight: 400;
       }
 
       .footer-links {
@@ -45,7 +43,7 @@
 
           a {
             color: $textLightContrast;
-            font-family: $primaryFont;
+            font-family: $secondaryFont;
             font-size: 16px;
             font-weight: 300;
             text-decoration: none;
@@ -61,7 +59,7 @@
       .footer-contact-text {
         color: $textLightContrast;
         margin-bottom: 0.5rem;
-        font-family: $primaryFont;
+        font-family: $secondaryFont;
         font-size: 16px;
         font-weight: 300;
       }
@@ -78,7 +76,6 @@
 
           &:hover {
             filter: brightness(1);
-            transform: scale(1.1);
           }
         }
       }
@@ -87,12 +84,11 @@
     .footer-brand {
       .footer-logo {
         width: 200px;
-        margin-right: 4rem;
         margin-bottom: 2rem;
       }
 
       .footer-moto {
-        font-size: 24px;
+        font-size: 20px;
         font-family: $primaryFont;
         font-weight: 300;
         font-style: italic;
@@ -103,13 +99,14 @@
 
   .footer-bottom {
     border-top: 1px solid #333;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     width: 100%;
     text-align: center;
 
     .footer-copy {
-      font-size: 0.9rem;
+      font-size: 14px;
       color: $textLightContrast;
+      font-family: $secondaryFont;
     }
   }
 }

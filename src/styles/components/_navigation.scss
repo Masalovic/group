@@ -15,7 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.4rem 9.4rem;
+    padding: 0.4rem 6.4rem;
     overflow: hidden;
 
     .mobile {
@@ -31,7 +31,7 @@
         transition: transform 0.3s ease;
 
         &:hover {
-          transform: scale(1.1); /* Slight zoom on logo hover */
+          transform: scale(1.01); /* Slight zoom on logo hover */
         }
       }
     }
@@ -41,11 +41,10 @@
       justify-content: space-between;
       gap: 3rem;
 
-      .nav-link {
+      a {
         text-decoration: none;
         color: $textPrimary;
-        font-size: 18px;
-        letter-spacing: 1px;
+        font-size: 16px;
         font-family: $secondaryFont;
         position: relative;
 
@@ -91,7 +90,7 @@
         }
 
         img {
-          height: 30px;
+          height: 25px;
         }
       }
     }
@@ -118,80 +117,132 @@
 
 @media screen and (max-width: 1150px) {
   .navigation .navigation-container {
+    padding: 0.4rem 5.4rem;
     .nav-box-logo img {
-      width: 50px;
-      height: auto;
+      height: 32px;
     }
 
-    .nav-box-sections .nav-link {
-      font-size: 14px;
+    .nav-box-sections {
+      gap: 2rem;
     }
 
-    .nav-box-languages {
-      gap: 1rem;
+    .nav-box-languages button img {
+      height: 23px;
+    }
+  }
+}
 
-      button {
-        width: 50px;
+@media screen and (max-width: 950px) {
+  .navigation .navigation-container {
+    .nav-box-logo {
+      display: none;
+    }
 
-        img {
-          width: 25px;
-          height: auto;
-        }
+    .nav-box-sections {
+      gap: 1.5rem;
+
+      a {
+        font-size: 14px;
       }
     }
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
+  .navigation .navigation-container {
+    padding: 0.4rem 3.4rem;
+
+    .nav-box-languages {
+      gap: 1.2rem;
+      button img {
+        height: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
   .navigation {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: black; // Ensures background visibility on mobile
+    padding: 0.6rem 1.2rem;
+
     .navigation-container {
-      flex-direction: column;
-      align-items: flex-start;
-      margin: 0;
-      background-color: black;
-      width: 100;
-      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-      .mobile {
+      .nav-box-logo img {
+        display: none;
+      }
+
+      // Burger menu container
+      .nav-box-toggle {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-
-        .nav-box-logo {
-          display: flex;
-        }
-      }
-
-      .nav-box-logo {
-        display: none;
-      }
-
-      .nav-box-sections {
-        display: none;
         flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        width: 100%;
-        gap: 2rem;
-        padding: 2rem 0;
+        background: none;
+        border: none;
+        transition: transform 0.3s ease;
+        cursor: pointer;
 
-        &.open {
-          display: flex;
+        .burger-icon {
+          height: 28px;
+          transition: transform 0.3s ease;
 
-          .nav-box-languages {
-            display: flex;
+          &.active {
+            transform: rotate(0deg);
           }
         }
       }
 
-      .nav-box-languages {
-        display: none;
+      // Navigation links (dropdown)
+      .nav-box-sections {
+        display: none; // Hidden by default
+
+        &.open {
+          display: flex;
+          flex-direction: column;
+          position: fixed;
+          top: 60px;
+          left: 0;
+          width: 100%;
+          background-color: black;
+          padding: 1rem 0;
+          z-index: 999;
+
+          a {
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            padding: 0.8rem 0;
+            font-size: 16px;
+
+            &:hover {
+              color: #00b2df;
+            }
+          }
+        }
       }
 
-      .nav-box-toggle {
-        background-color: transparent;
-        border: none;
-        display: flex !important;
+      // Language box (always visible on mobile)
+      .nav-box-languages {
+        display: flex;
+        gap: 2rem;
+
+        button {
+          background: none;
+          border: none;
+          cursor: pointer;
+
+          img {
+            height: 20px;
+          }
+        }
       }
     }
   }

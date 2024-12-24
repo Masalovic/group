@@ -55,12 +55,8 @@ const ServiceSection = ({ data }) => {
         {/* Subtitle */}
         <div className="service-text">
           <div className="subtitle-container">
-            <h3 className="service-subtitle">{data.services.subtitle1}</h3>
-            <p className="service-description">
-              Izgradite brend koji se ističe, angažujte nove klijente i
-              unapredite svoj posao uz marketing rešenja prilagođena vašim
-              potrebama.
-            </p>
+            <h3 className="service-subtitle">{data.services.subtitle}</h3>
+            <p className="service-description">{data.services.description}</p>
             {/* <div className="subtitle-line"></div> */}
           </div>
         </div>

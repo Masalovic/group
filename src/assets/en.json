@@ -1,3 +1,4 @@
+
 {
   "navbar": [
     {
@@ -9,7 +10,7 @@
       "path": "/#about"
     },
     {
-      "name": "Portfolio",
+      "name": "Projects",
       "path": "/#portfolio"
     },
     {
@@ -22,70 +23,140 @@
     }
   ],
   "home": {
-    "title": "Vortex",
-    "subtitle": "Digital Marketing",
-    "text": "Whether you want to improve brand visibility, attract customers, or increase sales, we provide customized solutions that align with your unique goals.",
-    "button": "Contact"
-  },
-  "about": {
-    "title": "About Us",
-    "subtitle1": "Dedicated to your",
-    "subtitle2": "success and achieving business goals",
-    "text1": "Hello! We are a digital marketing agency built on dedication, creativity, and innovation. Our journey began with a simple mission: to help businesses thrive in the digital world.",
-    "text2": "We work closely with our clients to understand their needs, challenges, and goals. This partnership approach allows us to create customized strategies that not only meet but exceed expectations. With dedication and a focus on results, we are here to turn your vision into reality."
+    "subtitle": "Achieve your business goals",
+    "text": "Build a brand that stands out, engage new customers and grow your business with marketing solutions tailored to your needs.",
+    "button": "Schedule a free consultation"
   },
   "portfolio": {
     "marquee": "Design - Development - SEO - Marketing"
   },
-  "services": {
-    "title": "Services",
-    "subtitle1": "Digital",
-    "subtitle2": "Solutions",
-    "subtitle3": "from our offer",
-    "cardList": [
+  "about": {
+    "subtitle": "Who We Are?",
+    "text": "Universe Force is a team of problem solvers, strategists and technology enthusiasts who believe every business deserves the tools and expertise to thrive. We work with you to solve challenges, simplify your business and open up new opportunities for growth. With years of experience in business development, marketing and IT services, we understand the real challenges businesses face. Whether it's refining your strategy, improving efficiency or upgrading your technology, we're here to make things simpler and better.",
+    "reasons": [
       {
-        "title": "Design & Development",
-        "text": "Our web and graphic design services ensure that your website and visual identity are recognizable, modern, and functional, creating the best first impression for your users."
+        "title": "Simplicity",
+        "text": "We keep things simple: no jargon, no overcomplications — just clear, effective solutions."
       },
       {
-        "title": "SEO Process",
-        "text": "SEO strategies are designed to improve your website's ranking and direct organic traffic to your web address, ensuring that you are easily found."
+        "title": "Uniqueness",
+        "text": "We tailor everything to your needs, so you get exactly what works for your business."
       },
       {
-        "title": "Social Media Management",
-        "text": "Our social media services help you increase your reach and user engagement through targeted content and paid advertising."
-      },
-      {
-        "title": "Mobile Apps & Analytics",
-        "text": "We create customized mobile applications that provide a seamless experience across all devices, while data analytics turn complex information into actionable insights to optimize your strategies."
+        "title": "Support",
+        "text": "We're with you every step of the way, offering guidance and support whenever you need it."
       }
-    ],
-    "quotation": [
-      "We take the time to understand your business, challenges, and goals and tailor our approach to your unique needs. Every project we undertake is an opportunity to make a difference, and we are committed to delivering exceptional results.",
-      "Thank you for considering Vortex-MK as your digital marketing partner. We look forward to helping you achieve your digital marketing goals."
     ]
-  },
+    },
+    "services": {
+      "title": "usluge",
+      "subtitle": "Digitalna rešenja iz naše ponude",
+      "description": "We make technology simple, safe, and effective for your business. From setting up systems to creating custom tools, we handle all your IT needs so you can focus on growing your business.",
+      "cardList": [
+        {
+          "title": "Brand Development",
+          "text": "From creating a logo, coming up with striking messages that you want to convey to your customers and refreshing outdated branding to creating a precise marketing plan."
+        },
+        {
+          "title": "Market Research",
+          "text": "We provide insight into consumer behavior, competition and market trends, in order to create the most effective marketing campaigns."
+        },
+        {
+          "title": "Digital Marketing",
+          "text": "We create a positive digital presence and greater visibility on all platforms. By running social networks, creating and promoting quality content, organically and through PPC ads, we connect you with new clients and open new markets."
+        },
+        {
+          "title": "Offline Marketing",
+          "text": "We increase the visibility of your brand through event marketing, print campaigns and direct contact with clients."
+        },
+        {
+          "title": "Performance Analytics",
+          "text": "We monitor and improve campaigns; with the help of the obtained data, we perform A/B testing and create detailed reports."
+        }
+      ]
+    },
   "contact": {
     "title": "Contact",
-    "subtitle1": "Whether you have a project in mind,",
-    "subtitle2": "need advice,",
-    "subtitle3": "or just want to learn more about what we can do for your business, our team is here",
-    "subtitle4": "to help you",
+    "description": "Discover how we can transform your brand and help you achieve your business goals. Our first consultation is completely free!",
     "infoCard": {
-      "cardTitle": "Contact Information",
-      "phoneNumber": "123412341234",
+      "cardTitle": "Contact Info",
+      "phoneNumber": "060 0000000",
       "email": "office@vortex-mk.com",
-      "location": "Serbia"
+      "location": "Vojvode Mišića 18, Novi Sad, Srbija"
     },
     "form": {
       "name": "Name",
-      "email": "Email Address",
+      "email": "Email address",
       "message": "Message",
       "button": "Send Message"
     }
   },
   "footer": {
-    "list": ["Design", "Development", "SEO", "Marketing"],
-    "text": "© 2024 Vortex-MK. All rights reserved."
+    "moto": "Transforming Brands, Building Futures.",
+    "copy": "© 2024 UniverseForce. All rights reserved.",
+    "contact": [
+      {
+        "title": "Contact",
+        "phone": "060 0000000",
+        "email": "office@universeforcegroup.com",
+        "address": "Vojvode Mišića, Beograd, Srbija"
+      },
+      {
+        "title": "Links",
+        "links": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Services",
+            "path": "/#services"
+          },
+          {
+            "name": "About",
+            "path": "/#about"
+          },
+          {
+            "name": "Projects",
+            "path": "/#portfolio"
+          },
+          {
+            "name": "Contact",
+            "path": "/#contact"
+          }
+        ]
+      },
+      {
+        "title": "Follow Us",
+       "socialIcons": [
+          {
+            "img": "FacebookIcon",
+            
+            "alt": "Facebook"
+          },
+          {
+            "img": "LinkedInIcon",
+            "url": "https://www.linkedin.com/company/universe-force-entertainment/",
+            "alt": "LinkedIn"
+          },
+          {
+            "img": "instagramIcon",
+            "url": "https://www.instagram.com/vortex_mk/",
+            "alt": "Instagram"
+          },
+          {
+            "img": "EmailIcon",
+            "url": "mailto:office@universeforcegroup.com",
+            "alt": "Email"
+          },
+          {
+            "img": "WhatsAppIcon",
+            "url": "https://wa.me/066380847",
+            "alt": "WhatsApp"
+          }
+        ]
+      }
+    ]
   }
 }
+

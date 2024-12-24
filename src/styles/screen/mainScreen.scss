@@ -6,6 +6,7 @@
   align-items: stretch;
   cursor: default;
   background-color: $primaryColor;
+  overflow-x: hidden;
 }
 
 /* Custom scrollbar for WebKit browsers (e.g., Chrome, Edge, Safari) */

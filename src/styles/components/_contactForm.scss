@@ -12,19 +12,19 @@
     .input {
       height: 30px;
       padding: 8px;
-      font-size: 14px;
+      font-size: 16px;
       border: none;
       background: transparent;
       border-bottom: 1px solid $textTertiary;
-      font-family: $primaryFont;
+      font-family: $secondaryFont;
     }
 
     .submit-button {
-      font-family: $primaryFont;
-      font-weight: 300;
-      color: $textPrimary;
+      font-family: $secondaryFont;
+      font-weight: 400;
+      color: $primaryColor;
       font-size: 15px;
-      background-color: lighten($textTertiaryTransparent, 15%);
+      background-color: $textSecondary;
       border: none;
       padding: 0.6rem 1.4rem;
       width: auto;
@@ -41,8 +41,7 @@
 
     /* Hover Effect */
     .submit-button:hover {
-      background-color: $textTertiaryTransparent;
-      color: $primaryFont;
+      background-color: $textTertiary;
       transform: scale(1.02);
     }
 
@@ -51,11 +50,11 @@
       background: transparent;
       padding: 8px;
       border: none;
-      font-size: 14px;
+      font-size: 16px;
       overflow: hidden;
       resize: none;
       border-bottom: 1px solid $textTertiary;
-      font-family: $primaryFont;
+      font-family: $secondaryFont;
     }
   }
 }

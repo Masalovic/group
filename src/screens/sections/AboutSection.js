@@ -1,60 +1,49 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "../../styles/section/aboutSection.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutSection = ({ data }) => {
   const sectionRef = useRef(null);
   const reasonsRef = useRef(null);
-  const ballRef = useRef(null);
-  const lineRef = useRef(null);
+  const subtitleRef = useRef(null);
 
   useEffect(() => {
     const section = sectionRef.current;
     const reasons = reasonsRef.current;
-    const ball = ballRef.current;
-    const line = lineRef.current;
+    const subtitle = subtitleRef.current;
 
-    if (!section || !reasons || !ball || !line) return;
+    if (!section || !reasons || !subtitle) return;
 
-    // Animate the reasons individually
-    Array.from(reasons.children).forEach((reason, index) => {
+    const reasonsList = gsap.utils.toArray(".reason");
+
+    // Pin the subtitle container
+    ScrollTrigger.create({
+      trigger: subtitle,
+      start: "top 25%",
+      end: "bottom 80%",
+      pin: true,
+      scrub: true,
+    });
+
+    // Animate the reasons on scroll
+    reasonsList.forEach((reason, index) => {
       gsap.fromTo(
         reason,
-        { opacity: 0, y: 50 },
+        { opacity: 0, y: 60 },
         {
           opacity: 1,
           y: 0,
           scrollTrigger: {
             trigger: reason,
-            start: `top+=${index * 40} center`,
-            end: `+=100`,
+            start: "top bottom-=100",
+            end: "top center",
             scrub: 1.5,
           },
         }
       );
-    });
-
-    // Animate the ball and line
-    gsap.to(ball, {
-      y: () => `${line.offsetHeight - ball.offsetHeight}px`, // Move ball down to bottom of the line
-      scrollTrigger: {
-        trigger: section,
-        start: "top top",
-        end: () => `bottom+=${window.innerHeight}`,
-        scrub: 1,
-        onUpdate: (self) => {
-          // Calculate the progress of the ball
-          const progress = self.progress;
-
-          if (progress >= 1) {
-            ball.style.opacity = 0; // Hide ball at the end
-          } else {
-            ball.style.opacity = 1; // Keep ball visible
-          }
-        },
-      },
     });
 
     return () => {
@@ -65,13 +54,9 @@ const AboutSection = ({ data }) => {
   return (
     <div className="about-section" ref={sectionRef}>
       {/* Sticky Subtitle */}
-      <div className="subtitle-container">
+      <div className="subtitle-container" ref={subtitleRef}>
         <h2>{data.about.subtitle}</h2>
         <p>{data.about.text}</p>
-        {/* Vertical Line */}
-        <div className="vertical-line" ref={lineRef}></div>
-        {/* Moving Ball */}
-        <div className="ball" ref={ballRef}></div>
       </div>
 
       {/* Reasons */}
