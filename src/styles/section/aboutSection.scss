@@ -67,14 +67,13 @@
 
 @media screen and (max-width: 1150px) {
   .about-section {
+    height: 120hv;
     flex-direction: column;
-    height: auto;
     padding: 5%;
     gap: 5%;
 
     .subtitle-container {
       width: 100%;
-      margin-bottom: 2rem;
       text-align: center;
 
       h2 {
@@ -90,45 +89,51 @@
 
     .reasons-container {
       width: 100%;
-      gap: 5rem;
+      gap: 4rem;
+      align-items: center;
+      text-align: center;
 
       .reason {
         h3 {
-          font-size: 26px;
+          font-size: 24px;
+          font-weight: 600;
         }
 
         p {
+          width: 550px;
           font-size: 18px;
         }
       }
     }
   }
 }
-// Responsive for screen widths 550px and below
+
 @media screen and (max-width: 550px) {
   .about-section {
+    height: 180vh;
     padding: 5%;
-    gap: 2rem;
+    gap: 8rem;
 
     .subtitle-container {
+      align-items: center;
       h2 {
         font-size: 32px;
       }
 
       p {
+        width: 95%;
         font-size: 16px;
       }
     }
 
     .reasons-container {
-      gap: 3rem;
-
       .reason {
         h3 {
           font-size: 22px;
         }
 
         p {
+          width: 300px;
           font-size: 16px;
         }
       }

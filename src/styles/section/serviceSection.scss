@@ -107,6 +107,15 @@
     }
     .service-text {
       width: 15%;
+
+      .subtitle-container {
+        .service-subtitle {
+          font-size: 30px;
+        }
+        .service-description {
+          font-size: 16px;
+        }
+      }
     }
   }
 }

@@ -93,22 +93,19 @@
     top: 0px;
     left: 0px;
   }
-
-  @media (min-width: 768px) {
-    .home-button {
-      padding: 13px 50px 13px;
-    }
-  }
 }
 
 @media screen and (max-width: 1150px) {
   .home-section {
     .depth-layer {
       width: 25%;
-      left: 65%;
+      left: 70%;
     }
     .home-container {
-      width: 40%;
+      width: 50%;
+      .home-subtitle {
+        font-size: 50px;
+      }
     }
   }
 }
@@ -126,8 +123,26 @@
     .home-container {
       width: 60%;
       .home-subtitle {
-        font-size: 50px;
+        font-size: 40px;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .home-section {
+    .home-container {
+      width: 60%;
+      .home-subtitle {
+        font-size: 30px;
+      }
+      .home-text {
+        font-size: 16px;
+      }
+    }
+    .home-button {
+      padding: 10px 15px 10px;
+      font-size: 12px;
     }
   }
 }
