@@ -1,7 +1,10 @@
+@use "../config/base" as *;
+
 .navigation {
   position: fixed;
   top: 0;
   width: 100vw;
+  background-color: rgba(0, 0, 0, 0.9);
 
   z-index: 1000;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -47,25 +50,21 @@
         font-size: 16px;
         font-family: $secondaryFont;
         position: relative;
+      }
+      a::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: $textSecondary;
+        transition: transform 0.25s ease-out;
+      }
 
-        // &:hover {
-        //   color: $textLightContrast;
-        // }
-
-        &::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: -3px;
-          width: 0;
-          height: 0.8px;
-          background-color: $textSecondary;
-          transition: width 0.3s ease;
-        }
-
-        &:hover::after {
-          width: 100%;
-        }
+      a:hover::after {
+        transform: scaleX(1);
       }
 
       .nav-box-languages {

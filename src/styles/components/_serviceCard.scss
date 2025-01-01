@@ -31,9 +31,9 @@
   }
   .top-container {
     .card-title {
-      font-family: $primaryFont;
+      font-family: $secondaryFont;
       font-size: 34px;
-      font-weight: 500;
+      font-weight: 600;
       color: $textSecondary;
     }
   }
@@ -55,28 +55,32 @@
 
 @media screen and (max-width: 1150px) {
   .service-card {
-    padding: 1.2rem;
+    height: 300px;
 
-    .top-container {
-      padding-bottom: 1rem;
-      justify-content: space-evenly;
-
-      .card-title {
-        font-size: 14px;
-        font-weight: 600;
-      }
+    .top-container .card-title {
+      font-size: 32px;
     }
 
     .bottom-container {
-      font-size: 14px;
+      padding-top: 1rem;
     }
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   .service-card {
-    width: 50vw; /* Make each card full width */
-    flex-shrink: 0; /* Prevent cards from shrinking */
-    scroll-snap-align: start; /* Ensure each card snaps to start */
+    height: 280px;
+    width: 400px;
+
+    .top-container .card-title {
+      font-size: 26px;
+    }
+
+    .bottom-container {
+      padding-top: 0.5rem;
+      .card-details {
+        font-size: 18px;
+      }
+    }
   }
 }

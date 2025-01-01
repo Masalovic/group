@@ -66,7 +66,7 @@
     font-weight: 400;
     padding: 13px 20px 13px;
     outline: 0;
-    border: 1px solid rgb(110, 110, 110);
+    border: 1px solid $textTertiary;
     cursor: pointer;
     position: relative;
     background-color: rgba(0, 0, 0, 0);
@@ -99,101 +99,34 @@
       padding: 13px 50px 13px;
     }
   }
-
-  // .home-button {
-  //   font-family: $secondaryFont;
-  //   font-weight: 300;
-  //   color: $textPrimary;
-  //   font-size: 15px;
-  //   background-color: lighten($textTertiary, 15%);
-
-  //   border: none;
-  //   padding: 0.8rem 1.4rem;
-  //   width: auto;
-  //   cursor: pointer;
-  //   position: relative;
-  //   overflow: hidden;
-  //   display: inline-flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   gap: 0.5rem;
-  //   transition: all 0.3s ease;
-  //   transform-origin: left center;
-  // }
-
-  // .home-button::after {
-  //   content: "→";
-  //   font-size: 16px;
-  //   color: $textPrimary;
-  //   position: relative;
-  //   transition: transform 0.3s ease, opacity 0.3s ease;
-  //   transform: translateX(0);
-  //   opacity: 1;
-  // }
-
-  // /* Hover Effect */
-  // .home-button:hover {
-  //   background-color: $textTertiary;
-  //   color: $primaryFont;
-  //   transform: scale(1.02);
-  // }
-
-  // /* Move arrow on hover */
-  // .home-button:hover::after {
-  //   transform: translateX(5px);
-  //   opacity: 1;
-  // }
 }
 
-@media screen and (max-width: 1050px) {
-  .home-section .home-container {
-    width: 50%;
+@media screen and (max-width: 1150px) {
+  .home-section {
+    .depth-layer {
+      width: 25%;
+      left: 65%;
+    }
+    .home-container {
+      width: 40%;
+    }
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 900px) {
   .home-section {
-    height: 80vh;
+    background-image: url(../../assets/images/HomeBckg.png);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
 
+    .depth-layer {
+      display: none;
+    }
     .home-container {
-      display: flex;
-      flex-direction: column;
-      width: 100vw;
-      margin: 0;
-      padding: 0;
-
-      .home-title {
-        font-size: 4rem;
-        text-transform: uppercase;
-        color: $textPrimary;
-        font-family: Plus Jakarta Sans;
-        font-weight: 600;
-        letter-spacing: 10px;
-        padding: 0 10%;
-      }
-
+      width: 60%;
       .home-subtitle {
-        padding: 0 10%;
-        font-size: 2.2rem;
-        text-transform: capitalize;
-        color: $textTertiary;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        font-family: Plus Jakarta Sans;
-        font-weight: 300;
-      }
-
-      .home-text {
-        padding: 0 10%;
-        font-size: 18px;
-        margin-top: 1rem;
-        letter-spacing: 0;
-        font-weight: 500;
-      }
-
-      .home-button {
-        margin: 4% 10%;
-        width: 50%;
+        font-size: 50px;
       }
     }
   }

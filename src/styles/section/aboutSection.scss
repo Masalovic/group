@@ -64,3 +64,74 @@
     }
   }
 }
+
+@media screen and (max-width: 1150px) {
+  .about-section {
+    flex-direction: column;
+    height: auto;
+    padding: 5%;
+    gap: 5%;
+
+    .subtitle-container {
+      width: 100%;
+      margin-bottom: 2rem;
+      text-align: center;
+
+      h2 {
+        font-size: 44px;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 18px;
+        font-style: normal;
+      }
+    }
+
+    .reasons-container {
+      width: 100%;
+      gap: 5rem;
+
+      .reason {
+        h3 {
+          font-size: 26px;
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+// Responsive for screen widths 550px and below
+@media screen and (max-width: 550px) {
+  .about-section {
+    padding: 5%;
+    gap: 2rem;
+
+    .subtitle-container {
+      h2 {
+        font-size: 32px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .reasons-container {
+      gap: 3rem;
+
+      .reason {
+        h3 {
+          font-size: 22px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

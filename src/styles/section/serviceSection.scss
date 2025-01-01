@@ -28,16 +28,17 @@
     flex-direction: column;
     align-items: flex-start;
     margin: 0 10%;
-    padding-top: 4rem;
+    padding-top: 6rem;
 
     .service-text {
       padding-bottom: 2rem;
+      width: 30%;
+
       .subtitle-container {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
-        width: 45%;
 
         .service-subtitle {
           font-weight: 600;
@@ -56,13 +57,6 @@
           margin: 1rem 0;
           font-weight: 400;
         }
-
-        // .subtitle-line {
-        //   height: 1px;
-        //   background-color: $textSecondary;
-        //   margin-top: 0.5rem;
-        //   width: 78%;
-        // }
       }
     }
 
@@ -81,6 +75,38 @@
 
     .service-cards::-webkit-scrollbar {
       display: none; /* Chrome, Safari */
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .service-section .service-container {
+    padding-top: 7rem;
+    .service-text {
+      width: 25%;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .service-section .service-container .service-text {
+    width: 16%;
+
+    .subtitle-container .service-subtitle {
+      font-size: 40px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .service-section .service-container {
+    padding-top: 4rem;
+    .service-cards {
+      padding: 1rem 0;
+    }
+    .service-text {
+      width: 15%;
     }
   }
 }
