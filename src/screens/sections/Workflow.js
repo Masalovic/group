@@ -39,7 +39,7 @@ const Workflow = () => {
       snap: {
         snapTo: 1 / (numSubsections - 1), // Snap to each subsection
         duration: 0.5, // Smooth snapping
-        ease: "power2.inOut", // Easing for the snapping animation
+        ease: "power2.in", // Easing for the snapping animation
       },
     });
 
