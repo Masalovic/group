@@ -1,8 +1,8 @@
 @use "../config/base" as *;
 
 .service-section {
-  background: url("../../assets/images/Offline1.jpg");
-  background-position: center;
+  background: url("../../assets/images/Brending.png");
+  background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -22,6 +22,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
   }
+
   .service-container {
     display: flex;
     flex-direction: column;

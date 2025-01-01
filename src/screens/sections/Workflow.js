@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import logo from "../../assets/images/BackgroundLogo.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../../styles/section/workflow.scss";
@@ -8,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Workflow = () => {
   const sectionRef = useRef(null);
   const containerRef = useRef(null);
-  const ballRef = useRef(null);
+  const logoRef = useRef(null);
   const wormPathRef = useRef(null);
 
   const totalLineWidth = 1520; // Define this outside useEffect so it's accessible in JSX
@@ -16,10 +17,10 @@ const Workflow = () => {
   useEffect(() => {
     const section = sectionRef.current;
     const container = containerRef.current;
-    const ball = ballRef.current;
+    const logoElement = logoRef.current;
     const wormPath = wormPathRef.current;
 
-    if (!section || !container || !ball || !wormPath) return;
+    if (!section || !container || !logoElement || !wormPath) return;
 
     const subsections = gsap.utils.toArray(".subsection");
     const subsectionWidth = window.innerWidth; // Each subsection's width
@@ -54,8 +55,8 @@ const Workflow = () => {
       },
     });
 
-    // Proportional movement for the ball
-    gsap.to(ball, {
+    // Proportional movement for the logo
+    gsap.to(logoElement, {
       x: () => {
         const stepSize = totalLineWidth / (numSubsections - 1);
         return `${stepSize * (numSubsections - 1)}px`;
@@ -67,8 +68,8 @@ const Workflow = () => {
         scrub: true,
         onUpdate: (self) => {
           const progress = self.progress; // Progress from 0 to 1
-          const ballX = progress * totalLineWidth; // Map progress to line width
-          ball.style.transform = `translate(${ballX}px, -50%)`; // Update ball position
+          const logoX = progress * totalLineWidth; // Map progress to line width
+          logoElement.style.transform = `translate(${logoX}px, -50%)`; // Update ball position
         },
       },
     });
@@ -91,32 +92,32 @@ const Workflow = () => {
             id="horizontal-worm-path"
             ref={wormPathRef}
             d={`M0 50 L${totalLineWidth} 50`} // Line spans the full width
-            stroke="rgb(35, 137, 181, 0.7)"
+            stroke="rgb(35, 137, 181, 0.3)"
             strokeWidth="4"
             fill="none"
           />
         </svg>
         <div
-          id="worm-ball"
-          ref={ballRef}
+          id="worm-logo"
+          ref={logoRef}
           style={{
-            width: "50px",
-            height: "50px",
-            borderRadius: "50%",
-            background: `
-      radial-gradient(circle at 30% 30%, #ffffff 10%, rgba(0, 178, 223, 0.6) 40%, rgba(35, 48, 75, 0.8) 80%, rgba(0, 0, 0, 0.8) 100%),
-      radial-gradient(circle at 70% 70%, rgba(0, 72, 255, 0.5), transparent)
-    `,
-            boxShadow: `
-      0px 0px 15px 10px rgba(0, 124, 255, 0.35), 
-      inset 0px 0px 10px 5px rgba(255, 255, 255, 0.6)
-    `,
             position: "absolute",
-            top: "70px",
+            top: "78px",
             left: "0",
             transform: "translate(-50%, -50%)",
           }}
-        ></div>
+        >
+          <img
+            src={logo}
+            alt="Logo"
+            style={{
+              width: "50px",
+              height: "50px",
+              borderRadius: "50%",
+              objectFit: "contain",
+            }}
+          />
+        </div>
       </div>
 
       {/* Subsections */}

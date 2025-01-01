@@ -31,7 +31,7 @@
         font-family: $secondaryFont;
         margin-bottom: 2rem;
         color: $textSecondary;
-        font-weight: 400;
+        font-weight: 300;
       }
 
       .footer-links {
@@ -69,8 +69,8 @@
         gap: 1rem;
 
         .social-icon {
-          width: 35px;
-          height: 35px;
+          width: 30px;
+          height: 30px;
           filter: brightness(0.8);
           transition: filter 0.3s, transform 0.3s;
 
