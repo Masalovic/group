@@ -73,6 +73,9 @@
 
 @media screen and (max-width: 1150px) {
   .workflow-section {
+    .horizontal-worm-container #worm-logo {
+      display: none;
+    }
     .subsections-container .subsection {
       h3 {
         font-size: 30px;
@@ -86,10 +89,6 @@
 
 @media screen and (max-width: 550px) {
   .workflow-section {
-    .horizontal-worm-container #worm-logo {
-      display: none;
-    }
-
     .subsections-container {
       .subsection {
         h3 {
