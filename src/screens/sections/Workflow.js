@@ -12,8 +12,8 @@ const Workflow = ({ data }) => {
   const logoRef = useRef(null);
   const wormPathRef = useRef(null);
 
-  const totalLineWidth = 1520; // Define this outside useEffect so it's accessible in JSX
-
+  const totalLineWidth = window.innerWidth; // Define this outside useEffect so it's accessible in JSX
+  // const totalLineWidth = 1520;
   useEffect(() => {
     const section = sectionRef.current;
     const container = containerRef.current;
@@ -89,28 +89,14 @@ const Workflow = ({ data }) => {
           id="horizontal-worm"
           xmlns="http://www.w3.org/2000/svg"
           viewBox={`0 0 ${totalLineWidth} 100`}
+          style={{ overflow: "visible" }}
         >
-          <defs>
-            <radialGradient
-              id="glowing-gradient"
-              cx="50%"
-              cy="50%"
-              r="50%"
-              fx="50%"
-              fy="50%"
-            >
-              <stop offset="0%" stopColor="rgba(0,178,223,1)" />
-              <stop offset="50%" stopColor="rgba(10,69,100,1)" />
-              <stop offset="100%" stopColor="rgba(0,0,0,1)" />
-            </radialGradient>
-          </defs>
           <path
             id="horizontal-worm-path"
             ref={wormPathRef}
-            d={`M0 50 L${totalLineWidth} 50`} // Line spans the full width
-            stroke="url(#glowing-gradient)"
+            d={`M0 50 L${totalLineWidth} 50`}
+            stroke="rgba(0, 178, 223, 0.22)"
             strokeWidth="4"
-            fill="none"
           />
         </svg>
         <div
@@ -118,7 +104,7 @@ const Workflow = ({ data }) => {
           ref={logoRef}
           style={{
             position: "absolute",
-            top: "78px",
+            top: "53px",
             left: "0",
             transform: "translate(-50%, -50%)",
           }}
