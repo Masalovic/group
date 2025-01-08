@@ -81,7 +81,7 @@
 
 @media screen and (max-width: 1050px) {
   .service-section .service-container {
-    padding-top: 7rem;
+    padding-top: 4rem;
     .service-text {
       width: 25%;
     }
@@ -90,11 +90,17 @@
 
 @media screen and (max-width: 950px) {
   .service-section .service-container .service-text {
-    width: 16%;
+    width: 18%;
 
-    .subtitle-container .service-subtitle {
-      font-size: 40px;
-      margin-bottom: 0;
+    .subtitle-container {
+      .service-subtitle {
+        font-size: 40px;
+        margin-bottom: 0;
+      }
+
+      .service-description {
+        font-size: 18px;
+      }
     }
   }
 }

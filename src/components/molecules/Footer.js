@@ -37,14 +37,6 @@ const Footer = ({ data }) => {
           <p className="footer-moto">{moto}</p>
         </div>
 
-        {/* Contact Details Section */}
-        <div className="footer-contact">
-          <h4 className="footer-title">{contactInfo.title}</h4>
-          <p className="footer-contact-text">{contactInfo.phone}</p>
-          <p className="footer-contact-text">{contactInfo.email}</p>
-          <p className="footer-contact-text">{contactInfo.address}</p>
-        </div>
-
         {/* Navigation Links Section */}
         <div className="footer-nav">
           <h4 className="footer-title">{quickLinks.title}</h4>
@@ -57,6 +49,14 @@ const Footer = ({ data }) => {
               </li>
             ))}
           </ul>
+        </div>
+
+        {/* Contact Details Section */}
+        <div className="footer-contact">
+          <h4 className="footer-title">{contactInfo.title}</h4>
+          <p className="footer-contact-text">{contactInfo.phone}</p>
+          <p className="footer-contact-text">{contactInfo.email}</p>
+          <p className="footer-contact-text">{contactInfo.address}</p>
         </div>
 
         {/* Social Media Section */}

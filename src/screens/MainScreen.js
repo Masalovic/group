@@ -46,7 +46,7 @@ class MainPage extends React.PureComponent {
           <PortfolioSection data={data} />
         </section>
         <section id="workflow">
-          <Workflow />
+          <Workflow data={data} />
         </section>
         <section id="client">
           <ClientBanner />

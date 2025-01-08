@@ -2,10 +2,17 @@ import React, { useState } from "react";
 import logo from "../../assets/images/logo.png";
 import sr from "../../assets/icons/sr.png";
 import uk from "../../assets/icons/uk.png";
-import burger from "../../assets/icons/burger.png";
 
 const Navigation = ({ data, onLanguageChange }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const handleToggleMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleCloseMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <div className="navigation">
@@ -17,26 +24,19 @@ const Navigation = ({ data, onLanguageChange }) => {
 
         {/* Burger Menu */}
         <button
-          className="nav-box-toggle"
-          onClick={() => {
-            if (isMobileMenuOpen) {
-              setIsMobileMenuOpen(false); // Close the menu and reset position
-            } else {
-              setIsMobileMenuOpen(true);
-            }
-          }}
+          className={`nav-box-toggle ${isMobileMenuOpen ? "open" : ""}`}
+          onClick={handleToggleMenu}
+          aria-label="Toggle menu"
         >
-          <img
-            src={burger}
-            alt="Menu"
-            className={`burger-icon ${isMobileMenuOpen ? "rotated" : ""}`}
-          />
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
         </button>
 
         {/* Navigation Links */}
         <div className={`nav-box-sections ${isMobileMenuOpen ? "open" : ""}`}>
           {data.navbar.map((item) => (
-            <a href={item.path} key={item.name}>
+            <a href={item.path} key={item.name} onClick={handleCloseMenu}>
               {item.name}
             </a>
           ))}

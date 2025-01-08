@@ -34,3 +34,15 @@
     transform: translateX(-50%); /* Stay off the left end of the screen */
   }
 }
+
+@media screen and (max-width: 950px) {
+  .marquee .marquee-content span {
+    font-size: 140px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .marquee .marquee-content span {
+    font-size: 80px;
+  }
+}

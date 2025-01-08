@@ -13,21 +13,20 @@
     align-items: flex-start;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 1400px;
+
     margin-bottom: 1rem;
-    gap: 5rem;
-    padding: 0 4rem;
+    gap: 2rem;
+    padding: 0 2rem;
 
     .footer-brand,
     .footer-nav,
     .footer-contact,
     .footer-social {
-      flex: 1;
       text-align: left;
       margin-bottom: 1rem;
 
       .footer-title {
-        font-size: 22px;
+        font-size: 20px;
         font-family: $secondaryFont;
         margin-bottom: 2rem;
         color: $textSecondary;
@@ -44,7 +43,7 @@
           a {
             color: $textLightContrast;
             font-family: $secondaryFont;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 300;
             text-decoration: none;
             transition: color 0.3s ease;
@@ -60,7 +59,7 @@
         color: $textLightContrast;
         margin-bottom: 0.5rem;
         font-family: $secondaryFont;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 300;
       }
 
@@ -69,8 +68,8 @@
         gap: 1rem;
 
         .social-icon {
-          width: 30px;
-          height: 30px;
+          width: 25px;
+          height: 25px;
           filter: brightness(0.8);
           transition: filter 0.3s, transform 0.3s;
 
@@ -83,12 +82,14 @@
 
     .footer-brand {
       .footer-logo {
-        width: 200px;
+        width: 160px;
         margin-bottom: 2rem;
       }
 
       .footer-moto {
-        font-size: 20px;
+        font-size: 18px;
+        line-height: 1.4;
+        white-space: pre-line;
         font-family: $primaryFont;
         font-weight: 300;
         font-style: italic;
@@ -107,6 +108,131 @@
       font-size: 14px;
       color: $textLightContrast;
       font-family: $secondaryFont;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .footer-container {
+    .footer-top {
+      .footer-contact,
+      .footer-nav,
+      .footer-social {
+        .footer-title {
+          font-size: 18px;
+        }
+      }
+      .footer-contact .footer-contact-text {
+        font-size: 14px;
+      }
+
+      .footer-nav .footer-links .footer-link-item a {
+        font-size: 14px;
+      }
+
+      .footer-social .social-icons {
+        gap: 10px;
+        flex-direction: row;
+
+        .social-icon {
+          width: 22px;
+          height: 22px;
+        }
+      }
+    }
+
+    .footer-bottom {
+      .footer-copy {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .footer-container {
+    .footer-top {
+      gap: 2rem;
+      justify-content: space-around;
+      .footer-brand {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .footer-container {
+    .footer-top {
+      padding: 0 1rem;
+
+      .footer-contact,
+      .footer-nav,
+      .footer-social {
+        .footer-title {
+          font-size: 16px;
+        }
+      }
+
+      .footer-contact .footer-contact-text {
+        font-size: 13px;
+      }
+
+      .footer-nav .footer-links .footer-link-item a {
+        font-size: 13px;
+      }
+
+      .footer-social .social-icons {
+        gap: 4px;
+        flex-direction: column;
+
+        .social-icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .footer-container {
+    .footer-top {
+      flex-direction: column;
+      align-items: center;
+
+      .footer-nav {
+        display: none;
+      }
+
+      .footer-contact {
+        text-align: center;
+
+        .footer-title {
+          font-size: 20px;
+        }
+
+        .footer-contact-text {
+          font-size: 15px;
+        }
+      }
+
+      .footer-social {
+        .footer-title {
+          font-size: 20px;
+          text-align: center;
+        }
+        .social-icons {
+          gap: 10px;
+          align-items: center;
+          flex-direction: row;
+
+          .social-icon {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
     }
   }
 }

@@ -8,20 +8,34 @@
     // background-color: $secondaryColor;
 
     img {
-      width: 150px;
+      width: 140px;
     }
   }
 }
 
-@media screen and (max-width: 1050px) {
-  .logo-list .logo-wrapper img {
-    width: 120px;
+@media screen and (max-width: 1150px) {
+  .logo-list {
+    padding: 2rem;
+    .logo-wrapper img {
+      width: 110px;
+    }
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 900px) {
+  .logo-list {
+    padding: 1rem;
+
+    .logo-wrapper img {
+      width: 90px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
   .logo-list {
     flex-wrap: wrap;
-    gap: 40px;
+    justify-content: center;
+    gap: 30px;
   }
 }

@@ -131,6 +131,9 @@
 
 @media screen and (max-width: 550px) {
   .home-section {
+    background-image: none;
+    align-items: center;
+    text-align: center;
     .home-container {
       width: 60%;
       .home-subtitle {

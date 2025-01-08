@@ -6,7 +6,7 @@ import "../../styles/section/workflow.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Workflow = () => {
+const Workflow = ({ data }) => {
   const sectionRef = useRef(null);
   const containerRef = useRef(null);
   const logoRef = useRef(null);
@@ -69,7 +69,7 @@ const Workflow = () => {
         onUpdate: (self) => {
           const progress = self.progress; // Progress from 0 to 1
           const logoX = progress * totalLineWidth; // Map progress to line width
-          logoElement.style.transform = `translate(${logoX}px, -50%)`; // Update ball position
+          logoElement.style.transform = `translate(${logoX}px, -50%)`; // Update logo position
         },
       },
     });
@@ -78,6 +78,8 @@ const Workflow = () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, [totalLineWidth]);
+
+  const workflowData = data.workflow || [];
 
   return (
     <div ref={sectionRef} className="workflow-section">
@@ -122,32 +124,7 @@ const Workflow = () => {
 
       {/* Subsections */}
       <div ref={containerRef} className="subsections-container">
-        {[
-          {
-            title: "Consultation",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet orci quam. Nam ornare, orci a consequat ornare, nunc tellus faucibus elit, non lobortis nisi nulla quis nunc. Nam at interdum felis, eu hendrerit justo. Suspendisse iaculis mi et sapien suscipit, eget ornare mauris aliquet. Quisque elementum elementum commodo.",
-          },
-          {
-            title: "Proposal with Offer",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet orci quam. Nam ornare, orci a consequat ornare, nunc tellus faucibus elit, non lobortis nisi nulla quis nunc. Nam at interdum felis, eu hendrerit justo. Suspendisse iaculis mi et sapien suscipit, eget ornare mauris aliquet. Quisque elementum elementum commodo.",
-          },
-          {
-            title: "Onboarding",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet orci quam. Nam ornare, orci a consequat ornare, nunc tellus faucibus elit, non lobortis nisi nulla quis nunc. Nam at interdum felis, eu hendrerit justo. Suspendisse iaculis mi et sapien suscipit, eget ornare mauris aliquet. Quisque elementum elementum commodo.",
-          },
-          {
-            title: "Design",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet orci quam. Nam ornare, orci a consequat ornare, nunc tellus faucibus elit, non lobortis nisi nulla quis nunc. Nam at interdum felis, eu hendrerit justo. Suspendisse iaculis mi et sapien suscipit, eget ornare mauris aliquet. Quisque elementum elementum commodo.",
-          },
-          {
-            title: "Development",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet orci quam. Nam ornare, orci a consequat ornare, nunc tellus faucibus elit, non lobortis nisi nulla quis nunc. Nam at interdum felis, eu hendrerit justo. Suspendisse iaculis mi et sapien suscipit, eget ornare mauris aliquet. Quisque elementum elementum commodo.",
-          },
-          {
-            title: "Outboarding",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet orci quam. Nam ornare, orci a consequat ornare, nunc tellus faucibus elit, non lobortis nisi nulla quis nunc. Nam at interdum felis, eu hendrerit justo. Suspendisse iaculis mi et sapien suscipit, eget ornare mauris aliquet. Quisque elementum elementum commodo.",
-          },
-        ].map((subsection, index) => (
+        {workflowData.map((subsection, index) => (
           <div className="subsection" key={index}>
             <h3>{subsection.title}</h3>
             <p>{subsection.text}</p>

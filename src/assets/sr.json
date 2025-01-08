@@ -74,6 +74,32 @@
       }
     ]
   },
+  "workflow": [
+    {
+      "title": "Konsultacije",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet orci quam. Nam ornare, orci a consequat ornare, nunc tellus faucibus elit, non lobortis nisi nulla quis nunc. Nam at interdum felis, eu hendrerit justo. Suspendisse iaculis mi et sapien suscipit, eget ornare mauris aliquet. Quisque elementum elementum commodo."
+    },
+    {
+      "title": "Predlog sa ponudom",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet orci quam. Nam ornare, orci a consequat ornare, nunc tellus faucibus elit, non lobortis nisi nulla quis nunc. Nam at interdum felis, eu hendrerit justo. Suspendisse iaculis mi et sapien suscipit, eget ornare mauris aliquet. Quisque elementum elementum commodo."
+    },
+    {
+      "title": "Onboarding",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet orci quam. Nam ornare, orci a consequat ornare, nunc tellus faucibus elit, non lobortis nisi nulla quis nunc. Nam at interdum felis, eu hendrerit justo. Suspendisse iaculis mi et sapien suscipit, eget ornare mauris aliquet. Quisque elementum elementum commodo."
+    },
+    {
+      "title": "Dizajn",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet orci quam. Nam ornare, orci a consequat ornare, nunc tellus faucibus elit, non lobortis nisi nulla quis nunc. Nam at interdum felis, eu hendrerit justo. Suspendisse iaculis mi et sapien suscipit, eget ornare mauris aliquet. Quisque elementum elementum commodo."
+    },
+    {
+      "title": "Development",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet orci quam. Nam ornare, orci a consequat ornare, nunc tellus faucibus elit, non lobortis nisi nulla quis nunc. Nam at interdum felis, eu hendrerit justo. Suspendisse iaculis mi et sapien suscipit, eget ornare mauris aliquet. Quisque elementum elementum commodo."
+    },
+    {
+      "title": "Outboarding",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet orci quam. Nam ornare, orci a consequat ornare, nunc tellus faucibus elit, non lobortis nisi nulla quis nunc. Nam at interdum felis, eu hendrerit justo. Suspendisse iaculis mi et sapien suscipit, eget ornare mauris aliquet. Quisque elementum elementum commodo."
+    }
+  ],
   "contact": {
     "title": "Kontakt",
     "description": "Otkrijte kako možemo transformisati vaš brend i pomoći vam da postignete poslovne ciljeve. Naša prva konsultacija je potpuno besplatna!",
@@ -91,7 +117,7 @@
     }
   },
   "footer": {
-    "moto": "Transformisanje Brendova, Izgradnja Budućnosti.",
+    "moto": "Transformisanje Brendova,\n Izgradnja Budućnosti.",
     "copy": "© 2024 UniverseForce. Sva prava zadržana.",
     "contact": [
       {

@@ -10,6 +10,7 @@
     gap: 2rem;
 
     .input {
+      color: $textPrimary;
       height: 30px;
       padding: 8px;
       font-size: 16px;
@@ -47,6 +48,7 @@
 
     .textarea {
       height: 30px;
+      color: $textPrimary;
       background: transparent;
       padding: 8px;
       border: none;
@@ -55,6 +57,48 @@
       resize: none;
       border-bottom: 1px solid $textTertiary;
       font-family: $secondaryFont;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .form-container {
+    width: 70%;
+
+    .form {
+      gap: 1.5rem;
+
+      .input,
+      .textarea {
+        font-size: 14px;
+        padding: 6px;
+      }
+
+      .submit-button {
+        font-size: 14px;
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .form-container {
+    width: 90%;
+
+    .form {
+      gap: 1rem;
+
+      .input,
+      .textarea {
+        font-size: 13px;
+        padding: 5px;
+      }
+
+      .submit-button {
+        font-size: 13px;
+        padding: 0.4rem 0.8rem;
+      }
     }
   }
 }
