@@ -3,8 +3,6 @@
 .workflow-section {
   position: relative;
   height: 100vh;
-  background-color: $primaryColor;
-  color: $textPrimary;
   overflow: hidden;
 
   .horizontal-worm-container {
@@ -13,6 +11,7 @@
     left: 0;
     width: 100vw;
     height: 150px;
+    z-index: 999;
 
     #horizontal-worm {
       width: 100%;
@@ -42,6 +41,10 @@
     position: absolute;
 
     .subsection {
+      background-image: url(../../assets/images/WorkflowBckg.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
       width: 100vw;
       height: 100vh;
       display: flex;

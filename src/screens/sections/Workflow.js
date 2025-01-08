@@ -90,11 +90,25 @@ const Workflow = ({ data }) => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox={`0 0 ${totalLineWidth} 100`}
         >
+          <defs>
+            <radialGradient
+              id="glowing-gradient"
+              cx="50%"
+              cy="50%"
+              r="50%"
+              fx="50%"
+              fy="50%"
+            >
+              <stop offset="0%" stopColor="rgba(0,178,223,1)" />
+              <stop offset="50%" stopColor="rgba(10,69,100,1)" />
+              <stop offset="100%" stopColor="rgba(0,0,0,1)" />
+            </radialGradient>
+          </defs>
           <path
             id="horizontal-worm-path"
             ref={wormPathRef}
             d={`M0 50 L${totalLineWidth} 50`} // Line spans the full width
-            stroke="rgb(35, 137, 181, 0.3)"
+            stroke="url(#glowing-gradient)"
             strokeWidth="4"
             fill="none"
           />

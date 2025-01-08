@@ -9,7 +9,7 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
   &.scrolled {
-    background-color: black;
+    background-color: $primaryColor;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow when scrolling */
   }
 
@@ -19,6 +19,10 @@
     justify-content: space-between;
     padding: 0.4rem 6.4rem;
     overflow: hidden;
+
+    .mobile {
+      display: none;
+    }
 
     .nav-box-logo {
       display: flex;
@@ -38,20 +42,6 @@
       display: flex;
       justify-content: space-between;
       gap: 3rem;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-
-      &.open {
-        display: block;
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        right: 0;
-        background: #1d1d1d;
-        width: 250px;
-        border-radius: 8px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-        padding: 1rem;
-      }
 
       a {
         text-decoration: none;
@@ -59,10 +49,25 @@
         font-size: 16px;
         font-family: $secondaryFont;
         position: relative;
+      }
+      a::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: $textSecondary;
+        transition: transform 0.25s ease-out;
+      }
 
-        &:hover {
-          color: $primaryColor;
-        }
+      a:hover::after {
+        transform: scaleX(1);
+      }
+
+      .nav-box-languages {
+        display: none;
       }
     }
 
@@ -174,7 +179,7 @@
     top: 0;
     width: 100%;
     z-index: 1000;
-    background-color: black; // Ensures background visibility on mobile
+    background-color: $primaryColor; // Ensures background visibility on mobile
     padding: 0.6rem 1.2rem;
 
     .navigation-container {
@@ -218,19 +223,19 @@
           top: 60px;
           left: 0;
           width: 100%;
-          background-color: black;
+          background-color: $primaryColor;
           padding: 1rem 0;
           z-index: 999;
 
           a {
-            color: white;
+            color: $textPrimary;
             text-align: center;
             text-decoration: none;
             padding: 0.8rem 0;
             font-size: 16px;
 
             &:hover {
-              color: #00b2df;
+              color: $textSecondary;
             }
           }
         }
