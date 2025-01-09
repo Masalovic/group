@@ -76,20 +76,20 @@
   },
   "workflow": [
     {
-      "title": "Konsultacije",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet orci quam. Nam ornare, orci a consequat ornare, nunc tellus faucibus elit, non lobortis nisi nulla quis nunc. Nam at interdum felis, eu hendrerit justo. Suspendisse iaculis mi et sapien suscipit, eget ornare mauris aliquet. Quisque elementum elementum commodo."
+      "title": "Besplatne konsultacije",
+      "text": "Počnimo razgovorom! Upoznaćemo se s vašim izazovima, istražiti rešenja i podeliti kako možemo da vam pomognemo – potpuno besplatno. Fokus je na razumevanju vaših ciljeva i postavljanju temelja za uspeh."
     },
     {
-      "title": "Predlog sa ponudom",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet orci quam. Nam ornare, orci a consequat ornare, nunc tellus faucibus elit, non lobortis nisi nulla quis nunc. Nam at interdum felis, eu hendrerit justo. Suspendisse iaculis mi et sapien suscipit, eget ornare mauris aliquet. Quisque elementum elementum commodo."
+      "title": "Ugovor",
+      "text": "Kada se usaglasimo, napravićemo jednostavan i jasan ugovor. U njemu ćete pronaći sve što vam treba – šta radimo, koliko traje i koliko košta – kako bismo započeli saradnju s poverenjem."
     },
     {
-      "title": "Onboarding",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet orci quam. Nam ornare, orci a consequat ornare, nunc tellus faucibus elit, non lobortis nisi nulla quis nunc. Nam at interdum felis, eu hendrerit justo. Suspendisse iaculis mi et sapien suscipit, eget ornare mauris aliquet. Quisque elementum elementum commodo."
+      "title": "Prototip",
+      "text": "Pogledajte kako vaše ideje oživljavaju! Pripremićemo prvu verziju za vašu recenziju, doradu i usavršavanje. Vaše povratne informacije osiguravaju da finalni rezultat odgovara vašim očekivanjima."
     },
     {
-      "title": "Dizajn",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet orci quam. Nam ornare, orci a consequat ornare, nunc tellus faucibus elit, non lobortis nisi nulla quis nunc. Nam at interdum felis, eu hendrerit justo. Suspendisse iaculis mi et sapien suscipit, eget ornare mauris aliquet. Quisque elementum elementum commodo."
+      "title": "Lansiranje",
+      "text": "Vreme je za akciju! Realizovaćemo vaš projekat i obezbediti da sve teče glatko. Nakon lansiranja, ostajemo tu za vas – za podršku i istraživanje novih načina da unapredimo vaš rast."
     }
   ],
   "contact": {
@@ -148,7 +148,7 @@
         "socialIcons": [
           {
             "img": "FacebookIcon",
-            
+
             "alt": "Facebook"
           },
           {

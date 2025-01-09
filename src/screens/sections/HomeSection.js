@@ -5,11 +5,14 @@ const HomeSection = ({ data }) => {
   useEffect(() => {
     // Initialize Lenis
     const lenis = new Lenis({
-      duration: 1.2, // Scrolling duration
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Smooth easing
-      direction: "vertical", // Vertical scroll
-      smooth: true, // Enable smooth scrolling
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      direction: "vertical",
+      smooth: true,
+      smoothTouch: true, // Enable smooth scrolling for touch devices
+      touchMultiplier: 1.5, // Adjust scrolling speed for touch
     });
+
 
     // Update scroll position on animation frame
     function raf(time) {

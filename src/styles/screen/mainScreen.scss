@@ -7,6 +7,7 @@
   cursor: default;
   background-color: $primaryColor;
   overflow-x: hidden;
+  overflow-y: auto; /* Ensure vertical scrolling is enabled */
 }
 
 /* Custom scrollbar for WebKit browsers (e.g., Chrome, Edge, Safari) */
