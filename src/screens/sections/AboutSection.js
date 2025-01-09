@@ -22,10 +22,12 @@ const AboutSection = ({ data }) => {
     // Pin the subtitle container
     ScrollTrigger.create({
       trigger: subtitle,
-      start: "top 25%",
-      end: "bottom 80%",
+      start: "top 40%",
+      end: "center center",
       pin: true,
       scrub: true,
+      overflow: "visible",
+      invalidateOnRefresh: true,
     });
 
     // Animate the reasons on scroll
@@ -38,13 +40,15 @@ const AboutSection = ({ data }) => {
           y: 0,
           scrollTrigger: {
             trigger: reason,
-            start: "top bottom-=100",
+            start: "top bottom-=50",
             end: "top center",
             scrub: 1.5,
           },
         }
       );
     });
+
+    ScrollTrigger.refresh();
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());

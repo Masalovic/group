@@ -1,37 +1,11 @@
-import React, { useEffect } from "react";
-import Lenis from "@studio-freight/lenis";
+import React from "react";
 
 const HomeSection = ({ data }) => {
-  useEffect(() => {
-    // Initialize Lenis
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      direction: "vertical",
-      smooth: true,
-      smoothTouch: true, // Enable smooth scrolling for touch devices
-      touchMultiplier: 1.5, // Adjust scrolling speed for touch
-    });
-
-
-    // Update scroll position on animation frame
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    // Clean up on component unmount
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
-
   const handleScrollToContact = (e) => {
     e.preventDefault(); // Prevent default anchor behavior
     const target = document.querySelector("#contact");
     if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
+      target.scrollIntoView({ behavior: "smooth" }); // Use native smooth scrolling
     }
   };
 

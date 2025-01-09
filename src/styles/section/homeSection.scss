@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .depth-layer {
@@ -18,7 +18,7 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden;
+  // overflow: hidden;
   opacity: 1;
   z-index: 2;
   animation: fadePattern 6s ease-in-out infinite;
@@ -131,7 +131,6 @@
 
 @media screen and (max-width: 550px) {
   .home-section {
-    background-image: none;
     align-items: center;
     text-align: center;
     .home-container {
@@ -141,11 +140,14 @@
       }
       .home-text {
         font-size: 16px;
+        font-weight: 500;
+        color: $textPrimary;
       }
     }
     .home-button {
       padding: 10px 15px 10px;
       font-size: 12px;
+      font-weight: 500;
     }
   }
 }

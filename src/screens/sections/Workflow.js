@@ -13,7 +13,7 @@ const Workflow = ({ data }) => {
   const wormPathRef = useRef(null);
 
   const totalLineWidth = window.innerWidth; // Define this outside useEffect so it's accessible in JSX
-  // const totalLineWidth = 1520;
+
   useEffect(() => {
     const section = sectionRef.current;
     const container = containerRef.current;
@@ -22,62 +22,62 @@ const Workflow = ({ data }) => {
 
     if (!section || !container || !logoElement || !wormPath) return;
 
-    const subsections = gsap.utils.toArray(".subsection");
-    const subsectionWidth = window.innerWidth; // Each subsection's width
-    const numSubsections = subsections.length;
+    const updateWorkflow = () => {
+      const subsections = gsap.utils.toArray(".subsection");
+      const subsectionWidth = window.innerWidth; // Each subsection's width
+      const numSubsections = subsections.length;
 
-    // Update the line's width to match the total scrollable width
-    wormPath.setAttribute("d", `M0 50 L${totalLineWidth} 50`);
+      const totalLineWidth = window.innerWidth;
+      wormPath.setAttribute("d", `M0 50 L${totalLineWidth} 50`);
 
-    // Pin the Workflow section and allow horizontal scrolling
-    ScrollTrigger.create({
-      trigger: section,
-      start: "top top",
-      end: () => `+=${numSubsections * subsectionWidth}`,
-      pin: true,
-      scrub: true,
-      snap: {
-        snapTo: 1 / (numSubsections - 1), // Snap to each subsection
-        duration: 0.5, // Smooth snapping
-        ease: "power2.in", // Easing for the snapping animation
-      },
-    });
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 
-    // Horizontal scroll for subsections
-    gsap.to(container, {
-      x: () => `-${(subsections.length - 1) * subsectionWidth}px`,
-      ease: "none",
-      scrollTrigger: {
+      // Pin the Workflow section
+      ScrollTrigger.create({
         trigger: section,
         start: "top top",
         end: () => `+=${numSubsections * subsectionWidth}`,
+        pin: true,
         scrub: true,
-      },
-    });
-
-    // Proportional movement for the logo
-    gsap.to(logoElement, {
-      x: () => {
-        const stepSize = totalLineWidth / (numSubsections - 1);
-        return `${stepSize * (numSubsections - 1)}px`;
-      },
-      scrollTrigger: {
-        trigger: section,
-        start: "top top",
-        end: () => `+=${numSubsections * subsectionWidth}`,
-        scrub: true,
-        onUpdate: (self) => {
-          const progress = self.progress; // Progress from 0 to 1
-          const logoX = progress * totalLineWidth; // Map progress to line width
-          logoElement.style.transform = `translate(${logoX}px, -50%)`; // Update logo position
+        snap: {
+          snapTo: 1 / (numSubsections - 1),
+          duration: 0.5,
+          ease: "power2.in",
         },
-      },
-    });
+      });
+
+      // Horizontal scroll for subsections
+      gsap.to(container, {
+        x: () => `-${(subsections.length - 1) * subsectionWidth}px`,
+        ease: "none",
+        scrollTrigger: {
+          trigger: section,
+          start: "top top",
+          end: () => `+=${numSubsections * subsectionWidth}`,
+          scrub: true,
+        },
+      });
+
+      // Logo movement
+      gsap.to(logoElement, {
+        x: () => `${totalLineWidth - logoElement.clientWidth}px`,
+        scrollTrigger: {
+          trigger: section,
+          start: "top top",
+          end: () => `+=${numSubsections * subsectionWidth}`,
+          scrub: true,
+        },
+      });
+    };
+
+    updateWorkflow();
+    window.addEventListener("resize", updateWorkflow);
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      window.removeEventListener("resize", updateWorkflow);
     };
-  }, [totalLineWidth]);
+  }, []);
 
   const workflowData = data.workflow || [];
 

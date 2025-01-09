@@ -76,20 +76,20 @@
   },
   "workflow": [
     {
-      "title": "Besplatne konsultacije",
-      "text": "Počnimo razgovorom! Upoznaćemo se s vašim izazovima, istražiti rešenja i podeliti kako možemo da vam pomognemo – potpuno besplatno. Fokus je na razumevanju vaših ciljeva i postavljanju temelja za uspeh."
+      "title": "Besplatne Konsultacije",
+      "text": "Počnimo sa razgovorom! Naučićemo o vašim izazovima, istražiti rešenja i objasniti kako možemo da vam pomognemo - sve to, besplatno. Sve je u razumevanju vaših ciljeva i postavljanju temelja za uspeh."
     },
     {
       "title": "Ugovor",
-      "text": "Kada se usaglasimo, napravićemo jednostavan i jasan ugovor. U njemu ćete pronaći sve što vam treba – šta radimo, koliko traje i koliko košta – kako bismo započeli saradnju s poverenjem."
+      "text": "Kada budemo na istoj stranici, izložićemo plan u jednostavnom, jasnom ugovoru. Ovo uključuje sve što treba da znate - isporuke, rokove i troškove; kako bismo mogli da počnemo sa poverenjem."
     },
     {
       "title": "Prototip",
-      "text": "Pogledajte kako vaše ideje oživljavaju! Pripremićemo prvu verziju za vašu recenziju, doradu i usavršavanje. Vaše povratne informacije osiguravaju da finalni rezultat odgovara vašim očekivanjima."
+      "text": "Pogledajte kako se vaše ideje oblikuju! Napravićemo prvu verziju za vas da pregledate i usavršite. Vaše povratne informacije osiguravaju da konačni rezultat odgovara vašoj viziji."
     },
     {
       "title": "Lansiranje",
-      "text": "Vreme je za akciju! Realizovaćemo vaš projekat i obezbediti da sve teče glatko. Nakon lansiranja, ostajemo tu za vas – za podršku i istraživanje novih načina da unapredimo vaš rast."
+      "text": "Vreme je za pokret! Oživećemo vaš projekat i postaraćemo se da sve teče glatko. Nakon lansiranja, mi ćemo ostati tu da vas podržimo i istražimo nove načine da vam pomognemo u rastu."
     }
   ],
   "contact": {
@@ -148,7 +148,7 @@
         "socialIcons": [
           {
             "img": "FacebookIcon",
-
+            
             "alt": "Facebook"
           },
           {

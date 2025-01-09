@@ -4,3 +4,9 @@
   overflow: hidden;
   box-sizing: border-box;
 }
+
+html,
+body {
+  overflow: visible;
+  height: 100%;
+}

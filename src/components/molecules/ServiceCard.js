@@ -2,7 +2,7 @@ import React from "react";
 
 const ServiceCard = ({ title, text }) => {
   return (
-    <div className="service-card" style={{ overflow: "hidden" }}>
+    <div className="service-card">
       <div className="top-container">
         <p className="card-title">{title}</p>
       </div>
