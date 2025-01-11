@@ -9,7 +9,8 @@
     align-items: stretch;
     gap: 2rem;
 
-    .input {
+    .input,
+    .textarea {
       color: $textPrimary;
       height: 30px;
       padding: 8px;
@@ -18,6 +19,44 @@
       background: transparent;
       border-bottom: 1px solid $textTertiary;
       font-family: $secondaryFont;
+    }
+
+    .textarea {
+      height: 80px;
+      resize: none;
+    }
+
+    .file-upload-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .file-upload-label {
+        background-color: $primaryColor;
+        color: $textPrimary;
+        padding: 0.5rem 1rem;
+
+        font-family: $secondaryFont;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: $textSecondary;
+        }
+      }
+
+      .file-input {
+        display: none;
+      }
+
+      .file-upload-text {
+        font-family: $secondaryFont;
+        color: $textPrimary;
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
 
     .submit-button {
@@ -28,39 +67,16 @@
       background-color: $textSecondary;
       border: none;
       padding: 0.6rem 1.4rem;
-      width: auto;
       cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
       transition: all 0.3s ease;
-      transform-origin: center;
-    }
 
-    /* Hover Effect */
-    .submit-button:hover {
-      background-color: $textTertiary;
-      transform: scale(1.02);
-    }
-
-    .textarea {
-      height: 30px;
-      color: $textPrimary;
-      background: transparent;
-      padding: 8px;
-      border: none;
-      font-size: 16px;
-      overflow: hidden;
-      resize: none;
-      border-bottom: 1px solid $textTertiary;
-      font-family: $secondaryFont;
+      &:hover {
+        background-color: $textTertiary;
+        transform: scale(1.02);
+      }
     }
   }
 }
-
 @media screen and (max-width: 1150px) {
   .form-container {
     width: 70%;
@@ -69,14 +85,16 @@
       gap: 1.5rem;
 
       .input,
-      .textarea {
+      .textarea,
+      .file-input {
         font-size: 14px;
-        padding: 6px;
       }
 
+      .file-upload-wrapper {
+        font-size: 14px;
+      }
       .submit-button {
         font-size: 14px;
-        padding: 0.5rem 1rem;
       }
     }
   }
@@ -90,14 +108,16 @@
       gap: 1rem;
 
       .input,
-      .textarea {
+      .textarea,
+      .file-input {
         font-size: 13px;
-        padding: 5px;
       }
 
+      .file-upload-wrapper {
+        font-size: 13px;
+      }
       .submit-button {
         font-size: 13px;
-        padding: 0.4rem 0.8rem;
       }
     }
   }

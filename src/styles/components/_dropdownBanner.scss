@@ -1,0 +1,112 @@
+@use "../config/base" as *;
+
+.dropdown-banner {
+  background-color: $textSecondary;
+  color: $textPrimary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001; // Ensure it's above the navigation
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, height 0.3s ease;
+  font-family: $secondaryFont;
+
+  &.expanded {
+    padding: 1rem 2rem;
+    height: auto;
+    cursor: pointer;
+
+    .banner-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .headline {
+        font-size: 22px;
+        font-weight: 700;
+        color: $textPrimary;
+      }
+
+      .subheadline {
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      .banner-button {
+        background-color: $primaryColor;
+        color: $textPrimary;
+        border: none;
+        padding: 0.4rem 1.4rem;
+        font-size: 13px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: lighten($primaryColor, 20%);
+        }
+      }
+    }
+  }
+
+  &.stacked {
+    height: 30px;
+    padding: 0.5rem 2rem;
+
+    .banner-content {
+      display: none;
+    }
+
+    .toggle-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+
+      svg {
+        width: 24px; // Adjust arrow size
+        height: 24px;
+        color: $textPrimary;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .dropdown-banner {
+    &.expanded {
+      .banner-content {
+        .headline {
+          font-size: 20px;
+        }
+
+        .subheadline {
+          font-size: 14px;
+        }
+
+        .banner-button {
+          font-size: 12px;
+          padding: 0.5rem 1rem;
+        }
+      }
+    }
+
+    &.stacked {
+      .toggle-button {
+        font-size: 16px;
+
+        .arrow-icon {
+          width: 20px; // Adjust SVG size for smaller screens
+          height: 20px;
+        }
+      }
+    }
+  }
+}

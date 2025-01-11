@@ -136,3 +136,54 @@ const Workflow = ({ data }) => {
 };
 
 export default Workflow;
+
+// import React, { useEffect, useRef } from "react";
+// import logo from "../../assets/images/BackgroundLogo.png";
+// import "../../styles/section/workflow.scss";
+
+// const Workflow = ({ data }) => {
+//   const containerRef = useRef(null);
+//   const logoRef = useRef(null);
+
+//   useEffect(() => {
+//     const container = containerRef.current;
+//     const logo = logoRef.current;
+
+//     const handleScroll = () => {
+//       const scrollLeft = container.scrollLeft;
+//       const maxScrollLeft = container.scrollWidth - container.clientWidth;
+//       const progress = scrollLeft / maxScrollLeft;
+
+//       if (logo) {
+//         logo.style.transform = `translate(${progress * 100}%, -50%)`;
+//       }
+//     };
+
+//     container.addEventListener("scroll", handleScroll);
+
+//     return () => {
+//       container.removeEventListener("scroll", handleScroll);
+//     };
+//   }, []);
+
+//   return (
+//     <div className="workflow-section">
+//       <div className="horizontal-worm-container">
+//         <div id="worm-logo" ref={logoRef}>
+//           <img src={logo} alt="Logo" />
+//         </div>
+//       </div>
+
+//       <div className="subsections-container" ref={containerRef}>
+//         {data.workflow.map((subsection, index) => (
+//           <div className="subsection" key={index}>
+//             <h3>{subsection.title}</h3>
+//             <p>{subsection.text}</p>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Workflow;

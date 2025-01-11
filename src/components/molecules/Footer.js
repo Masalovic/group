@@ -10,10 +10,8 @@ import { Link } from "react-router-dom";
 const Footer = ({ data }) => {
   const { contact: footerContact, moto, copy } = data.footer;
 
-  // Extract specific contact sections
   const [contactInfo, quickLinks, socialMedia] = footerContact;
 
-  // Map social media icons to their respective images
   const socialIcons = socialMedia.socialIcons.map((icon) => ({
     ...icon,
     img:
@@ -31,13 +29,10 @@ const Footer = ({ data }) => {
   return (
     <footer className="footer-container">
       <div className="footer-top">
-        {/* Brand Section */}
         <div className="footer-brand">
           <img src={logo} alt="Logo" className="footer-logo" />
           <p className="footer-moto">{moto}</p>
         </div>
-
-        {/* Navigation Links Section */}
         <div className="footer-nav">
           <h4 className="footer-title">{quickLinks.title}</h4>
           <ul className="footer-links">
@@ -50,16 +45,12 @@ const Footer = ({ data }) => {
             ))}
           </ul>
         </div>
-
-        {/* Contact Details Section */}
         <div className="footer-contact">
           <h4 className="footer-title">{contactInfo.title}</h4>
           <p className="footer-contact-text">{contactInfo.phone}</p>
           <p className="footer-contact-text">{contactInfo.email}</p>
           <p className="footer-contact-text">{contactInfo.address}</p>
         </div>
-
-        {/* Social Media Section */}
         <div className="footer-social">
           <h4 className="footer-title">{socialMedia.title}</h4>
           <div className="social-icons">
@@ -78,9 +69,28 @@ const Footer = ({ data }) => {
         </div>
       </div>
 
-      {/* Bottom Section */}
       <div className="footer-bottom">
+        {/* Add Privacy Policy and Terms Links */}
+        <div className="footer-legal">
+          <Link to="/privacy-policy" className="footer-legal-link">
+            Privacy Policy
+          </Link>
+          <Link to="/terms-conditions" className="footer-legal-link">
+            Terms & Conditions
+          </Link>
+        </div>
         <p className="footer-copy">{copy}</p>
+        <div className="footer-legal-links">
+          <a href="/terms-of-service" className="footer-link">
+            Terms of Service
+          </a>
+          <a href="/privacy-policy" className="footer-link">
+            Privacy Policy
+          </a>
+          <a href="/cookie-policy" className="footer-link">
+            Cookie Policy
+          </a>
+        </div>
       </div>
     </footer>
   );

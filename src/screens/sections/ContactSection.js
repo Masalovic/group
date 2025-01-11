@@ -10,7 +10,7 @@ const ContactSection = ({ data }) => {
         <p className="contact-description">{data.contact.description}</p>
       </div>
       {/* Contact Form */}
-      <div className="contact-form">
+      <div className="contact-form" id="contact-form">
         <ContactForm data={data} />
       </div>
     </div>

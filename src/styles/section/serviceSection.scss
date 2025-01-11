@@ -5,9 +5,8 @@
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
-
   position: relative;
-  height: 100vh;
+  height: auto; // Dynamically adjust height
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -62,63 +61,50 @@
     .service-cards {
       display: flex;
       gap: 3rem;
-      overflow-x: scroll;
+      overflow-x: scroll; // Horizontal scroll for cards
       scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
+      -webkit-overflow-scrolling: touch; // Smooth touch scrolling
       padding: 2rem 0;
 
-      /* Hide scrollbar */
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none; /* IE 10+ */
-    }
+      &::-webkit-scrollbar {
+        display: none; // Hide scrollbar
+      }
 
-    .service-cards::-webkit-scrollbar {
-      display: none; /* Chrome, Safari */
+      .service-card {
+        scroll-snap-align: start; // Snap alignment for cards
+      }
     }
   }
 }
 
 @media screen and (max-width: 1050px) {
-  .service-section .service-container {
-    padding-top: 4rem;
-    .service-text {
-      width: 25%;
-    }
-  }
-}
+  .service-section {
+    .service-container {
+      padding-top: 4rem;
 
-@media screen and (max-width: 950px) {
-  .service-section .service-container .service-text {
-    width: 18%;
-
-    .subtitle-container {
-      .service-subtitle {
-        font-size: 40px;
-        margin-bottom: 0;
-      }
-
-      .service-description {
-        font-size: 18px;
+      .service-text {
+        width: 25%;
       }
     }
   }
 }
 
 @media screen and (max-width: 550px) {
-  .service-section .service-container {
-    padding-top: 4rem;
-    .service-cards {
-      padding: 1rem 0;
-    }
-    .service-text {
-      width: 15%;
+  .service-section {
+    .service-container {
+      padding-top: 4rem;
 
-      .subtitle-container {
-        .service-subtitle {
-          font-size: 30px;
-        }
-        .service-description {
-          font-size: 16px;
+      .service-text {
+        width: 20%;
+
+        .subtitle-container {
+          .service-subtitle {
+            font-size: 30px;
+          }
+
+          .service-description {
+            font-size: 16px;
+          }
         }
       }
     }

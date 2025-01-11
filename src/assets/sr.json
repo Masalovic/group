@@ -21,13 +21,18 @@
       "path": "/#contact"
     }
   ],
+  "dropdownBanner": {
+    "headline": "Pomažemo Vam da razvijete Vaš biznis!",
+    "subheadline": "Da li imate poslovnu ideju i potrebna vam je pomoć da je pokrenete? Javite se!",
+    "button": "Kontakt"
+  },
   "home": {
     "subtitle": "Ostvarite svoje poslovne ciljeve",
     "text": "Izgradite brend koji se ističe, angažujte nove klijente i unapredite svoj posao uz marketing rešenja prilagođena vašim potrebama.",
     "button": "Zakažite besplatne konsultacije"
   },
   "portfolio": {
-    "marquee": "Dizajn - Development - SEO - Marketing"
+    "marquee": "Dizajn - Razvoj - SEO - Marketing"
   },
   "about": {
     "subtitle": "Ko Smo Mi?",
@@ -97,9 +102,9 @@
     "description": "Otkrijte kako možemo transformisati vaš brend i pomoći vam da postignete poslovne ciljeve. Naša prva konsultacija je potpuno besplatna!",
     "infoCard": {
       "cardTitle": "Kontakt Podaci",
-      "phoneNumber": "060 0000000",
+      "phoneNumber": "(+381) 69 300 13 15",
       "email": "office@vortex-mk.com",
-      "location": "Vojvode Mišića 18, Novi Sad, Srbija"
+      "location": "Bistricka 39, 11010, Belgrade, Serbia"
     },
     "form": {
       "name": "Ime",
@@ -114,9 +119,9 @@
     "contact": [
       {
         "title": "Kontakt",
-        "phone": "060 0000000",
+        "phone": "(+381) 69 300 13 15",
         "email": "office@universeforcegroup.com",
-        "address": "Vojvode Mišića, Beograd, Srbija"
+        "address": "Bistricka 39, 11010, Belgrade, Serbia"
       },
       {
         "title": "Brzi Linkovi",
@@ -158,7 +163,7 @@
           },
           {
             "img": "instagramIcon",
-            "url": "https://www.instagram.com/vortex_mk/",
+            "url": "https://www.instagram.com/universeforcemarketing/",
             "alt": "Instagram"
           },
           {

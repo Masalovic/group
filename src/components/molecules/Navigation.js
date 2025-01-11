@@ -42,6 +42,18 @@ const Navigation = ({ data, onLanguageChange }) => {
           ))}
         </div>
 
+        {/* "Work With Us" Button */}
+        <div className="nav-box-work-with-us">
+          <a
+            href="https://forms.office.com/e/wnvxwcWsBr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="work-with-us-button"
+          >
+            Work With Us
+          </a>
+        </div>
+
         {/* Language Box */}
         <div className="nav-box-languages">
           <button onClick={() => onLanguageChange("sr")}>

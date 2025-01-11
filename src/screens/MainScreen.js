@@ -7,6 +7,7 @@ import ContactSection from "./sections/ContactSection";
 import PortfolioSection from "./sections/PortfolioSection";
 import Workflow from "./sections/Workflow";
 import ClientBanner from "../components/molecules/ClientBanner";
+import DropdownBanner from "../components/molecules/DropdownBanner";
 import Navigation from "../components/molecules/Navigation";
 import homeDataSr from "../assets/sr.json";
 import homeDataEn from "../assets/en.json";
@@ -21,6 +22,13 @@ class MainPage extends React.PureComponent {
     this.setState({ language: lang });
   };
 
+  componentDidMount() {
+    // Refresh ScrollTrigger after mounting all sections
+    setTimeout(() => {
+      window.dispatchEvent(new Event("resize")); // Trigger resize to refresh ScrollTrigger
+    }, 100);
+  }
+
   render() {
     ReactGA.send({
       hitType: "pageview",
@@ -31,7 +39,8 @@ class MainPage extends React.PureComponent {
     const data = this.state.language === "sr" ? homeDataSr : homeDataEn;
 
     return (
-      <div className="main-screen">
+      <div className="main-screen" style={{ overflow: "visible" }}>
+        <DropdownBanner data={data} />
         <Navigation data={data} onLanguageChange={this.switchLanguage} />
         <section id="home">
           <HomeSection data={data} />

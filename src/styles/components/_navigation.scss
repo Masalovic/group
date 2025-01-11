@@ -2,11 +2,11 @@
 
 .navigation {
   position: fixed;
-  top: 0;
+  top: 24px;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 1000;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: top 0.3s ease;
 
   &.scrolled {
     background-color: $primaryColor;
@@ -16,9 +16,10 @@
   .navigation-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0.4rem 6.4rem;
+    justify-content: space-around;
+    padding: 0.4rem 2.4rem;
     overflow: hidden;
+    gap: 4rem;
 
     .mobile {
       display: none;
@@ -29,7 +30,7 @@
       align-items: center;
 
       img {
-        height: 35px;
+        height: 30px;
         transition: transform 0.3s ease;
 
         &:hover {
@@ -41,12 +42,12 @@
     .nav-box-sections {
       display: flex;
       justify-content: space-between;
-      gap: 3rem;
+      gap: 2rem;
 
       a {
         text-decoration: none;
         color: $textPrimary;
-        font-size: 16px;
+        font-size: 14px;
         font-family: $secondaryFont;
         position: relative;
       }
@@ -65,15 +66,34 @@
       a:hover::after {
         transform: scaleX(1);
       }
+    }
 
-      .nav-box-languages {
-        display: none;
+    .nav-box-work-with-us {
+      margin-left: auto; /* Push the button to the far right */
+
+      .work-with-us-button {
+        background-color: transparent;
+        color: $textPrimary;
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        font-size: 14px;
+        font-family: $secondaryFont;
+        font-weight: 500;
+        text-decoration: underline;
+        white-space: nowrap;
+        text-align: center;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          color: $textSecondary; // Adjust text color on hover
+        }
       }
     }
 
     .nav-box-languages {
       display: flex;
-      gap: 2rem;
+      gap: 1rem;
       cursor: pointer;
 
       button {
@@ -129,13 +149,10 @@
 
 @media screen and (max-width: 1150px) {
   .navigation .navigation-container {
-    padding: 0.4rem 5.4rem;
-    .nav-box-logo img {
-      height: 32px;
-    }
+    gap: 3rem;
 
     .nav-box-sections {
-      gap: 2rem;
+      gap: 1rem;
     }
 
     .nav-box-languages button img {
@@ -146,6 +163,7 @@
 
 @media screen and (max-width: 950px) {
   .navigation .navigation-container {
+    gap: 4rem;
     .nav-box-logo {
       display: none;
     }
@@ -154,21 +172,37 @@
       gap: 1.5rem;
 
       a {
-        font-size: 14px;
+        font-size: 13px;
+      }
+    }
+
+    .nav-box-work-with-us {
+      margin-left: 0;
+
+      .work-with-us-button {
+        font-size: 13px;
+        padding: 0.4rem 0.8rem;
       }
     }
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   .navigation .navigation-container {
-    padding: 0.4rem 3.4rem;
+    gap: 1rem;
 
+    .nav-box-sections {
+      gap: 0.7rem;
+    }
     .nav-box-languages {
-      gap: 1.2rem;
       button img {
-        height: 20px;
+        height: 16px;
       }
+    }
+
+    .nav-box-work-with-us .work-with-us-button {
+      font-size: 13px;
+      padding: 0.4rem 0.2rem;
     }
   }
 }

@@ -1,73 +1,11 @@
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React from "react";
 import ServiceCard from "../../components/molecules/ServiceCard";
-
-gsap.registerPlugin(ScrollTrigger);
+import "../../styles/section/serviceSection.scss";
 
 const ServiceSection = ({ data }) => {
-  const sectionRef = useRef(null);
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    const section = sectionRef.current;
-    const container = containerRef.current;
-
-    if (!section || !container) return;
-
-    const initializeScroll = () => {
-      // Clear existing ScrollTriggers
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-
-      // Horizontal scroll with GSAP
-      gsap.to(container, {
-        x: () => `-${container.scrollWidth - section.clientWidth}px`,
-        ease: "none",
-        scrollTrigger: {
-          trigger: section,
-          start: "top top",
-          end: () => `+=${container.scrollWidth - section.clientWidth}`,
-          scrub: true,
-          pin: true,
-          anticipatePin: 1,
-          invalidateOnRefresh: true, // Recalculate on resize
-        },
-      });
-
-      ScrollTrigger.refresh(); // Refresh ScrollTrigger
-    };
-
-    // Initialize on component mount
-    initializeScroll();
-
-    // Reinitialize on window resize
-    window.addEventListener("resize", initializeScroll);
-
-    return () => {
-      // Clean up on unmount
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-      window.removeEventListener("resize", initializeScroll);
-    };
-  }, []);
-
   return (
-    <div
-      className="service-section"
-      ref={sectionRef}
-      style={{
-        display: "flex",
-        overflow: "visible",
-        position: "relative",
-      }}
-    >
-      <div
-        className="service-container"
-        ref={containerRef}
-        style={{
-          display: "flex",
-          width: "max-content",
-        }}
-      >
+    <div className="service-section">
+      <div className="service-container">
         {/* Subtitle */}
         <div className="service-text">
           <div className="subtitle-container">

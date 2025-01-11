@@ -3,18 +3,17 @@
 .about-section {
   display: flex;
   flex-direction: row;
-
-  height: 170vh;
   padding: 10%;
   gap: 15%;
   position: relative;
+  height: auto; // Adjust height dynamically based on content
 
   .subtitle-container {
     width: 40%;
+    position: sticky;
+    top: 10%; // Sticky effect to keep subtitle pinned
     display: flex;
     flex-direction: column;
-    position: relative; // Fixed pinning behavior
-    top: 0;
 
     h2 {
       font-family: $primaryFont;
@@ -45,6 +44,11 @@
       transform: translateY(50px);
       transition: transform 0.5s ease, opacity 0.5s ease;
 
+      &.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
       h3 {
         font-family: $primaryFont;
         font-size: 30px;
@@ -67,7 +71,6 @@
 
 @media screen and (max-width: 1150px) {
   .about-section {
-    height: 120hv;
     flex-direction: column;
     padding: 5%;
     gap: 5%;
@@ -102,6 +105,39 @@
         p {
           width: 550px;
           font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .about-section {
+    padding: 5%;
+    gap: 8rem;
+
+    .subtitle-container {
+      align-items: center;
+
+      h2 {
+        font-size: 32px;
+      }
+
+      p {
+        width: 95%;
+        font-size: 16px;
+      }
+    }
+
+    .reasons-container {
+      .reason {
+        h3 {
+          font-size: 22px;
+        }
+
+        p {
+          width: 300px;
+          font-size: 16px;
         }
       }
     }

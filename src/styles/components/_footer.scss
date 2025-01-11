@@ -1,11 +1,33 @@
 @use "../config/base" as *;
 
 .footer-container {
-  background-color: #1d1d1d;
+  background-color: $secondaryColor;
   color: $textPrimary;
   padding: 2.5rem 1.5rem;
   display: flex;
   flex-direction: column;
+
+  .footer-legal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin: 1rem 0;
+
+    .footer-legal-link {
+      color: $textLightContrast;
+      font-family: $secondaryFont;
+      font-size: 14px;
+      font-weight: 400;
+      text-decoration: none;
+      transition: color 0.3s ease, text-decoration 0.3s ease;
+
+      &:hover {
+        color: $textPrimary;
+        text-decoration: underline;
+      }
+    }
+  }
 
   .footer-top {
     display: flex;
@@ -13,7 +35,6 @@
     align-items: flex-start;
     flex-wrap: wrap;
     width: 100%;
-
     margin-bottom: 1rem;
     gap: 2rem;
     padding: 0 2rem;
@@ -36,9 +57,11 @@
       .footer-links {
         list-style: none;
         padding: 0;
+        color: $primaryFont;
 
         .footer-link-item {
           margin-bottom: 0.5rem;
+          color: $primaryFont;
 
           a {
             color: $textLightContrast;
@@ -46,21 +69,30 @@
             font-size: 14px;
             font-weight: 300;
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
 
             &:hover {
               color: $textPrimary;
+              text-decoration: underline;
             }
           }
         }
       }
 
       .footer-contact-text {
+        display: flex;
+        flex-direction: column;
         color: $textLightContrast;
         margin-bottom: 0.5rem;
+        text-decoration: none;
         font-family: $secondaryFont;
         font-size: 14px;
         font-weight: 300;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $textPrimary;
+        }
       }
 
       .social-icons {
@@ -75,6 +107,7 @@
 
           &:hover {
             filter: brightness(1);
+            transform: scale(1.1);
           }
         }
       }
@@ -92,7 +125,6 @@
         white-space: pre-line;
         font-family: $primaryFont;
         font-weight: 300;
-        font-style: italic;
         color: $textLightContrast;
       }
     }
@@ -102,12 +134,27 @@
     border-top: 1px solid #333;
     padding-top: 1.5rem;
     width: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 
     .footer-copy {
       font-size: 14px;
       color: $textLightContrast;
       font-family: $secondaryFont;
+    }
+
+    .footer-legal-links {
+      display: flex;
+      gap: 10px;
+
+      .footer-link {
+        color: $textPrimary;
+        font-size: 13px;
+        font-family: $primaryFont;
+      }
     }
   }
 }

@@ -1,72 +1,50 @@
 import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../../styles/section/aboutSection.scss";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const AboutSection = ({ data }) => {
-  const sectionRef = useRef(null);
-  const reasonsRef = useRef(null);
-  const subtitleRef = useRef(null);
+  const reasonsRef = useRef([]);
 
   useEffect(() => {
-    const section = sectionRef.current;
-    const reasons = reasonsRef.current;
-    const subtitle = subtitleRef.current;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
 
-    if (!section || !reasons || !subtitle) return;
+    const observedElements = [...reasonsRef.current]; // Create a stable copy of the current elements
 
-    const reasonsList = gsap.utils.toArray(".reason");
-
-    // Pin the subtitle container
-    ScrollTrigger.create({
-      trigger: subtitle,
-      start: "top 40%",
-      end: "center center",
-      pin: true,
-      scrub: true,
-      overflow: "visible",
-      invalidateOnRefresh: true,
+    observedElements.forEach((reason) => {
+      if (reason) observer.observe(reason);
     });
-
-    // Animate the reasons on scroll
-    reasonsList.forEach((reason, index) => {
-      gsap.fromTo(
-        reason,
-        { opacity: 0, y: 60 },
-        {
-          opacity: 1,
-          y: 0,
-          scrollTrigger: {
-            trigger: reason,
-            start: "top bottom-=50",
-            end: "top center",
-            scrub: 1.5,
-          },
-        }
-      );
-    });
-
-    ScrollTrigger.refresh();
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      observedElements.forEach((reason) => {
+        if (reason) observer.unobserve(reason);
+      });
     };
-  }, []);
+  }, []); // Dependencies remain as an empty array
 
   return (
-    <div className="about-section" ref={sectionRef}>
+    <div className="about-section">
       {/* Sticky Subtitle */}
-      <div className="subtitle-container" ref={subtitleRef}>
+      <div className="subtitle-container">
         <h2>{data.about.subtitle}</h2>
         <p>{data.about.text}</p>
       </div>
 
       {/* Reasons */}
-      <div className="reasons-container" ref={reasonsRef}>
+      <div className="reasons-container">
         {data.about.reasons.map((reason, index) => (
-          <div className="reason" key={index}>
+          <div
+            className="reason"
+            key={index}
+            ref={(el) => (reasonsRef.current[index] = el)}
+          >
             <h3>{reason.title}</h3>
             <p>{reason.text}</p>
           </div>
