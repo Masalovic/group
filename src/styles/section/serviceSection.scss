@@ -1,7 +1,7 @@
 @use "../config/base" as *;
 
 .service-section {
-  height: 110vh;
+  height: auto;
   position: relative;
   padding: 0 10% !important;
   overflow: hidden;
@@ -45,22 +45,70 @@
 
     .service-cards {
       display: flex;
-      gap: 2rem;
+      gap: 3rem;
       width: 100%;
       overflow-x: auto; // Enable horizontal scrolling
 
       .service-card {
         flex-shrink: 0;
+        margin: 2px;
         scroll-snap-align: start;
         width: 600px;
         height: 250px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 1%;
-        border: 1px solid #00b2df8f;
-        border-radius: 8px;
-        background-color: #000000bb;
+        padding: 3%;
+        background-color: #000000bb; // Semi-transparent background
         text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden; // Prevent overflow
+        border: 1px solid transparent;
+
+        // Add the glowing effect with pseudo-elements
+        &::before {
+          content: "";
+          position: absolute;
+          top: -10px;
+          left: -10px;
+          right: -10px;
+          bottom: -10px;
+          background: radial-gradient(
+            ellipse at center,
+            rgba(0, 178, 223),
+            rgba(0, 0, 0, 0)
+          );
+          filter: blur(30px); // Smooth glow
+          z-index: -1; // Place behind the content
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border: 1px solid rgba(0, 178, 223);
+          border-radius: 8px; // Rounded edges for a smoother glow
+          filter: blur(20px); // Slightly less blur than ::before
+          z-index: -1; // Place behind the content
+        }
+
+        // Animation for a subtle pulsing effect
+        animation: glowPulse 2s infinite;
+
+        @keyframes glowPulse {
+          0% {
+            box-shadow: 0 0 5px 2px rgba(0, 178, 223, 0.9);
+          }
+          25% {
+            box-shadow: 0 0 5px 2px rgba(0, 178, 223, 0.8);
+          }
+          50% {
+            box-shadow: 0 0 5px 2px rgba(0, 178, 223, 0.7);
+          }
+          100% {
+            box-shadow: 0 0 5px 2px rgba(0, 178, 223, 0.8);
+          }
+        }
 
         .card-title {
           font-size: 24px;

@@ -126,8 +126,10 @@ const Workflow = ({ data }) => {
       <div ref={containerRef} className="subsections-container">
         {workflowData.map((subsection, index) => (
           <div className="subsection" key={index}>
-            <h3>{subsection.title}</h3>
-            <p>{subsection.text}</p>
+            <div className="subsection-content">
+              <h3>{subsection.title}</h3>
+              <p>{subsection.text}</p>
+            </div>
           </div>
         ))}
       </div>

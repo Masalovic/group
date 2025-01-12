@@ -103,52 +103,44 @@
    
     "form": {
       "name": "Ime",
-      "email": "Email adresa",
+      "companyName": "Naziv Kompanije",
+      "email": "Email Adresa",
+      "phoneNumber": "Broj Telefona",
       "message": "Poruka",
-      "button": "Pošalji Poruku"
+      "chooseFile": "Odaberite Fajl",
+      "noFile": "Nijedan fajl nije izabran",
+      "button": "Pošalji Poruku",
+      "submitting": "Slanje...",
+      "successMessage": "Poruka uspešno poslata!",
+      "errors": {
+        "mandatoryFields": "Molimo popunite sva obavezna polja.",
+        "invalidEmail": "Molimo unesite ispravnu email adresu.",
+        "noPublicKey": "Javni ključ nije podešen. Molimo pokušajte kasnije.",
+        "failedToSend": "Slanje poruke nije uspelo, molimo pokušajte ponovo."
+      }
     }
   },
-  "footer": {
-    "moto": "Transformisanje Brendova,\n Izgradnja Budućnosti.",
-    "copy": "© 2024 UniverseForce. Sva prava zadržana.",
-    "contact": [
-      {
+    "footer": {
+      "moto": "Transformisanje Brendova,\n Izgradnja Budućnosti.",
+      "copy": "© 2024 UniverseForce. Sva prava zadržana.",
+      "legalLinks": {
+        "privacyPolicy": "Politika Privatnosti",
+        "termsConditions": "Uslovi Korišćenja",
+        "termsService": "Uslovi Servisa",
+        "cookiePolicy": "Politika Kolačića"
+      },
+      "contact": {
         "title": "Kontakt",
-        "phone": "(+381) 69 300 13 15",
+        "phone": "+381 69 300 13 15",
         "email": "office@universeforcegroup.com",
         "address": "Bistricka 39, 11010, Belgrade, Serbia"
       },
-      {
-        "title": "Brzi Linkovi",
-        "links": [
-          {
-            "name": "Početna",
-            "path": "/"
-          },
-          {
-            "name": "Usluge",
-            "path": "/#services"
-          },
-          {
-            "name": "O Nama",
-            "path": "/#about"
-          },
-          {
-            "name": "Projekti",
-            "path": "/#portfolio"
-          },
-          {
-            "name": "Kontakt",
-            "path": "/#contact"
-          }
-        ]
-      },
-      {
+      "socialMedia": {
         "title": "Pratite Nas",
         "socialIcons": [
           {
             "img": "FacebookIcon",
-            
+            "url": "https://www.facebook.com/",
             "alt": "Facebook"
           },
           {
@@ -157,7 +149,7 @@
             "alt": "LinkedIn"
           },
           {
-            "img": "instagramIcon",
+            "img": "InstagramIcon",
             "url": "https://www.instagram.com/universeforcemarketing/",
             "alt": "Instagram"
           },
@@ -172,7 +164,28 @@
             "alt": "Email"
           }
         ]
-      }
-    ]
+      },
+      "navbar": [
+        {
+          "name": "Početna",
+          "path": "/"
+        },
+        {
+          "name": "Usluge",
+          "path": "/#services"
+        },
+        {
+          "name": "O Nama",
+          "path": "/#about"
+        },
+        {
+          "name": "Projekti",
+          "path": "/#portfolio"
+        },
+        {
+          "name": "Kontakt",
+          "path": "/#contact"
+        }
+      ]
+    }
   }
-}

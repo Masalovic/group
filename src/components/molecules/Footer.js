@@ -8,9 +8,15 @@ import EmailIcon from "../../assets/icons/Email.png";
 import { Link } from "react-router-dom";
 
 const Footer = ({ data }) => {
-  const { contact: footerContact, moto, copy } = data.footer;
-
-  const [contactInfo, quickLinks, socialMedia] = footerContact;
+  // Safely access data to avoid undefined errors
+  const {
+    moto = "",
+    copy = "",
+    legalLinks = {},
+    contact = {},
+    socialMedia = { socialIcons: [] },
+    navbar = [],
+  } = data.footer || {};
 
   const socialIcons = socialMedia.socialIcons.map((icon) => ({
     ...icon,
@@ -29,14 +35,17 @@ const Footer = ({ data }) => {
   return (
     <footer className="footer-container">
       <div className="footer-top">
+        {/* Branding */}
         <div className="footer-brand">
           <img src={logo} alt="Logo" className="footer-logo" />
           <p className="footer-moto">{moto}</p>
         </div>
+
+        {/* Quick Links */}
         <div className="footer-nav">
-          <h4 className="footer-title">{quickLinks.title}</h4>
+          <h4 className="footer-title">Link</h4>
           <ul className="footer-links">
-            {quickLinks.links.map((link, index) => (
+            {navbar.map((link, index) => (
               <li key={index} className="footer-link-item">
                 <Link to={link.path} className="footer-link">
                   {link.name}
@@ -46,73 +55,79 @@ const Footer = ({ data }) => {
           </ul>
         </div>
 
-        {/* Contact Details Section */}
+        {/* Contact Details */}
         <div className="footer-contact">
-          <h4 className="footer-title">{contactInfo.title}</h4>
-          <a
-            href={`tel:${contactInfo.phone.replace(/\s+/g, "")}`}
-            className="footer-contact-text"
-          >
-            {contactInfo.phone}
-          </a>
-          <a
-            href={`mailto:${contactInfo.email}`}
-            className="footer-contact-text"
-          >
-            {contactInfo.email}
-          </a>
-          <a
-            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-              contactInfo.address
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer-contact-text"
-          >
-            {contactInfo.address}
-          </a>
+          <h4 className="footer-title">{contact.title || "Contact"}</h4>
+          {contact.phone && (
+            <a
+              href={`tel:${contact.phone.replace(/\s+/g, "")}`}
+              className="footer-contact-text"
+            >
+              {contact.phone}
+            </a>
+          )}
+          {contact.email && (
+            <a href={`mailto:${contact.email}`} className="footer-contact-text">
+              {contact.email}
+            </a>
+          )}
+          {contact.address && (
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                contact.address
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-contact-text"
+            >
+              {contact.address}
+            </a>
+          )}
         </div>
 
-        {/* Social Media Section */}
+        {/* Social Media */}
         <div className="footer-social">
-          <h4 className="footer-title">{socialMedia.title}</h4>
+          <h4 className="footer-title">{socialMedia.title || "Follow Us"}</h4>
           <div className="social-icons">
             {socialIcons.map((icon, index) => (
               <a
                 key={index}
-                href={icon.url}
+                href={icon.url || "#"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
               >
-                <img src={icon.img} alt={icon.alt} className="social-icon" />
+                <img
+                  src={icon.img}
+                  alt={icon.alt || "Social Icon"}
+                  className="social-icon"
+                />
               </a>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Footer Bottom Section */}
+      {/* Footer Bottom */}
       <div className="footer-bottom">
-        {/* Add Privacy Policy and Terms Links */}
         <div className="footer-legal">
           <Link to="/privacy-policy" className="footer-legal-link">
-            Privacy Policy
+            {legalLinks.privacyPolicy || "Privacy Policy"}
           </Link>
           <Link to="/terms-conditions" className="footer-legal-link">
-            Terms & Conditions
+            {legalLinks.termsConditions || "Terms & Conditions"}
           </Link>
         </div>
         <p className="footer-copy">{copy}</p>
         <div className="footer-legal-links">
           <a href="/terms-of-service" className="footer-link">
-            Terms of Service
+            {legalLinks.termsService || "Terms of Service"}
           </a>
           <a href="/privacy-policy" className="footer-link">
-            Privacy Policy
+            {legalLinks.privacyPolicy || "Privacy Policy"}
           </a>
           <a href="/cookie-policy" className="footer-link">
-            Cookie Policy
+            {legalLinks.cookiePolicy || "Cookie Policy"}
           </a>
         </div>
       </div>

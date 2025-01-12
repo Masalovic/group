@@ -38,6 +38,9 @@ class MainPage extends React.PureComponent {
 
     const data = this.state.language === "sr" ? homeDataSr : homeDataEn;
 
+    console.log("Current language:", this.state.language);
+    console.log("Loaded data:", data);
+
     return (
       <div className="main-screen" style={{ overflow: "visible" }}>
         <DropdownBanner data={data} />
