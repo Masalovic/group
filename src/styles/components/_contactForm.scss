@@ -15,10 +15,16 @@
       height: 30px;
       padding: 8px;
       font-size: 16px;
+      font-weight: 500;
       border: none;
       background: transparent;
       border-bottom: 1px solid $textTertiary;
       font-family: $secondaryFont;
+
+      &::placeholder {
+        color: #ffffff; // Make placeholder text bright white as well
+        opacity: 0.8; // Slightly dimmer than the input text for differentiation
+      }
     }
 
     .textarea {

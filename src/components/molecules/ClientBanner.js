@@ -5,6 +5,7 @@ import markovic from "../../assets/images/logoMarkovic.png";
 import takeuchi from "../../assets/images/logoTakeuchi.png";
 import divia from "../../assets/images/logoDivia.png";
 import LogoList from "../../components/atoms/LogoList";
+import "../../styles/components/_clientBanner.scss";
 
 const ClientBanner = () => {
   const logos = [bozic, bosch, muro, markovic, takeuchi, divia];

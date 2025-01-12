@@ -1,4 +1,5 @@
 import React from "react";
+import Overlay from "./Overlay";
 
 const HomeSection = ({ data }) => {
   const handleScrollToContact = (e) => {
@@ -11,7 +12,8 @@ const HomeSection = ({ data }) => {
 
   return (
     <div className="home-section">
-      <div className="depth-layer"></div>
+      <Overlay />
+
       <div className="home-container">
         <h3 className="home-subtitle">{data.home.subtitle}</h3>
         <p className="home-text">{data.home.text}</p>

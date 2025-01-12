@@ -1,40 +1,25 @@
 @use "../config/base" as *;
 
 .service-section {
-  background: url("../../assets/images/Brending.png");
-  background-position: bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
+  height: 110vh;
   position: relative;
-  height: auto; // Dynamically adjust height
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-  }
+  padding: 0 10% !important;
+  overflow: hidden;
 
   .service-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 0 10%;
+    width: 100%;
     padding-top: 6rem;
+    z-index: 10;
 
     .service-text {
       padding-bottom: 2rem;
-      width: 30%;
+      width: 90%;
 
       .subtitle-container {
         display: flex;
-        flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
 
@@ -60,18 +45,37 @@
 
     .service-cards {
       display: flex;
-      gap: 3rem;
-      overflow-x: scroll; // Horizontal scroll for cards
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch; // Smooth touch scrolling
-      padding: 2rem 0;
-
-      &::-webkit-scrollbar {
-        display: none; // Hide scrollbar
-      }
+      gap: 2rem;
+      width: 100%;
+      overflow-x: auto; // Enable horizontal scrolling
 
       .service-card {
-        scroll-snap-align: start; // Snap alignment for cards
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        width: 600px;
+        height: 250px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1%;
+        border: 1px solid #00b2df8f;
+        border-radius: 8px;
+        background-color: #000000bb;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        .card-title {
+          font-size: 24px;
+          font-family: $secondaryFont;
+          font-weight: 600;
+          color: $textPrimary;
+          margin-bottom: 1rem;
+        }
+
+        .card-details {
+          font-size: 18px;
+          font-family: $secondaryFont;
+          font-weight: 400;
+          color: $textLightContrast;
+        }
       }
     }
   }
@@ -79,11 +83,19 @@
 
 @media screen and (max-width: 1050px) {
   .service-section {
-    .service-container {
-      padding-top: 4rem;
+    .service-text {
+      .service-container {
+        .service-cards .service-card {
+          width: 350px;
 
-      .service-text {
-        width: 25%;
+          .card-title {
+            font-size: 20px;
+          }
+
+          .card-details {
+            font-size: 14px;
+          }
+        }
       }
     }
   }
@@ -92,11 +104,8 @@
 @media screen and (max-width: 550px) {
   .service-section {
     .service-container {
-      padding-top: 4rem;
-
+      padding-top: 2rem;
       .service-text {
-        width: 20%;
-
         .subtitle-container {
           .service-subtitle {
             font-size: 30px;
@@ -105,6 +114,19 @@
           .service-description {
             font-size: 16px;
           }
+        }
+      }
+
+      .service-cards .service-card {
+        width: 300px;
+        padding: 8%;
+
+        .card-title {
+          font-size: 20px;
+        }
+
+        .card-details {
+          font-size: 15px;
         }
       }
     }

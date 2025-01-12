@@ -3,12 +3,9 @@ import React from "react";
 const ServiceCard = ({ title, text }) => {
   return (
     <div className="service-card">
-      <div className="top-container">
-        <p className="card-title">{title}</p>
-      </div>
-      <div className="bottom-container">
-        <p className="card-details">{text}</p>
-      </div>
+      <p className="card-title">{title}</p>
+
+      <p className="card-details">{text}</p>
     </div>
   );
 };

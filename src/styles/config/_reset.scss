@@ -1,12 +1,15 @@
 * {
   margin: 0;
   padding: 0;
-  overflow: hidden;
   box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 html,
 body {
-  overflow: visible;
   height: 100%;
+  scroll-behavior: smooth; /* Enable smooth scrolling */
 }

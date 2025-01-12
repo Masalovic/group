@@ -1,8 +1,11 @@
 @use "../config/base" as *;
 
+#contact {
+  z-index: 1;
+}
 .contact-section {
   padding: 5rem 2rem;
-  background-color: $primaryColor;
+  // background-color: $primaryColor;
   color: $textPrimary;
   font-family: $primaryFont;
 
