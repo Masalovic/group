@@ -45,12 +45,35 @@ const Footer = ({ data }) => {
             ))}
           </ul>
         </div>
+
+        {/* Contact Details Section */}
         <div className="footer-contact">
           <h4 className="footer-title">{contactInfo.title}</h4>
-          <p className="footer-contact-text">{contactInfo.phone}</p>
-          <p className="footer-contact-text">{contactInfo.email}</p>
-          <p className="footer-contact-text">{contactInfo.address}</p>
+          <a
+            href={`tel:${contactInfo.phone.replace(/\s+/g, "")}`}
+            className="footer-contact-text"
+          >
+            {contactInfo.phone}
+          </a>
+          <a
+            href={`mailto:${contactInfo.email}`}
+            className="footer-contact-text"
+          >
+            {contactInfo.email}
+          </a>
+          <a
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+              contactInfo.address
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-contact-text"
+          >
+            {contactInfo.address}
+          </a>
         </div>
+
+        {/* Social Media Section */}
         <div className="footer-social">
           <h4 className="footer-title">{socialMedia.title}</h4>
           <div className="social-icons">
@@ -69,6 +92,7 @@ const Footer = ({ data }) => {
         </div>
       </div>
 
+      {/* Footer Bottom Section */}
       <div className="footer-bottom">
         {/* Add Privacy Policy and Terms Links */}
         <div className="footer-legal">
