@@ -1,67 +1,46 @@
 import React from "react";
+import LegalLayout from "./LegalLayout";
 
-const PrivacyPolicy = () => {
+const PrivacyPolicy = ({ data, onLanguageChange }) => {
+  if (!data || !data.footer?.privacyPolicy) {
+    return <div>Loading...</div>; // Fallback for missing data
+  }
+
+  const { title, effectiveDateLabel, effectiveDate, intro, sections } =
+    data.footer.privacyPolicy;
+
   return (
-    <div className="privacy-policy">
-      <h1>Privacy Policy</h1>
+    <LegalLayout data={data} onLanguageChange={onLanguageChange}>
+      <h1>{title}</h1>
       <p>
-        <strong>Effective Date:</strong> 10/1/2025
+        <strong>{effectiveDateLabel}:</strong> {effectiveDate}
       </p>
+      <p>{intro}</p>
       <ol>
-        <li>
-          <strong>Information We Collect</strong>
-          <ul>
-            <li>
-              <strong>Personal Data:</strong> Name, email address, phone number,
-              and any other information you provide when contacting us or using
-              our services.
-            </li>
-            <li>
-              <strong>Non-Personal Data:</strong> Browser type, operating
-              system, IP address, and other technical details collected
-              automatically when you access our website.
-            </li>
-            <li>
-              <strong>Cookies and Tracking Technologies:</strong> Cookies and
-              similar technologies to enhance your user experience and gather
-              analytics.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <strong>Legal Basis for Processing</strong>
-          <p>
-            We process your personal data in accordance with Serbian law and
-            GDPR based on the following legal grounds:
-          </p>
-          <ul>
-            <li>Consent</li>
-            <li>Contractual Necessity</li>
-            <li>Legal Obligation</li>
-            <li>Legitimate Interests</li>
-          </ul>
-        </li>
-        <li>
-          <strong>How We Use Your Information:</strong> To provide and manage
-          our services, respond to inquiries, improve our website, and comply
-          with legal obligations.
-        </li>
-        <li>
-          <strong>Your Rights</strong>
-          <ul>
-            <li>Access</li>
-            <li>Correction</li>
-            <li>Deletion</li>
-            <li>Restriction</li>
-            <li>Data Portability</li>
-          </ul>
-        </li>
+        {sections.map((section, index) => (
+          <li key={index}>
+            <strong>{section.title}</strong>
+            <p>{section.text}</p>
+            {section.list && (
+              <ul>
+                {section.list.map((item, listIndex) => (
+                  <li key={listIndex}>
+                    {typeof item === "string" ? (
+                      item
+                    ) : (
+                      <>
+                        {item.title && <strong>{item.title}: </strong>}
+                        {item.text}
+                      </>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
       </ol>
-      <p>
-        For questions, please contact us at: Universe Force Group DOO Beograd®
-        Email: office@universeforcegroup.com
-      </p>
-    </div>
+    </LegalLayout>
   );
 };
 

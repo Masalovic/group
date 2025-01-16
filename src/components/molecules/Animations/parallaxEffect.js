@@ -64,7 +64,7 @@ export default ParallaxComponent;
 //         <div
 //           style={{
 //             height: "300px",
-//             backgroundImage: "url('https://via.placeholder.com/1200x300')",
+//             Image: "url('https://via.placeholder.com/1200x300')",
 //             backgroundSize: "cover",
 //             backgroundPosition: "center",
 //           }}

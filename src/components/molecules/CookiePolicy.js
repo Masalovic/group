@@ -1,29 +1,27 @@
 import React from "react";
+import LegalLayout from "./LegalLayout";
 
-const CookiePolicy = () => {
+const CookiePolicy = ({ data, onLanguageChange }) => {
+  if (!data || !data.footer?.cookiePolicy) {
+    return <div>Loading...</div>; // Fallback for missing data
+  }
+
+  const { title, intro, consent, additionalInfo, footer } =
+    data.footer.cookiePolicy;
+
   return (
-    <div className="cookie-policy">
-      <h1>Cookie Policy</h1>
+    <LegalLayout data={data} onLanguageChange={onLanguageChange}>
+      <h1>{title}</h1>
+      <p>{intro}</p>
+      <p>{consent}</p>
       <p>
-        Our website uses cookies to enhance your browsing experience, analyze
-        website performance, and provide personalized content and
-        advertisements. Cookies are small data files stored on your device that
-        help us understand how you interact with our website.
+        {additionalInfo}{" "}
+        <a href="/privacy-policy">{data.footer?.legalLinks?.privacyPolicy}</a>
       </p>
       <p>
-        By continuing to use our site, you consent to the use of cookies as
-        outlined in this policy. You can manage or disable cookies through your
-        browser settings; however, this may impact certain functionalities of
-        the site.
+        <strong>{footer}</strong>
       </p>
-      <p>
-        For more information, please refer to our{" "}
-        <a href="/privacy-policy">Privacy Policy</a>.
-      </p>
-      <p>
-        <strong>Universe Force Group DOO Beograd®</strong>
-      </p>
-    </div>
+    </LegalLayout>
   );
 };
 

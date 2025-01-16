@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/logos/logo.png";
 import FacebookIcon from "../../assets/icons/Facebook.svg";
 import InstagramIcon from "../../assets/icons/Instagram.png";
 import LinkedInIcon from "../../assets/icons/LinkedIn.svg";
@@ -71,18 +71,15 @@ const Footer = ({ data }) => {
               {contact.email}
             </a>
           )}
-          {contact.address && (
-            <a
-              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                contact.address
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer-contact-text"
-            >
-              {contact.address}
-            </a>
-          )}
+          {/* Replace the address with the Google Business link */}
+          <a
+            href="https://www.google.com/search?q=universe+force+marketing&oq=universe+force+marketing&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIKCAEQABiABBiiBDIKCAIQABiABBiiBDIKCAMQABiABBiiBDIKCAQQABiABBiiBDIGCAUQRRg8MgYIBhBFGD0yBggHEEUYPdIBCDc0MDZqMGo0qAIAsAIB&sourceid=chrome&ie=UTF-8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-contact-text"
+          >
+            {contact.address || "Our Location"}
+          </a>
         </div>
 
         {/* Social Media */}
@@ -110,15 +107,15 @@ const Footer = ({ data }) => {
 
       {/* Footer Bottom */}
       <div className="footer-bottom">
-        <div className="footer-legal">
+        {/* <div className="footer-legal">
           <Link to="/privacy-policy" className="footer-legal-link">
             {legalLinks.privacyPolicy || "Privacy Policy"}
           </Link>
           <Link to="/terms-conditions" className="footer-legal-link">
             {legalLinks.termsConditions || "Terms & Conditions"}
           </Link>
-        </div>
-        <p className="footer-copy">{copy}</p>
+        </div> */}
+
         <div className="footer-legal-links">
           <a href="/terms-of-service" className="footer-link">
             {legalLinks.termsService || "Terms of Service"}
@@ -130,6 +127,7 @@ const Footer = ({ data }) => {
             {legalLinks.cookiePolicy || "Cookie Policy"}
           </a>
         </div>
+        <p className="footer-copy">{copy}</p>
       </div>
     </footer>
   );

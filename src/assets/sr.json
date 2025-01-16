@@ -13,8 +13,8 @@
       "path": "/#about"
     },
     {
-      "name": "Projekti",
-      "path": "/#portfolio"
+      "name": "Put Sa Nama",
+      "path": "/#workflow"
     },
     {
       "name": "Kontakt",
@@ -32,7 +32,7 @@
     "button": "Zakažite besplatne konsultacije"
   },
   "portfolio": {
-    "marquee": "Dizajn - Razvoj - SEO - Marketing"
+    "marquee": "Dizajn - Strategija - SEO - Marketing"
   },
   "about": {
     "subtitle": "Ko Smo Mi?",
@@ -55,7 +55,7 @@
   "services": {
     "title": "usluge",
     "subtitle": "Digitalna rešenja iz naše ponude",
-    "description": "Tehnologiju činimo jednostavnom, bezbednom i efikasnom za vaše poslovanje. Od postavljanja sistema do kreiranja prilagođenih alata, rešavamo sve vaše IT potrebe kako biste se mogli fokusirati na razvoj vašeg poslovanja.",
+    "description": "Pravi uspeh nastaje tamo gde se vizija susreće s prilikama, a strategija sa smelošću. Verujemo da svaki izazov nosi u sebi potencijal za rast, ako se posmatra iz pravog ugla. Naš pristup nije samo da rešimo probleme, već da redefinišemo granice onoga što je moguće. Gradimo rešenja koja ne odgovaraju samo na današnje zahteve, već oblikuju sutrašnje standarde - jer budućnost pripada onima koji ne traže prilike, već ih stvaraju.",
     "cardList": [
       {
         "title": "Razvoj Brenda",
@@ -179,13 +179,189 @@
           "path": "/#about"
         },
         {
-          "name": "Projekti",
-          "path": "/#portfolio"
+          "name": "Put Sa Nama",
+          "path": "/#workflow"
         },
         {
           "name": "Kontakt",
           "path": "/#contact"
         }
-      ]
-    }
+      ],
+      "termsOfService": {
+        "title": "Uslovi Korišćenja",
+        "effectiveDateLabel": "Datum Stupanja na Snagu",
+        "effectiveDate": "10-01-2025",
+        "intro": "Dobrodošli u Universe Force Group DOO Beograd („Kompanija“, „mi“, „naš“ ili „nas“). Korišćenjem našeg sajta (https://universeforcemarketing.com/) ili naših usluga, saglasni ste da ćete se pridržavati i biti obavezani sledećim Uslovima Korišćenja. Molimo vas da ih pažljivo pročitate.",
+        "sections": [
+          {
+            "title": "Prihvatanje Uslova",
+            "text": "Korišćenjem našeg sajta ili usluga, saglasni ste sa ovim Uslovima Korišćenja. Ako se ne slažete sa ovim uslovima, ne smete koristiti naše usluge."
+          },
+          {
+            "title": "Usluge",
+            "text": "Universe Force Group DOO Beograd pruža usluge marketinga, IT-a i konsaltinga. Obim, naknade i trajanje usluga biće definisani u pojedinačnim ugovorima sa klijentima."
+          },
+          {
+            "title": "Korišćenje Sajta",
+            "text": "Saglasni ste da koristite naš sajt samo za zakonite svrhe i na način koji je u skladu sa važećim zakonima. Ne smete:",
+            "list": [
+              "Kopirati, distribuirati ili otkrivati bilo koji deo sajta bez prethodne pisane saglasnosti.",
+              "Ometati ili narušavati integritet ili performanse sajta.",
+              "Pokušati neovlašćen pristup sajtu ili njegovim sistemima."
+            ]
+          },
+          {
+            "title": "Intelektualna Svojina",
+            "text": "Sav sadržaj na ovom sajtu, uključujući tekst, grafiku, logotipe, slike i softver, vlasništvo je Universe Force Group DOO Beograd ili je licenciran od strane trećih lica i zaštićen je zakonima o intelektualnoj svojini. Ne smete reprodukovati, distribuirati ili kreirati izvedena dela bez izričite pisane dozvole."
+          },
+          {
+            "title": "Plaćanja i Povraćaji",
+            "text": "Plaćanja se moraju izvršavati u skladu sa uslovima navedenim u ugovoru o usluzi.",
+            "list": [
+              "Plaćanja se moraju izvršavati u skladu sa uslovima navedenim u ugovoru o usluzi.",
+              "Povraćaji su podložni našoj politici povraćaja, koja će biti uključena u pojedinačne ugovore sa klijentima."
+            ]
+          },
+          {
+            "title": "Ograničenje Odgovornosti",
+            "text": "Do maksimalne mere dozvoljene zakonom, Universe Force Group DOO Beograd neće biti odgovoran za:",
+            "list": [
+              "Bilo kakve indirektne, slučajne ili posledične štete nastale korišćenjem naših usluga.",
+              "Bilo kakva kašnjenja ili propuste u izvršenju zbog uzroka van naše kontrole."
+            ]
+          },
+          {
+            "title": "Politika Privatnosti",
+            "text": "Vaše korišćenje sajta takođe je regulisano našom Politikom Privatnosti, koja objašnjava kako prikupljamo, koristimo i štitimo vaše informacije."
+          },
+          {
+            "title": "Prestanak",
+            "text": "Zadržavamo pravo da ukinemo ili suspendujemo vaš pristup sajtu ili uslugama zbog kršenja ovih Uslova ili iz bilo kog drugog razloga, bez prethodnog obaveštenja."
+          },
+          {
+            "title": "Merodavno Pravo",
+            "text": "Ovi Uslovi regulisani su i tumačeni u skladu sa zakonima Srbije. Svi sporovi rešavaće se pred nadležnim sudovima u Beogradu."
+          },
+          {
+            "title": "Izmene Uslova",
+            "text": "Možemo povremeno izmeniti ove Uslove. Sve izmene biće objavljene na ovoj stranici sa ažuriranim 'Datumom Stupanja na Snagu.' Nastavak korišćenja naših usluga podrazumeva vaše prihvatanje izmenjenih Uslova."
+          },
+          {
+            "title": "Kontakt Informacije",
+            "text": "Universe Force Group DOO Beograd®",
+            "list": [
+              "Email: office@universeforcegroup.com",
+              "Telefon: +381 69 300 13 15"
+            ]
+          }
+        ]
+      },
+        "privacyPolicy": {
+          "title": "Politika Privatnosti",
+          "effectiveDateLabel": "Datum Stupanja na Snagu",
+          "effectiveDate": "10/1/2025",
+          "intro": "Universe Force Group DOO Beograd („Kompanija“, „mi“, „naš“ ili „nas“) posvećen je zaštiti vaše privatnosti u skladu sa zakonima o zaštiti podataka Republike Srbije i Opštom uredbom o zaštiti podataka (GDPR). Ova Politika Privatnosti objašnjava kako prikupljamo, koristimo i štitimo vaše informacije kada posetite naš veb-sajt (https://universeforcemarketing.com/) ili koristite naše usluge.",
+          "sections": [
+            {
+              "title": "Informacije koje prikupljamo",
+              "list": [
+                {
+                  "title": "Lični Podaci",
+                  "text": "Ime, email adresa, broj telefona i sve druge informacije koje pružite prilikom kontaktiranja ili korišćenja naših usluga."
+                },
+                {
+                  "title": "Ne-Lični Podaci",
+                  "text": "Tip pregledača, operativni sistem, IP adresa i drugi tehnički detalji prikupljeni automatski kada pristupate našem veb-sajtu."
+                },
+                {
+                  "title": "Kolačići i Tehnologije Praćenja",
+                  "text": "Kolačići i slične tehnologije koje poboljšavaju vaše korisničko iskustvo i prikupljaju analitiku."
+                }
+              ]
+            },
+            {
+              "title": "Pravni Osnov za Obradu Podataka",
+              "text": "Obrađujemo vaše lične podatke u skladu sa zakonima Srbije i GDPR na osnovu sledećih pravnih osnova:",
+              "list": [
+                "Saglasnost: Kada ste dali jasnu saglasnost za određene svrhe.",
+                "Ugovorna Potreba: Kada je obrada neophodna za ispunjenje ugovora.",
+                "Zakonska Obaveza: Kada je obrada potrebna za usklađenost sa zakonskim obavezama.",
+                "Legitimni Interesi: Kada je obrada potrebna za naše legitimne interese, pod uslovom da ne ugrožava vaša prava."
+              ]
+            },
+            {
+              "title": "Kako Koristimo Vaše Informacije",
+              "text": "Informacije koje prikupljamo možemo koristiti za sledeće svrhe:",
+              "list": [
+                "Da obezbedimo i upravljamo našim uslugama.",
+                "Da odgovaramo na upite i komuniciramo sa vama.",
+                "Da unapredimo i optimizujemo naš veb-sajt i usluge.",
+                "Da se pridržavamo zakonskih obaveza i sprovodimo naše uslove."
+              ]
+            },
+            {
+              "title": "Deljenje Vaših Informacija",
+              "text": "Ne prodajemo niti delimo vaše lične informacije osim kada je to neophodno za:",
+              "list": [
+                "Pružanje usluga putem pouzdanih partnera ili provajdera usluga.",
+                "Usklađenost sa zakonskim obavezama ili odgovaranje na zakonite zahteve vlasti.",
+                "Zaštitu prava i sigurnosti naše kompanije, korisnika ili drugih lica."
+              ]
+            },
+            {
+              "title": "Čuvanje Podataka",
+              "text": "Vaše lične podatke čuvamo onoliko dugo koliko je potrebno za ispunjenje svrha navedenih u ovoj Politici Privatnosti ili kako to zakon nalaže."
+            },
+            {
+              "title": "Vaša Prava",
+              "text": "U skladu sa GDPR-om i zakonima Srbije, imate sledeća prava:",
+              "list": [
+                "Pristup: Zahtev za pristup ličnim podacima koje čuvamo o vama.",
+                "Ispravka: Zahtev za ispravku netačnih ili nepotpunih podataka.",
+                "Brisanje: Zahtev za brisanje vaših ličnih podataka.",
+                "Ograničenje: Zahtev za ograničenje obrade vaših podataka.",
+                "Prenosivost Podataka: Zahtev za kopiju vaših podataka u strukturiranom formatu.",
+                "Prigovor: Prigovor na obradu vaših podataka na osnovu legitimnih interesa.",
+                "Povlačenje Saglasnosti: Povlačenje saglasnosti za obradu podataka u bilo kom trenutku."
+              ]
+            },
+            {
+              "title": "Kolačići i Tehnologije Praćenja",
+              "text": "Koristimo kolačiće da razumemo vaše preferencije, sačuvamo ih za buduće posete i prikupljamo agregirane podatke kako bismo unapredili naše usluge."
+            },
+            {
+              "title": "Bezbednost Podataka",
+              "text": "Primjenjujemo tehničke i organizacione mere kako bismo zaštitili vaše podatke. Međutim, nijedan sistem ne može garantovati 100% bezbednost."
+            },
+            {
+              "title": "Prekogranični Prenos Podataka",
+              "text": "Ako prenosimo vaše podatke van Srbije ili EEA, osiguravamo da su zaštićeni mehanizmima u skladu sa GDPR-om."
+            },
+            {
+              "title": "Linkovi ka Trećim Licima",
+              "text": "Naš veb-sajt može sadržati linkove ka eksternim sajtovima. Nismo odgovorni za njihove prakse privatnosti ili sadržaj. Pregledajte njihove politike privatnosti pre nego što podelite lične podatke."
+            },
+            {
+              "title": "Izmene Politike Privatnosti",
+              "text": "Možemo povremeno ažurirati ovu Politiku Privatnosti. Izmene će biti objavljene na ovoj stranici sa ažuriranim 'Datumom Stupanja na Snagu'."
+            },
+            {
+              "title": "Kontakt Informacije",
+              "text": "Za pitanja ili zabrinutosti u vezi sa ovom Politikom Privatnosti, kontaktirajte nas na:",
+              "list": [
+                "Universe Force Group DOO Beograd®",
+                "Email: office@universeforcegroup.com",
+                "Telefon: +381 69 300 13 15"
+              ]
+            }
+          ]
+        },
+          "cookiePolicy": {
+            "title": "Politika Kolačića",
+            "intro": "Naš veb-sajt koristi kolačiće kako bi unapredio vaše iskustvo pregledanja, analizirao performanse sajta i pružio personalizovani sadržaj i oglase. Kolačići su male datoteke podataka sačuvane na vašem uređaju koje nam pomažu da razumemo kako komunicirate sa našim veb-sajtom.",
+            "consent": "Nastavkom korišćenja našeg sajta pristajete na upotrebu kolačića kao što je navedeno u ovoj politici. Kolačiće možete upravljati ili onemogućiti putem postavki vašeg pregledača; međutim, ovo može uticati na određene funkcionalnosti sajta.",
+            "additionalInfo": "Za više informacija, pogledajte našu Politiku Privatnosti.",
+            "footer": "Universe Force Group DOO Beograd®"
+          }
+      }
   }

@@ -6,67 +6,94 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // overflow: hidden;
-}
+  position: relative;
+  overflow: hidden;
 
-.home-container {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  margin: 10%;
-  z-index: 3;
-
-  .home-subtitle {
-    color: $textPrimary;
-    font-family: $primaryFont;
-    font-weight: 600;
-    font-size: 60px;
-    text-transform: capitalize;
-  }
-
-  .home-text {
-    font-size: 20px;
-    color: $textLightContrast;
-    margin-top: 1rem;
-    margin-bottom: 3rem;
-    line-height: 1.4;
-    font-family: $secondaryFont;
-    font-weight: 300;
-  }
-
-  /* CSS */
-  .home-button {
-    font-size: 14px;
-    font-family: $secondaryFont;
-    font-weight: 400;
-    padding: 13px 20px 13px;
-    outline: 0;
-    border: 1px solid #00b2df8f;
-    cursor: pointer;
-    position: relative;
-    background-color: rgba(0, 0, 0, 0);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-  }
-
-  .home-button:after {
-    content: "";
-    background-color: $textSecondary;
-    width: 100%;
-    z-index: -1;
+  .background-video {
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    top: 7px;
-    left: 7px;
-    transition: 0.2s;
+    object-fit: cover; // Ensures the video covers the entire section
+    z-index: 1; // Places the video behind the content
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.5
+    ); // Adjust opacity with the alpha value (0.0 to 1.0)
+    z-index: 2; // Place it above the video
   }
 
-  .home-button:hover:after {
-    top: 0px;
-    left: 0px;
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 10%;
+    z-index: 3;
+
+    .home-subtitle {
+      color: $textPrimary;
+      font-family: $primaryFont;
+      font-weight: 600;
+      font-size: 60px;
+      text-transform: capitalize;
+    }
+
+    .home-text {
+      font-size: 20px;
+      color: $textPrimary;
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+      line-height: 1.4;
+      font-family: $secondaryFont;
+      font-weight: 300;
+    }
+
+    /* CSS */
+    .home-button {
+      font-size: 14px;
+      font-family: $secondaryFont;
+      font-weight: 400;
+      padding: 13px 20px 13px;
+      outline: 0;
+      color: $textPrimary;
+      border: 1px solid #00b2df8f;
+      cursor: pointer;
+      position: relative;
+      background-color: rgba(0, 0, 0, 0);
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+
+    .home-button:after {
+      content: "";
+      background-color: #009cdfa2;
+      width: 100%;
+      z-index: -1;
+      position: absolute;
+      height: 100%;
+      top: 7px;
+      left: 7px;
+      transition: 0.2s;
+    }
+
+    .home-button:hover:after {
+      top: 0px;
+      left: 0px;
+    }
   }
 }
 
@@ -87,11 +114,6 @@
 
 @media screen and (max-width: 900px) {
   .home-section {
-    background-image: url(../../assets/images/HomeBckg.png);
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
-
     .depth-layer {
       display: none;
     }
@@ -106,10 +128,41 @@
 
 @media screen and (max-width: 550px) {
   .home-section {
+    background-image: url(../../assets/images/MainBckg.png);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
     align-items: center;
     text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(
+        0,
+        0,
+        0,
+        0.4
+      ); // Adjust opacity with the alpha value (0.0 to 1.0)
+      z-index: 1; // Place it above the background
+    }
+
+    // Ensure content stays above the overlay
+    > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .background-video {
+      display: none;
+    }
     .home-container {
       width: 60%;
+
       .home-subtitle {
         font-size: 30px;
       }

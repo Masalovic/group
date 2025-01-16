@@ -5,17 +5,18 @@
       "path": "/"
     },
     {
+      "name": "Services",
+      "path": "/#services"
+    },
+    {
       "name": "About Us",
       "path": "/#about"
     },
     {
-      "name": "Projects",
-      "path": "/#portfolio"
+      "name": "Steps",
+      "path": "/#workflow"
     },
-    {
-      "name": "Services",
-      "path": "/#services"
-    },
+   
     {
       "name": "Contact",
       "path": "/#contact"
@@ -54,7 +55,7 @@
   "services": {
     "title": "usluge",
     "subtitle": "Digital solutions we offer",
-    "description": "We make technology simple, safe, and effective for your business. From setting up systems to creating custom tools, we handle all your IT needs so you can focus on growing your business.",
+    "description": "True success occurs where vision meets opportunity and strategy meets boldness. We believe that every challenge carries within it the potential for growth, if viewed from the right angle. Our approach is not just to solve problems, but to redefine the boundaries of what is possible. We build solutions that not only respond to today's requirements, but shape tomorrow's standards - because the future belongs to those who don't look for opportunities, but create them.",
     "cardList": [
       {
         "title": "Brand Development",
@@ -178,13 +179,190 @@
       "path": "/#about"
     },
     {
-      "name": "Projekti",
-      "path": "/#portfolio"
+      "name": "Steps",
+      "path": "/#workflow"
     },
     {
       "name": "Kontakt",
       "path": "/#contact"
     }
-  ]
+  ],
+    "termsOfService": {
+      "title": "Terms of Service",
+      "effectiveDateLabel": "Effective Date",
+      "effectiveDate": "10-01-2025",
+      "intro": "Welcome to Universe Force Group DOO Beograd (“Company”, “we”, “our”, or “us”). By accessing or using our website (https://universeforcemarketing.com/) or our services, you agree to comply with and be bound by the following Terms of Service. Please read them carefully.",
+      "sections": [
+        {
+          "title": "Acceptance of Terms",
+          "text": "By accessing and using our website or services, you agree to these Terms of Service. If you do not agree with these terms, you must not use our services."
+        },
+        {
+          "title": "Services",
+          "text": "Universe Force Group DOO Beograd provides marketing, IT, and Consulting Services. The scope, fees, and duration of services will be specified in individual agreements with clients."
+        },
+        {
+          "title": "Website Use",
+          "text": "You agree to use our website only for lawful purposes and in a manner consistent with applicable laws. You must not:",
+          "list": [
+            "Copy, distribute, or disclose any part of the website without prior written consent.",
+            "Interfere with or disrupt the website’s integrity or performance.",
+            "Attempt to gain unauthorized access to the website or its systems."
+          ]
+        },
+        {
+          "title": "Intellectual Property",
+          "text": "All content on this website, including text, graphics, logos, images, and software, is owned by or licensed to Universe Force Group DOO Beograd and is protected under intellectual property laws. You may not reproduce, distribute, or create derivative works without express written permission."
+        },
+        {
+          "title": "Payment and Refunds",
+          "text": "Payments must be made as per the terms outlined in the service agreement.",
+          "list": [
+            "Payments must be made as per the terms outlined in the service agreement.",
+            "Refunds are subject to our refund policy, which will be included in individual agreements with clients."
+          ]
+        },
+        {
+          "title": "Limitation of Liability",
+          "text": "To the maximum extent permitted by law, Universe Force Group DOO Beograd shall not be liable for:",
+          "list": [
+            "Any indirect, incidental, or consequential damages arising from your use of our services.",
+            "Any delay or failure in performance due to causes beyond our control."
+          ]
+        },
+        {
+          "title": "Privacy Policy",
+          "text": "Your use of the website is also governed by our Privacy Policy, which explains how we collect, use, and protect your information."
+        },
+        {
+          "title": "Termination",
+          "text": "We reserve the right to terminate or suspend your access to the website or services for violations of these Terms or any other reason, without prior notice."
+        },
+        {
+          "title": "Governing Law",
+          "text": "These Terms shall be governed by and construed in accordance with the laws of Serbia. Any disputes shall be resolved in the competent courts of Belgrade."
+        },
+        {
+          "title": "Changes to the Terms",
+          "text": "We may revise these Terms from time to time. Any changes will be posted on this page with an updated 'Effective Date.' Continued use of our services indicates your acceptance of the revised Terms."
+        },
+        {
+          "title": "Contact Information",
+          "text": "Universe Force Group DOO Beograd®",
+          "list": [
+            "Email: office@universeforcegroup.com",
+            "Phone: +381 69 300 13 15"
+          ]
+        }
+      ]
+    },
+    "privacyPolicy": {
+      "title": "Privacy Policy",
+      "effectiveDateLabel": "Effective Date",
+      "effectiveDate": "10/1/2025",
+      "intro": "Universe Force Group DOO Beograd (\"Company,\" \"we,\" \"our,\" or \"us\") is committed to protecting your privacy in compliance with Serbian data protection laws and the General Data Protection Regulation (GDPR). This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website (https://universeforcemarketing.com/) or use our services.",
+      "sections": [
+        {
+          "title": "Information We Collect",
+          "list": [
+            {
+              "title": "Personal Data",
+              "text": "Name, email address, phone number, and any other information you provide when contacting us or using our services."
+            },
+            {
+              "title": "Non-Personal Data",
+              "text": "Browser type, operating system, IP address, and other technical details collected automatically when you access our website."
+            },
+            {
+              "title": "Cookies and Tracking Technologies",
+              "text": "Cookies and similar technologies to enhance your user experience and gather analytics."
+            }
+          ]
+        },
+        {
+          "title": "Legal Basis for Processing",
+          "text": "We process your personal data in accordance with Serbian law and GDPR based on the following legal grounds:",
+          "list": [
+            "Consent: Where you have given clear consent for specific purposes.",
+            "Contractual Necessity: Where processing is necessary to fulfill a contract.",
+            "Legal Obligation: Where processing is required to comply with legal obligations.",
+            "Legitimate Interests: Where processing is necessary for our legitimate interests, provided it does not override your rights."
+          ]
+        },
+        {
+          "title": "How We Use Your Information",
+          "text": "We may use the information collected for the following purposes:",
+          "list": [
+            "To provide and manage our services.",
+            "To respond to inquiries and communicate with you.",
+            "To improve and optimize our website and services.",
+            "To comply with legal obligations and enforce our terms."
+          ]
+        },
+        {
+          "title": "Sharing Your Information",
+          "text": "We do not sell or share your personal information except as necessary to:",
+          "list": [
+            "Provide services through trusted partners or service providers.",
+            "Comply with legal obligations or respond to lawful requests from authorities.",
+            "Protect the rights and safety of our Company, users, or others."
+          ]
+        },
+        {
+          "title": "Data Retention",
+          "text": "We retain your personal data for as long as necessary to fulfill the purposes outlined in this Privacy Policy or as required by law."
+        },
+        {
+          "title": "Your Rights",
+          "text": "Under GDPR and Serbian law, you have the following rights:",
+          "list": [
+            "Access: Request access to the personal data we hold about you.",
+            "Correction: Request correction of inaccurate or incomplete personal data.",
+            "Deletion: Request deletion of your personal data.",
+            "Restriction: Request that we limit processing your personal data.",
+            "Data Portability: Request a copy of your personal data in a structured format.",
+            "Objection: Object to the processing of your personal data based on legitimate interests.",
+            "Withdraw Consent: Withdraw your consent at any time for processing based on consent."
+          ]
+        },
+        {
+          "title": "Cookies and Tracking Technologies",
+          "text": "We use cookies to understand your preferences, save them for future visits, and compile aggregate data to improve our services."
+        },
+        {
+          "title": "Data Security",
+          "text": "We implement technical and organizational measures to safeguard your personal data. However, no system can guarantee 100% security."
+        },
+        {
+          "title": "Cross-Border Data Transfers",
+          "text": "If we transfer your data outside Serbia or the EEA, we ensure it is protected through mechanisms compliant with GDPR."
+        },
+        {
+          "title": "Third-Party Links",
+          "text": "Our website may contain links to external websites. We are not responsible for their privacy practices or content. Review their privacy policies before providing personal data."
+        },
+        {
+          "title": "Changes to This Privacy Policy",
+          "text": "We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated 'Effective Date.'"
+        },
+        {
+          "title": "Contact Information",
+          "text": "For questions or concerns about this Privacy Policy, contact us at:",
+          "list": [
+            "Universe Force Group DOO Beograd®",
+            "Email: office@universeforcegroup.com",
+            "Phone: +381 69 300 13 15"
+          ]
+        }
+      ]
+    },
+    "cookiePolicy": {
+      "title": "Cookie Policy",
+      "intro": "Our website uses cookies to enhance your browsing experience, analyze website performance, and provide personalized content and advertisements. Cookies are small data files stored on your device that help us understand how you interact with our website.",
+      "consent": "By continuing to use our site, you consent to the use of cookies as outlined in this policy. You can manage or disable cookies through your browser settings; however, this may impact certain functionalities of the site.",
+      "additionalInfo": "For more information, please refer to our Privacy Policy.",
+      "footer": "Universe Force Group DOO Beograd®"
+    } 
+  }
 }
-}
+

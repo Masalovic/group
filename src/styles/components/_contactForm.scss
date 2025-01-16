@@ -22,7 +22,7 @@
       font-family: $secondaryFont;
 
       &::placeholder {
-        color: #ffffff; // Make placeholder text bright white as well
+        color: $textPrimary; // Make placeholder text bright white as well
         opacity: 0.8; // Slightly dimmer than the input text for differentiation
       }
     }
@@ -68,9 +68,9 @@
     .submit-button {
       font-family: $secondaryFont;
       font-weight: 400;
-      color: $primaryColor;
+      color: $textPrimary;
       font-size: 15px;
-      background-color: $textSecondary;
+      background-color: #009cdf8c;
       border: none;
       padding: 0.6rem 1.4rem;
       cursor: pointer;

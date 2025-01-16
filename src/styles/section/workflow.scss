@@ -6,8 +6,14 @@
   overflow: hidden;
   position: relative;
 
+  background-image: url(../../assets/images/1.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
   .horizontal-worm-container {
-    filter: drop-shadow(0 0 10px rgba(0, 178, 223, 0.8));
+    display: none;
+    filter: drop-shadow(0 0 10px rgba(0, 178, 223, 0.888));
     position: absolute;
     top: 10%;
     left: 0;
@@ -22,9 +28,7 @@
 
   #worm-logo {
     position: absolute;
-    z-index: 10;
-    top: 78px;
-    left: 0;
+    z-index: 1;
     transform: translate(-50%, -50%);
     img {
       width: 50px;
@@ -43,18 +47,13 @@
     position: absolute;
 
     .subsection {
-      // background-image: url(../../assets/images/WorkflowBckg.png);
-      // background-position: center;
-      // background-size: cover;
-      // background-repeat: no-repeat;
       width: 100vw;
-      height: 100%;
+      height: 100vh;
       display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding-top: 4rem;
       font-family: $secondaryFont;
 
       h3 {
@@ -62,7 +61,7 @@
         font-weight: bold;
         color: $textTertiary;
         margin-bottom: 1rem;
-        padding-top: 4rem;
+        padding-top: 2rem;
       }
 
       p {
@@ -94,6 +93,7 @@
 
 @media screen and (max-width: 550px) {
   .workflow-section {
+    background-size: cover;
     .subsections-container {
       .subsection .subsection-content {
         gap: 2rem;

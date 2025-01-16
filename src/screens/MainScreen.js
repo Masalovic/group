@@ -12,6 +12,7 @@ import Navigation from "../components/molecules/Navigation";
 import homeDataSr from "../assets/sr.json";
 import homeDataEn from "../assets/en.json";
 import Footer from "../components/molecules/Footer";
+import Overlay from "../screens/sections/Overlay";
 
 class MainPage extends React.PureComponent {
   state = {
@@ -43,6 +44,7 @@ class MainPage extends React.PureComponent {
 
     return (
       <div className="main-screen" style={{ overflow: "visible" }}>
+        <Overlay />
         <DropdownBanner data={data} />
         <Navigation data={data} onLanguageChange={this.switchLanguage} />
         <section id="home">

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/logos/logo.png";
 import sr from "../../assets/icons/sr.png";
 import uk from "../../assets/icons/uk.png";
 
@@ -12,6 +12,14 @@ const Navigation = ({ data, onLanguageChange }) => {
 
   const handleCloseMenu = () => {
     setIsMobileMenuOpen(false);
+  };
+
+  const handleLanguageChange = (lang) => {
+    if (typeof onLanguageChange === "function") {
+      onLanguageChange(lang);
+    } else {
+      console.error("onLanguageChange is not a function.");
+    }
   };
 
   return (
@@ -50,16 +58,16 @@ const Navigation = ({ data, onLanguageChange }) => {
             rel="noopener noreferrer"
             className="work-with-us-button"
           >
-            Work With Us
+            Create With Us
           </a>
         </div>
 
         {/* Language Box */}
         <div className="nav-box-languages">
-          <button onClick={() => onLanguageChange("sr")}>
+          <button onClick={() => handleLanguageChange("sr")}>
             <img src={sr} alt="Serbian" />
           </button>
-          <button onClick={() => onLanguageChange("en")}>
+          <button onClick={() => handleLanguageChange("en")}>
             <img src={uk} alt="English" />
           </button>
         </div>

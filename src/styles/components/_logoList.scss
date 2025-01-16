@@ -1,14 +1,20 @@
 .logo-list {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: flex-start;
   padding: 4rem;
 
   .logo-wrapper {
-    // background-color: $secondaryColor;
+    flex: 1 1 150px; // Each logo takes up at least 200px width
+    max-width: 200px; // Optional: set a maximum width
+    display: flex;
+    justify-content: center;
 
     img {
-      width: 140px;
+      max-width: 100%;
+      height: auto;
+      max-height: 120px; // Uniform height
     }
   }
 }
@@ -16,26 +22,31 @@
 @media screen and (max-width: 1150px) {
   .logo-list {
     padding: 2rem;
-    .logo-wrapper img {
-      width: 110px;
-    }
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
   .logo-list {
     padding: 1rem;
+    justify-content: center;
 
-    .logo-wrapper img {
-      width: 90px;
+    .logo-wrapper {
+      flex: 1 1 100px;
+      max-width: 100px;
     }
   }
 }
 
 @media screen and (max-width: 600px) {
   .logo-list {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    gap: 1.5rem; // Smaller gap for mobile screens
+
+    .logo-wrapper {
+      img {
+        max-width: 100%;
+        height: auto;
+        max-height: 100px; // Set a max height for uniformity
+      }
+    }
   }
 }
