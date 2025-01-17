@@ -3,17 +3,8 @@
 .service-section {
   height: 100vh;
   position: relative;
-  padding: 0 10% !important;
+  padding: 0 10%;
   overflow: hidden;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
 
   .service-container {
     display: flex;
@@ -21,7 +12,6 @@
     align-items: flex-start;
     width: 100%;
     padding-top: 6rem;
-    z-index: 10;
 
     .service-text {
       padding-bottom: 2rem;
@@ -30,12 +20,11 @@
       .subtitle-container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
 
         .service-subtitle {
           font-weight: 600;
           font-size: 50px;
-          color: $textPrimary;
+          color: $textSecondary;
           font-family: $primaryFont;
           margin-bottom: 1rem;
         }
@@ -54,96 +43,52 @@
 
     .service-cards {
       display: flex;
-      gap: 3rem;
-      width: 100%;
-      overflow-x: auto; // Enable horizontal scrolling
-      background-color: black;
-      z-index: 1;
+      width: max-content;
+      overflow: hidden; // Disable scrollbar
+      position: relative;
+      background-color: transparent;
+      padding-top: 0.5rem;
 
-      scrollbar-width: thin; /* For Firefox */
-      scrollbar-color: rgba(0, 178, 223, 0.8) transparent; /* For Firefox */
-
-      &::-webkit-scrollbar {
-        height: 8px; /* Horizontal scrollbar height */
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px; // Border thickness
+        background: linear-gradient(
+          to right,
+          #ff6f91,
+          #ff9671,
+          #ffd571,
+          #47bbed,
+          #9d47ed
+        );
+        background-size: 200% 100%;
+        animation: gradientBorder 3s linear infinite;
+        z-index: 1;
       }
 
-      &::-webkit-scrollbar-thumb {
-        background-color: rgba(
-          0,
-          178,
-          223,
-          0.8
-        ); /* Color of the scrollbar thumb */
-        border-radius: 10px;
+      @keyframes gradientBorder {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
       }
-
-      &::-webkit-scrollbar-track {
-        background-color: transparent; /* Background track */
-      }
-      // overflow-x: auto;
-      // overflow-y: hidden; /* Prevent vertical scrollbars in the card area */
-      // scroll-behavior: smooth;
-      // -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
 
       .service-card {
         flex-shrink: 0;
-        margin: 2px;
-        scroll-snap-align: start;
-        width: 600px;
-        height: 250px;
+        width: 550px;
         padding: 3%;
-        background-color: #000000bb; // Semi-transparent background
-        text-align: center;
+        background-color: #000000bb;
+        text-align: flex-start;
         position: relative;
-        overflow: hidden; // Prevent overflow
-        & {
-          border: 1px solid transparent;
-        }
-
-        // Add the glowing effect with pseudo-elements
-        &::before {
-          content: "";
-          position: absolute;
-          top: -10px;
-          left: -10px;
-          right: -10px;
-          bottom: -10px;
-          background: radial-gradient(
-            ellipse at center,
-            rgba(0, 106, 144, 0.33),
-            rgba(0, 0, 0, 0)
-          );
-          filter: blur(30px); // Smooth glow
-          z-index: -1; // Place behind the content
-        }
-
-        &::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          border: 1px solid rgba(0, 178, 223);
-          border-radius: 8px; // Rounded edges for a smoother glow
-          filter: blur(20px); // Slightly less blur than ::before
-          z-index: -1; // Place behind the content
-        }
-
-        // Animation for a subtle pulsing effect
-        animation: glowPulse 2s infinite;
-
-        @keyframes glowPulse {
-          0% {
-            box-shadow: 0 0 5px 2px rgba(0, 178, 223, 0.9);
-          }
-          50% {
-            box-shadow: 0 0 5px 2px rgba(0, 178, 223, 0.8);
-          }
-          100% {
-            box-shadow: 0 0 5px 2px rgba(0, 178, 223, 0.8);
-          }
-        }
+        scroll-snap-align: start;
 
         .card-title {
           font-size: 24px;
@@ -193,17 +138,19 @@
         .subtitle-container {
           .service-subtitle {
             font-size: 30px;
+            margin-bottom: 0;
           }
 
           .service-description {
             font-size: 16px;
+            margin: 0;
           }
         }
       }
 
       .service-cards .service-card {
         width: 300px;
-        padding: 8%;
+        padding: 2%;
 
         .card-title {
           font-size: 20px;

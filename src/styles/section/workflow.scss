@@ -11,32 +11,32 @@
   background-position: center;
   background-repeat: no-repeat;
 
-  .horizontal-worm-container {
-    display: none;
-    filter: drop-shadow(0 0 10px rgba(0, 178, 223, 0.888));
-    position: absolute;
-    top: 10%;
-    left: 0;
-    width: 100vw;
-    height: 150px;
-    z-index: 10; // Adjust this if necessary
-  }
+  // .horizontal-worm-container {
+  //   display: none;
+  //   filter: drop-shadow(0 0 10px rgba(0, 178, 223, 0.888));
+  //   position: absolute;
+  //   top: 10%;
+  //   left: 0;
+  //   width: 100vw;
+  //   height: 150px;
+  //   z-index: 10; // Adjust this if necessary
+  // }
 
-  #horizontal-worm {
-    z-index: 20;
-  }
+  // #horizontal-worm {
+  //   z-index: 20;
+  // }
 
-  #worm-logo {
-    position: absolute;
-    z-index: 1;
-    transform: translate(-50%, -50%);
-    img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      object-fit: contain;
-    }
-  }
+  // #worm-logo {
+  //   position: absolute;
+  //   z-index: 1;
+  //   transform: translate(-50%, -50%);
+  //   img {
+  //     width: 50px;
+  //     height: 50px;
+  //     border-radius: 50%;
+  //     object-fit: contain;
+  //   }
+  // }
 
   .subsections-container {
     display: flex;
@@ -57,7 +57,7 @@
       font-family: $secondaryFont;
 
       h3 {
-        font-size: 40px;
+        font-size: 30px;
         font-weight: bold;
         color: $textTertiary;
         margin-bottom: 1rem;
@@ -65,10 +65,10 @@
       }
 
       p {
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 300;
         color: $textPrimary;
-        max-width: 500px;
+        max-width: 400px;
         line-height: 1.4;
       }
     }
@@ -95,7 +95,7 @@
   .workflow-section {
     background-size: cover;
     .subsections-container {
-      .subsection .subsection-content {
+      .subsection {
         gap: 2rem;
         display: flex;
         flex-direction: column;

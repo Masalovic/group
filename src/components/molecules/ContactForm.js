@@ -55,6 +55,8 @@ const ContactForm = ({ data = {} }) => {
     setIsSubmitting(true);
     setStateMessage("");
 
+    console.log("Form data before sending:", formValues); // Debugging: Log form data
+
     try {
       await emailjs.sendForm(
         "service_5og20h5", // Replace with your EmailJS service ID

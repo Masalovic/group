@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import ServiceCard from "../../components/molecules/ServiceCard";
-import "../../styles/section/serviceSection.scss";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "../../styles/section/serviceSection.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,29 +11,48 @@ const ServiceSection = ({ data }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    const section = sectionRef.current;
-    const container = containerRef.current;
+    const ctx = gsap.context(() => {
+      const section = sectionRef.current;
+      const container = containerRef.current;
 
-    if (!section || !container) return;
+      if (!section || !container) return;
 
-    // Horizontal scrolling logic on mouse wheel
-    const handleWheel = (e) => {
-      e.preventDefault(); // Prevent vertical scrolling
-      container.scrollLeft += e.deltaY; // Scroll horizontally instead
-    };
+      const cards = gsap.utils.toArray(".service-card");
+      const containerWidth = container.scrollWidth - window.innerWidth + 50; // Ensure last card is fully visible
 
-    container.addEventListener("wheel", handleWheel);
+      // Pin the service section and create the horizontal scrolling
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top top",
+        end: () => `+=${containerWidth}`,
+        pin: true,
+        scrub: true,
+        snap: {
+          snapTo: 1 / (cards.length - 1),
+          duration: 0.5,
+          ease: "power1.inOut",
+        },
+      });
 
-    // Cleanup on unmount
-    return () => {
-      container.removeEventListener("wheel", handleWheel);
-    };
+      // Horizontal scrolling animation
+      gsap.to(container, {
+        x: () => `-${containerWidth}px`,
+        ease: "none",
+        scrollTrigger: {
+          trigger: section,
+          start: "top top",
+          end: () => `+=${containerWidth}`,
+          scrub: true,
+        },
+      });
+    }, sectionRef);
+
+    return () => ctx.revert(); // Cleanup on unmount
   }, []);
 
   return (
     <div ref={sectionRef} className="service-section">
       <div className="service-container">
-        {/* Subtitle */}
         <div className="service-text">
           <div className="subtitle-container">
             <h3 className="service-subtitle">{data.services.subtitle}</h3>
@@ -41,7 +60,6 @@ const ServiceSection = ({ data }) => {
           </div>
         </div>
 
-        {/* Service Cards */}
         <div ref={containerRef} className="service-cards">
           {data.services.cardList.map((card, index) => (
             <ServiceCard key={index} title={card.title} text={card.text} />
