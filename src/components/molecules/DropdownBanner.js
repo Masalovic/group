@@ -1,19 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 import "../../styles/components/_dropdownBanner.scss";
 
 const DropdownBanner = ({ data }) => {
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(true); // Default to closed
 
   const toggleBanner = () => {
     setIsExpanded(!isExpanded);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isExpanded) {
+        setIsExpanded(false); // Smoothly close the banner on scroll
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isExpanded]);
+
   return (
-    <div
-      className={`dropdown-banner ${isExpanded ? "expanded" : "stacked"}`}
-      onClick={isExpanded ? toggleBanner : null} // Close the banner when expanded and clicked
-    >
+    <div className={`dropdown-banner ${isExpanded ? "expanded" : "stacked"}`}>
       {isExpanded && (
         <div className="banner-content">
           <h2 className="headline">{data.dropdownBanner.headline}</h2>
@@ -29,7 +40,7 @@ const DropdownBanner = ({ data }) => {
         <button
           className="toggle-button"
           onClick={toggleBanner}
-          aria-label="Expand banner"
+          aria-label={isExpanded ? "Collapse banner" : "Expand banner"}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

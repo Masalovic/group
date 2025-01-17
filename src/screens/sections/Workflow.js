@@ -69,6 +69,24 @@ const Workflow = ({ data }) => {
           scrub: true,
         },
       });
+
+      // Subsection fade-in and fade-out effect
+      subsections.forEach((subsection) => {
+        gsap.fromTo(
+          subsection,
+          { autoAlpha: 1 }, // Start fully transparent
+          {
+            autoAlpha: 1, // Fully visible when in the center of the viewport
+            scrollTrigger: {
+              trigger: subsection,
+              start: "center center", // Trigger when in the center
+              end: "center+=100 center",
+              toggleActions: "play reverse play reverse",
+              scrub: true,
+            },
+          }
+        );
+      });
     };
 
     updateWorkflow();

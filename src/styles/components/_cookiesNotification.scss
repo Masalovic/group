@@ -1,9 +1,11 @@
+@use "../config/base" as *;
+
 .cookies-notification {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background-color: rgba(0, 0, 0, 0.9);
-  color: white;
+  color: $textPrimary;
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -16,11 +18,11 @@
     margin-bottom: 1rem;
 
     a {
-      color: #00b2df;
+      color: $textSecondary;
       text-decoration: underline;
 
       &:hover {
-        color: #00a0c0;
+        color: $textTertiary;
       }
     }
   }
@@ -37,17 +39,17 @@
       cursor: pointer;
 
       &.accept {
-        background-color: #00b2df;
-        color: white;
+        background-color: $textSecondary;
+        color: $textPrimary;
 
         &:hover {
-          background-color: #009ab8;
+          background-color: $textTertiary;
         }
       }
 
       &.reject {
         background-color: #555;
-        color: white;
+        color: $textPrimary;
 
         &:hover {
           background-color: #333;

@@ -16,22 +16,16 @@ const ContactForm = ({ data = {} }) => {
   const [fileName, setFileName] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [stateMessage, setStateMessage] = useState("");
-  const [fileClicked, setFileClicked] = useState(false); // Track if "Choose File" was clicked
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormValues((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleFileClick = () => {
-    setFileClicked(true); // Set true when the button is clicked
-  };
-
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     setFormValues((prev) => ({ ...prev, attachment: file }));
     setFileName(file ? file.name : ""); // Clear fileName if no file selected
-    setFileClicked(true); // Ensure the message logic is triggered
   };
 
   const validateForm = () => {
@@ -61,17 +55,12 @@ const ContactForm = ({ data = {} }) => {
     setIsSubmitting(true);
     setStateMessage("");
 
-    const formData = new FormData();
-    Object.entries(formValues).forEach(([key, value]) => {
-      if (value) formData.append(key, value);
-    });
-
     try {
       await emailjs.sendForm(
-        "your_service_id", // Replace with your EmailJS service ID
-        "your_template_id", // Replace with your EmailJS template ID
+        "service_5og20h5", // Replace with your EmailJS service ID
+        "template_ryfkm2k", // Replace with your EmailJS template ID
         form.current,
-        "your_public_key" // Replace with your EmailJS public key
+        "tKy3UnH2drzeygQXA" // Replace with your EmailJS public key
       );
       setStateMessage(
         formLabels.successMessage || "Message sent successfully!"
@@ -141,11 +130,7 @@ const ContactForm = ({ data = {} }) => {
           required
         ></textarea>
         <div className="file-upload-wrapper">
-          <label
-            htmlFor="file-upload"
-            className="file-upload-label"
-            onClick={handleFileClick} // Mark the file button as clicked
-          >
+          <label htmlFor="file-upload" className="file-upload-label">
             {formLabels.chooseFile}
           </label>
           <input
@@ -155,13 +140,9 @@ const ContactForm = ({ data = {} }) => {
             name="attachment"
             onChange={handleFileChange}
           />
-          {fileClicked &&
-            !fileName && ( // Show message only if button clicked and no file chosen
-              <span className="file-upload-text">
-                {formLabels.noFile || "No file chosen"}
-              </span>
-            )}
-          {fileName && <span className="file-upload-text">{fileName}</span>}
+          <span className="file-upload-text">
+            {fileName || formLabels.noFile || "No file chosen"}
+          </span>
         </div>
         <button type="submit" className="submit-button" disabled={isSubmitting}>
           {isSubmitting ? formLabels.submitting : formLabels.button}
