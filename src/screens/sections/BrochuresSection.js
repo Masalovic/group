@@ -3,7 +3,7 @@ import "../../styles/section/brochuresSection.scss";
 
 const BrochuresSection = ({ data }) => {
   return (
-    <div className="brochures-section">
+    <div className="brochures-section" id="more">
       <h2 className="section-title">{data.brochuresSection.title}</h2>
       <p className="section-subtitle">{data.brochuresSection.subtitle}</p>
 
@@ -13,11 +13,13 @@ const BrochuresSection = ({ data }) => {
             <div className="card-cover">
               <h3 className="brochure-title">{item.name}</h3>
               <p className="brochure-text">{item.text}</p>
-              <div className="card-background">
-                <a href={item.download} className="download-btn" download>
-                  {"Download"}
-                </a>
-              </div>
+
+              <a href={item.downloadSr} className="download-btn" download>
+                {data.download} (SR)
+              </a>
+              <a href={item.downloadEn} className="download-btn" download>
+                {data.download} (EN)
+              </a>
             </div>
           </div>
         ))}

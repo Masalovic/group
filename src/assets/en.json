@@ -113,13 +113,14 @@
         "name": "Brochures",
         "text": "Explore our brochures for a detailed look at our services and expertise.",
         "image": "/assets/brochures-preview.jpg",
-        "download": "/assets/brochures.pdf"
+        "downloadSr": "/passets/SveUsluge.pdf",
+        "downloadEn": "/passets/AllServices.pdf"
       },
       {
         "name": "Presentations",
         "text": "Dive into our presentations for in-depth insights and strategies tailored to your business needs.",
-        "image": "/assets/presentations-preview.jpg",
-        "download": "/assets/presentations.pdf"
+        "downloadSr": "/passets/UFGPresentationSR.pdf",
+        "downloadEn": "/passets/UFGPresentationEN.pdf"
       }
     ]
   },

@@ -8,9 +8,6 @@
   overflow: hidden;
   font-family: $primaryFont;
 
-  .marketing-content {
-  }
-
   .marketing-title {
     font-size: 50px;
     font-weight: 600;
@@ -41,6 +38,39 @@
 
     &:hover {
       border-bottom-color: $textTertiary;
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .marketing-section {
+    .marketing-title {
+      font-size: 40px;
+    }
+    .marketing-subtitle {
+      font-size: 20px;
+    }
+    .marketing-text {
+      font-size: 16px;
+    }
+    .marketing-cta {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .marketing-section {
+    margin-top: 2rem;
+    .marketing-title {
+      font-size: 30px;
+    }
+    .marketing-subtitle {
+      font-size: 18px;
+    }
+
+    .marketing-cta {
+      font-size: 16px;
     }
   }
 }

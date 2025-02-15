@@ -117,18 +117,31 @@
 
 @media screen and (max-width: 1050px) {
   .service-section {
-    .service-text {
-      .service-container {
-        .service-cards .service-card {
-          width: 350px;
+    .service-container {
+      .service-text {
+        .subtitle-container {
+          .service-title {
+            font-size: 40px;
+          }
 
-          .card-title {
+          .service-subtitle {
             font-size: 20px;
           }
 
-          .card-details {
-            font-size: 14px;
+          .service-description {
+            font-size: 16px;
           }
+        }
+      }
+      .service-cards .service-card {
+        width: 350px;
+
+        .card-title {
+          font-size: 20px;
+        }
+
+        .card-details {
+          font-size: 16px;
         }
       }
     }
@@ -139,17 +152,14 @@
   .service-section {
     height: auto;
     .service-container {
-      padding-top: 6rem;
+      padding-top: 8rem;
       .service-text {
         .subtitle-container {
-          .service-subtitle {
+          .service-title {
             font-size: 30px;
-            margin-bottom: 0;
           }
-
-          .service-description {
-            font-size: 16px;
-            margin: 0;
+          .service-subtitle {
+            font-size: 18px;
           }
         }
       }
@@ -159,11 +169,7 @@
         padding: 2%;
 
         .card-title {
-          font-size: 20px;
-        }
-
-        .card-details {
-          font-size: 15px;
+          font-size: 18px;
         }
       }
     }

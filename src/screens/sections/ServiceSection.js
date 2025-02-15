@@ -55,7 +55,7 @@ const ServiceSection = ({ data, sectionId }) => {
   if (!sectionData) return null; // Prevent rendering if section not found
 
   return (
-    <div ref={sectionRef} className="service-section">
+    <div ref={sectionRef} className="service-section" id={sectionId}>
       <div className="service-container">
         <div className="service-text">
           <div className="subtitle-container">

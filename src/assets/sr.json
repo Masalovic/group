@@ -110,17 +110,19 @@
   ],
   "brochuresSection": {
     "title": "Otključajte Našu Stručnost - Vaš Uspeh Počinje Ovde",
-    "subtitle": "Istražite naš portfolio i brošure da vidite šta možemo učiniti za vas",
+    "subtitle": "Istražite naš portfolio i brošure",
     "items": [
       {
         "name": "Brošure",
         "text": "Istražite naše brošure za detaljan pregled naših usluga i stručne ekspertize.",
-        "download": "/assets/brochures.pdf"
+        "downloadSr": "/passets/SveUsluge.pdf",
+        "downloadEn": "/passets/AllServices.pdf"
       },
       {
         "name": "Prezentacije",
         "text": "Zaronite u naše prezentacije za duboke uvide i strategije prilagođene vašem poslovanju.",
-        "download": "/assets/presentations.pdf"
+        "downloadSr": "/passets/UFGPresentationSR.pdf",
+        "downloadEn": "/passets/UFGPresentationEN.pdf"
       }
     ]
   },
