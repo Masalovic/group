@@ -3,10 +3,10 @@ import Background from "../../assets/videos/HomeBckg.mp4";
 
 const HomeSection = ({ data }) => {
   const handleScrollToContact = (e) => {
-    e.preventDefault(); // Prevent default anchor behavior
+    e.preventDefault();
     const target = document.querySelector("#contact");
     if (target) {
-      target.scrollIntoView({ behavior: "smooth" }); // Use native smooth scrolling
+      target.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -26,10 +26,25 @@ const HomeSection = ({ data }) => {
       </video>
 
       <div className="home-container">
-        <h3 className="home-subtitle">{data.home.subtitle}</h3>
-        <p className="home-text">{data.home.text}</p>
+        <h1 className="home-title">{data?.home?.title}</h1>
+        <div className="home-divider"></div>
+        <h3 className="home-subtitle">{data?.home?.subtitle}</h3>
+
+        {/* Map through texts dynamically */}
+        <div className="home-texts">
+          {Object.keys(data?.home || {})
+            .filter((key) => key.startsWith("text"))
+            .map((key) => (
+              <p key={key} className="home-text">
+                {data.home[key]}
+              </p>
+            ))}
+        </div>
+
+        <p className="home-subtext">{data?.home?.subtext}</p>
+
         <a href="/#contact" onClick={handleScrollToContact}>
-          <button className="home-button">{data.home.button}</button>
+          <button className="home-button">{data?.home?.button}</button>
         </a>
       </div>
     </div>

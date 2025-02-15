@@ -1,11 +1,10 @@
 import React from "react";
 import ReactGA from "react-ga4";
 import HomeSection from "./sections/HomeSection";
-import AboutSection from "./sections/AboutSection";
 import ServiceSection from "./sections/ServiceSection";
+import MarketingSection from "./sections/MarketingSection";
+import BrochuresSection from "./sections/BrochuresSection";
 import ContactSection from "./sections/ContactSection";
-import PortfolioSection from "./sections/PortfolioSection";
-import Workflow from "./sections/Workflow";
 import ClientBanner from "../components/molecules/ClientBanner";
 import DropdownBanner from "../components/molecules/DropdownBanner";
 import Navigation from "../components/molecules/Navigation";
@@ -50,18 +49,19 @@ class MainPage extends React.PureComponent {
         <section id="home">
           <HomeSection data={data} />
         </section>
-        <section id="services">
-          <ServiceSection data={data} />
+        <section>
+          <ServiceSection data={data} sectionId="it-services" />
         </section>
-        <section id="about">
-          <AboutSection data={data} />
+        <section>
+          <MarketingSection data={data} />
         </section>
-        <section id="portfolio">
-          <PortfolioSection data={data} />
+        <section>
+          <ServiceSection data={data} sectionId="consulting-services" />
         </section>
-        <section id="workflow">
-          <Workflow data={data} />
+        <section>
+          <BrochuresSection data={data} />
         </section>
+
         <section id="client">
           <ClientBanner />
         </section>

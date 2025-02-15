@@ -5,16 +5,20 @@
       "path": "/"
     },
     {
-      "name": "Usluge",
-      "path": "/#services"
+      "name": "IT Usluge",
+      "path": "/#it-services"
     },
     {
-      "name": "O Nama",
-      "path": "/#about"
+      "name": "Marketing Usluge",
+      "path": "/#marketing-services"
     },
     {
-      "name": "Put Sa Nama",
-      "path": "/#workflow"
+      "name": "Usluge Konsaltinga",
+      "path": "/#consulting-services"
+    },
+    {
+      "name": "Više",
+      "path": "/#more"
     },
     {
       "name": "Kontakt",
@@ -27,76 +31,101 @@
     "button": "Kontakt"
   },
   "home": {
-    "subtitle": "Ostvarite svoje poslovne ciljeve",
-    "text": "Izgradite brend koji se ističe, angažujte nove klijente i unapredite svoj posao uz marketing rešenja prilagođena vašim potrebama.",
-    "button": "Zakažite besplatne konsultacije"
+    "title": "Vaš Sveobuhvatni Centar Za Poslovni Rast",
+  "subtitle": "U Universe Force Group-u pomažemo preduzećima da skaliraju, inoviraju i rastu brže uz naše IT, marketing i konsultantske usluge — sve na jednom mestu.",
+  "text1": "➤ Trebate Optimizovati Operacije Pametnim IT Rešenjima? Tu Smo Za Vas.",
+  "text2": "➤ Tražite Poslovno Savetovanje Za Sledeću Fazu Rasta? Hajde Da To Ostvarimo.",
+  "text3": "➤ Želite Besprekornu Marketinšku Strategiju I Realizaciju Koja Donosi Rezultate? I To Radimo.",
+  "subtext": "Hajde Da Gradimo, Skaliramo I Rastemo — Zajedno!",
+  "button": "Zakažite Besplatne Konsultacije"
   },
-  "portfolio": {
-    "marquee": "Dizajn - Strategija - SEO - Marketing"
-  },
-  "about": {
-    "subtitle": "Ko Smo Mi?",
-    "text": "Universe Force je tim koji rešava probleme, stratezi i tehnološki entuzijasti koji veruju da svaki posao zaslužuje alate i stručnost za napredovanje. Radimo sa vama na rešavanju izazova, pojednostavljivanju poslovanja i otvaranju novih mogućnosti za rast. Sa dugogodišnjim iskustvom u poslovnom razvoju, marketingu i IT uslugama, razumemo prave izazove sa kojima se preduzeća suočavaju. Bilo da se radi o usavršavanju vaše strategije, poboljšanju efikasnosti ili nadogradnji vaše tehnologije, mi smo tu da stvari učinimo jednostavnijim i boljim.",
-    "reasons": [
-      {
-        "title": "Jednostavnost",
-        "text": "Držimo stvari jednostavnim: bez žargona, bez prekomernih komplikacija — samo jasna, efikasna rešenja."
-      },
-      {
-        "title": "Jedinstvenost",
-        "text": "Sve prilagođavamo vašim potrebama, tako da dobijate upravo ono što odgovara vašem poslu."
-      },
-      {
-        "title": "Podrška",
-        "text": "Uz vas smo na svakom koraku, nudeći smernice i podršku kad god vam zatreba."
-      }
-    ]
-  },
-  "services": {
-    "title": "usluge",
-    "subtitle": "Digitalna rešenja iz naše ponude",
-    "description": "Pravi uspeh nastaje tamo gde se vizija susreće s prilikama, a strategija sa smelošću. Verujemo da svaki izazov nosi u sebi potencijal za rast, ako se posmatra iz pravog ugla. Naš pristup nije samo da rešimo probleme, već da redefinišemo granice onoga što je moguće. Gradimo rešenja koja ne odgovaraju samo na današnje zahteve, već oblikuju sutrašnje standarde - jer budućnost pripada onima koji ne traže prilike, već ih stvaraju.",
-    "cardList": [
-      {
-        "title": "Razvoj Brenda",
-        "text": "Od kreiranja logotipa, osmišljavanja upečatljivih poruka koje želite da prenesete svojim klijentima i osvežavanje zastarelog brendiranja do kreiranja preciznog marketing plana."
-      },
-      {
-        "title": "Istraživanje Tržišta",
-        "text": "Pružamo uvid u ponašanje potrošača, konkurenciju i tržišne trendove, kako bi napravili najefikasnije marketing kampanje."
-      },
-      {
-        "title": "Digitalni Marketing",
-        "text": "Stvaramo pozitivnu digitalnu prisutnost i veću vidljivost na svim platformama. Vođenjem društvenih mreža, kreiranjem i promovisanjem kvalitetnog sadržaja, organski i putem PPC oglasa povezujemo Vas sa novim klijentima i otvaramo nova tržišta."
-      },
-      {
-        "title": "Offline Marketing",
-        "text": "Povećavamo vidljivost Vašeg brenda kroz marketing događaja, štampane kampanje i direktni kontakt sa klijentima."
-      },
-      {
-        "title": "Analitika Performansi",
-        "text": "Pratimo i unapređujemo kampanje; uz pomoć dobijenih podataka vršimo A/B testiranje i pravimo detaljne izveštaje."
-      }
-    ]
-  },
-  "workflow": [
+
+  "services": [
     {
-      "title": "Besplatne Konsultacije",
-      "text": "Počnimo sa razgovorom! Naučićemo o vašim izazovima, istražiti rešenja i objasniti kako možemo da vam pomognemo - sve to, besplatno. Sve je u razumevanju vaših ciljeva i postavljanju temelja za uspeh."
+      "id": "it-services",
+      "title": "IT Usluge",
+      "subtitle": "Pametna, skalabilna i bezbedna IT rešenja",
+      "text": "Tehnologija bi trebalo da vam olakša poslovanje, a ne da ga komplikuje. Kreiramo web sajtove, aplikacije, e-commerce platforme i brinemo se o vašoj IT infrastrukturi, bezbednosti i digitalnoj transformaciji, kako biste mogli da se fokusirate na ono što je zaista važno – rast vašeg biznisa.",
+      "cardList": [
+        {
+          "title": "Digitalna Transformacija",
+          "text": "Premestite svoje poslovanje u cloud, automatizujte procese i usvojite nove tehnologije za veću efikasnost."
+        },
+        {
+          "title": "Upravljanje IT Infrastrukturom",
+          "text": "Pouzdane mreže, brzi sistemi i besprekorno povezivanje kako bi vaše poslovanje teklo bez zastoja."
+        },
+        {
+          "title": "Sajber Bezbednost i Zaštita Podataka",
+          "text": "Firewall zaštita, enkripcija i monitoring u realnom vremenu – sve što vam je potrebno da zaštitite svoje podatke od sajber pretnji."
+        },
+        {
+          "title": "Razvoj Softvera i SaaS Rešenja",
+          "text": "Kreiramo prilagođene aplikacije i softverska rešenja koja odgovaraju vašem poslovanju."
+        },
+        {
+          "title": "Analitika i Poslovna Inteligencija",
+          "text": "Transformišemo sirove podatke u korisne uvide koji vam pomažu da donosite bolje poslovne odluke."
+        }
+      ]
+    
     },
+
     {
-      "title": "Ugovor",
-      "text": "Kada budemo na istoj stranici, izložićemo plan u jednostavnom, jasnom ugovoru. Ovo uključuje sve što treba da znate - isporuke, rokove i troškove; kako bismo mogli da počnemo sa poverenjem."
+      "id": "marketing-services",
+      "title": "Marketing Usluge",
+      "subtitle": "Dokazane marketinške strategije",
+      "text": "Naš tim posvećenih stručnjaka pomaže vam da povećate vidljivost i ostvarite stvarne rezultate kroz strategije prilagođene vašem brendu.",
+      "cta": "🔗 Pogledajte više na UniverseForceMarketing.com"
     },
+
     {
-      "title": "Prototip",
-      "text": "Pogledajte kako se vaše ideje oblikuju! Napravićemo prvu verziju za vas da pregledate i usavršite. Vaše povratne informacije osiguravaju da konačni rezultat odgovara vašoj viziji."
-    },
-    {
-      "title": "Lansiranje",
-      "text": "Vreme je za pokret! Oživećemo vaš projekat i postaraćemo se da sve teče glatko. Nakon lansiranja, mi ćemo ostati tu da vas podržimo i istražimo nove načine da vam pomognemo u rastu."
+      "id": "consulting-services",
+      "title": "Konsultantske Usluge",
+      "subtitle": "Strateško vođenje za pametan rast",
+      "text": "Bez obzira da li pokrećete, skalirate ili optimizujete biznis, naši eksperti pružaju podatke, uvide i rešenja za donošenje pravih odluka.",
+      "cardList": [
+        {
+          "title": "Razvoj Biznisa i Strategija",
+          "text": "Izrada poslovnih planova, finansijskih projekcija i strategija za dugoročni uspeh."
+        },
+        {
+          "title": "Finansijsko Planiranje i Budžetiranje",
+          "text": "Od optimizacije troškova do investicionih strategija – pomažemo vam da pametno upravljate resursima."
+        },
+        {
+          "title": "Operativna Efikasnost",
+          "text": "Analiziramo vaše poslovanje i implementiramo rešenja za povećanje produktivnosti i smanjenje gubitaka."
+        },
+        {
+          "title": "Optimizacija Korisničkog Iskustva",
+          "text": "Pomažemo vam da izgradite bolje odnose sa klijentima i povećate lojalnost kroz efikasno CRM upravljanje."
+        },
+        {
+          "title": "Istraživanje Tržišta i Analiza Konkurencije",
+          "text": "Detaljna analiza tržišta, potrošačkih trendova i konkurencije kako biste donosili informisane odluke."
+        }
+      ]
     }
   ],
+  "brochuresSection": {
+    "title": "Otključajte Našu Stručnost - Vaš Uspeh Počinje Ovde",
+    "subtitle": "Istražite naš portfolio i brošure da vidite šta možemo učiniti za vas",
+    "items": [
+      {
+        "name": "Brošure",
+        "text": "Istražite naše brošure za detaljan pregled naših usluga i stručne ekspertize.",
+        "download": "/assets/brochures.pdf"
+      },
+      {
+        "name": "Prezentacije",
+        "text": "Zaronite u naše prezentacije za duboke uvide i strategije prilagođene vašem poslovanju.",
+        "download": "/assets/presentations.pdf"
+      }
+    ]
+  },
+  "download": "Preuzmi",
+
   "contact": {
     "title": "Kontakt",
     "description": "Otkrijte kako možemo transformisati vaš brend i pomoći vam da postignete poslovne ciljeve. Naša prva konsultacija je potpuno besplatna!",
@@ -133,7 +162,7 @@
         "title": "Kontakt",
         "phone": "+381 69 300 13 15",
         "email": "office@universeforcegroup.com",
-        "address": "Bistricka 39, 11010, Belgrade, Serbia"
+        "address": "Bistrička 39, 11010, Belgrade, Serbia"
       },
       "socialMedia": {
         "title": "Pratite Nas",
@@ -174,10 +203,7 @@
           "name": "Usluge",
           "path": "/#services"
         },
-        {
-          "name": "O Nama",
-          "path": "/#about"
-        },
+       
         {
           "name": "Put Sa Nama",
           "path": "/#workflow"

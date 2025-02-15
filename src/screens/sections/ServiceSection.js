@@ -6,7 +6,7 @@ import "../../styles/section/serviceSection.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ServiceSection = ({ data }) => {
+const ServiceSection = ({ data, sectionId }) => {
   const sectionRef = useRef(null);
   const containerRef = useRef(null);
 
@@ -50,18 +50,24 @@ const ServiceSection = ({ data }) => {
     return () => ctx.revert(); // Cleanup on unmount
   }, []);
 
+  // 🛠 Move sectionData lookup after useEffect
+  const sectionData = data.services.find((service) => service.id === sectionId);
+  if (!sectionData) return null; // Prevent rendering if section not found
+
   return (
     <div ref={sectionRef} className="service-section">
       <div className="service-container">
         <div className="service-text">
           <div className="subtitle-container">
-            <h3 className="service-subtitle">{data.services.subtitle}</h3>
-            <p className="service-description">{data.services.description}</p>
+            <h3 className="service-title">{sectionData.title}</h3>
+            <h3 className="service-subtitle">{sectionData.subtitle}</h3>
+            <p className="service-description">{sectionData.text}</p>
           </div>
         </div>
 
         <div ref={containerRef} className="service-cards">
-          {data.services.cardList.map((card, index) => (
+          {/* Iterate over services and their cardList */}
+          {sectionData.cardList.map((card, index) => (
             <ServiceCard key={index} title={card.title} text={card.text} />
           ))}
         </div>

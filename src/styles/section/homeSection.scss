@@ -29,7 +29,7 @@
       0,
       0,
       0,
-      0.3
+      0.5
     ); // Adjust opacity with the alpha value (0.0 to 1.0)
     z-index: 2; // Place it above the video
   }
@@ -37,42 +37,64 @@
   .home-container {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 60%;
     margin: 10%;
+    padding-top: 4rem;
     z-index: 3;
 
-    .home-subtitle {
+    .home-title,
+    .home-subtitle,
+    .home-text,
+    .home-subtext {
       color: $textPrimary;
       font-family: $primaryFont;
+      font-weight: 400;
+    }
+
+    .home-title {
+      font-size: 20px;
+    }
+    .home-divider {
+      width: 430px;
+      margin-top: 3px;
+      height: 1px;
+      background-color: $textSecondary;
+    }
+    .home-subtitle {
       font-weight: 600;
-      font-size: 60px;
-      text-transform: capitalize;
+      font-size: 34px;
+      padding: 1.5rem 0;
     }
 
     .home-text {
-      font-size: 20px;
-      color: $textPrimary;
-      margin-top: 1rem;
-      margin-bottom: 3rem;
+      font-size: 18px;
       line-height: 1.4;
-      font-family: $secondaryFont;
-      font-weight: 300;
+      padding-top: 10px;
+      font-weight: 100;
+    }
+
+    .home-subtext {
+      font-size: 20px;
+      text-transform: capitalize;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 2rem 0;
     }
 
     /* CSS */
     .home-button {
       font-size: 14px;
-      font-family: $secondaryFont;
-      font-weight: 400;
+      font-family: $primaryFont;
+      font-weight: 100;
       padding: 13px 20px 13px;
       outline: 0;
       color: $textPrimary;
-      border: 1px solid #00b2df8f;
+      border: 1px solid #006cdf8f;
       cursor: pointer;
       position: relative;
-      background-color: rgba(0, 0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.3);
       box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        rgba(0, 0, 0, 0.5) 0px 18px 36px -18px inset;
       user-select: none;
       -webkit-user-select: none;
       touch-action: manipulation;
@@ -80,7 +102,7 @@
 
     .home-button:after {
       content: "";
-      background-color: #009cdfa2;
+      background-color: $textSecondary;
       width: 100%;
       z-index: -1;
       position: absolute;

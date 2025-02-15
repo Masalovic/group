@@ -5,18 +5,21 @@
       "path": "/"
     },
     {
-      "name": "Services",
-      "path": "/#services"
+      "name": "IT Services",
+      "path": "/#it-services"
     },
     {
-      "name": "About Us",
-      "path": "/#about"
+      "name": "Marketing Services",
+      "path": "/#marketing-services"
     },
     {
-      "name": "How We Work",
-      "path": "/#workflow"
+      "name": "Consulting Services",
+      "path": "/#consulting-services"
     },
-   
+    {
+      "name": "More",
+      "path": "/#more"
+    },
     {
       "name": "Contact",
       "path": "/#contact"
@@ -27,76 +30,101 @@
     "subheadline": "Got a business idea and need help in launching it? Reach out!",
     "button": "Contact Us" },
   "home": {
-    "subtitle": "Achieve your business goals",
-    "text": "Build a brand that stands out, engage new customers and grow your business with marketing solutions tailored to your needs.",
-    "button": "Schedule a free consultation"
+    "title": "Your One-Stop Shop for Business Growth",
+    "subtitle": "At Universe Force Group, we help businesses scale, innovate, and grow faster with our IT, marketing and consulting solutions — all under one roof.",
+    "text1": "➤ Need to optimize operations with smart IT solutions? We've got you.",
+    "text2": "➤ Looking for business consulting to fuel your next phase of growth? Let's make it happen.",
+    "text3": "➤ Want seamless marketing strategies and execution that actually drive results? We do that too.",
+    "subtext": "Let's build, scale, and grow — together!",
+    "button": "Book a Free Consultation"
   },
-  "portfolio": {
-    "marquee": "Design - Development - SEO - Marketing"
-  },
-  "about": {
-    "subtitle": "Who We Are?",
-    "text": "Universe Force is a team of problem solvers, strategists and technology enthusiasts who believe every business deserves the tools and expertise to thrive. We work with you to solve challenges, simplify your business and open up new opportunities for growth. With years of experience in business development, marketing and IT services, we understand the real challenges businesses face. Whether it's refining your strategy, improving efficiency or upgrading your technology, we're here to make things simpler and better.",
-    "reasons": [
-      {
-        "title": "Simplicity",
-        "text": "We keep things simple: no jargon, no overcomplications — just clear, effective solutions."
-      },
-      {
-        "title": "Uniqueness",
-        "text": "We tailor everything to your needs, so you get exactly what works for your business."
-      },
-      {
-        "title": "Support",
-        "text": "We're with you every step of the way, offering guidance and support whenever you need it."
-      }
-    ]
-  },
-  "services": {
-    "title": "usluge",
-    "subtitle": "Digital solutions we offer",
-    "description": "True success occurs where vision meets opportunity and strategy meets boldness. We believe that every challenge carries within it the potential for growth, if viewed from the right angle. Our approach is not just to solve problems, but to redefine the boundaries of what is possible. We build solutions that not only respond to today's requirements, but shape tomorrow's standards - because the future belongs to those who don't look for opportunities, but create them.",
-    "cardList": [
-      {
-        "title": "Brand Development",
-        "text": "From creating a logo, coming up with striking messages that you want to convey to your customers and refreshing outdated branding to creating a precise marketing plan."
-      },
-      {
-        "title": "Market Research",
-        "text": "We provide insight into consumer behavior, competition and market trends, in order to create the most effective marketing campaigns."
-      },
-      {
-        "title": "Digital Marketing",
-        "text": "We create a positive digital presence and greater visibility on all platforms. By running social networks, creating and promoting quality content, organically and through PPC ads, we connect you with new clients and open new markets."
-      },
-      {
-        "title": "Offline Marketing",
-        "text": "We increase the visibility of your brand through event marketing, print campaigns and direct contact with clients."
-      },
-      {
-        "title": "Performance Analytics",
-        "text": "We monitor and improve campaigns; with the help of the obtained data, we perform A/B testing and create detailed reports."
-      }
-    ]
-  },
-  "workflow": [
+ "services": [
     {
-      "title": "Free Consultation",
-      "text": "Let’s start with a conversation! We’ll learn about your challenges, explore solutions, and share how we can help—all at no cost. It’s all about understanding your goals and laying the groundwork for success."
+      "id": "it-services",
+      "title": "IT Services",
+      "subtitle": "Smart, Scalable, and Secure IT Solutions",
+      "text": "Technology should make your business easier, not more complicated. We create websites, apps, e-commerce platforms, and manage your IT infrastructure, security, and digital transformation so you can focus on what really matters – the growth of your business.",
+      "cardList": [
+        {
+          "title": "Digital Transformation",
+          "text": "Move your business to the cloud, automate processes, and adopt new technologies for greater efficiency."
+        },
+        {
+          "title": "IT Infrastructure Management",
+          "text": "Reliable networks, fast systems, and seamless connectivity to keep your business running smoothly."
+        },
+        {
+          "title": "Cybersecurity and Data Protection",
+          "text": "Firewall protection, encryption, and real-time monitoring – everything you need to protect your data from cyber threats."
+        },
+        {
+          "title": "Software Development and SaaS Solutions",
+          "text": "We create custom apps and software solutions tailored to your business."
+        },
+        {
+          "title": "Analytics and Business Intelligence",
+          "text": "We transform raw data into valuable insights that help you make better business decisions."
+        }
+      ]
     },
+
     {
-      "title": "Contract",
-      "text": "Once we’re on the same page, we’ll outline the plan in a simple, clear contract. This includes everything you need to know—deliverables, timelines, and costs—so we can get started with confidence."
+      "id": "marketing-services",
+      "title": "Marketing Services",
+      "subtitle": "Proven Marketing Strategies",
+      "text": "Our team of dedicated experts helps you increase visibility and achieve real results through strategies tailored to your brand.",
+      "cta": "🔗 Check out more at UniverseForceMarketing.com"
     },
+
     {
-      "title": "Prototype",
-      "text": "See your ideas take shape! We’ll create a first version for you to review, refine, and perfect together. Your feedback ensures the final result matches your vision."
-    },
-    {
-      "title": "Launch",
-      "text": "It’s go time! We’ll bring your project to life and make sure everything runs smoothly. After launch, we’ll stick around to support you and explore new ways to help you grow."
+      "id": "consulting-services",
+      "title": "Consulting Services",
+      "subtitle": "Strategic Guidance for Smart Growth",
+      "text": "Whether you're starting, scaling, or optimizing your business, our experts provide data, insights, and solutions to help you make the right decisions.",
+      "cardList": [
+        {
+          "title": "Business Development and Strategy",
+          "text": "Creating business plans, financial projections, and strategies for long-term success."
+        },
+        {
+          "title": "Financial Planning and Budgeting",
+          "text": "From cost optimization to investment strategies – we help you manage resources wisely."
+        },
+        {
+          "title": "Operational Efficiency",
+          "text": "We analyze your operations and implement solutions to increase productivity and reduce losses."
+        },
+        {
+          "title": "Customer Experience Optimization",
+          "text": "We help you build better relationships with customers and increase loyalty through effective CRM management."
+        },
+        {
+          "title": "Market Research and Competitor Analysis",
+          "text": "In-depth market analysis, consumer trends, and competitor research to help you make informed decisions."
+        }
+      ]
     }
   ],
+  "brochuresSection": {
+    "title": "Unlock Our Expertise - Your Success Starts Here",
+    "subtitle": "Explore Our Portfolio & Brochures to See What We Can Do for You",
+    "items": [
+      {
+        "name": "Brochures",
+        "text": "Explore our brochures for a detailed look at our services and expertise.",
+        "image": "/assets/brochures-preview.jpg",
+        "download": "/assets/brochures.pdf"
+      },
+      {
+        "name": "Presentations",
+        "text": "Dive into our presentations for in-depth insights and strategies tailored to your business needs.",
+        "image": "/assets/presentations-preview.jpg",
+        "download": "/assets/presentations.pdf"
+      }
+    ]
+  },
+  "download": "Download",
+  
   "contact": {
     "title": "Contact",
     "description": "Discover how we can transform your brand and help you achieve your business goals. Our first consultation is completely free!",
@@ -174,10 +202,7 @@
       "name": "Usluge",
       "path": "/#services"
     },
-    {
-      "name": "O Nama",
-      "path": "/#about"
-    },
+  
     {
       "name": "How We Work",
       "path": "/#workflow"

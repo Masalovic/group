@@ -19,7 +19,7 @@
       border: none;
       background: transparent;
       border-bottom: 1px solid $textTertiary;
-      font-family: $secondaryFont;
+      font-family: $primaryFont;
 
       &::placeholder {
         color: $textPrimary; // Make placeholder text bright white as well
@@ -42,7 +42,7 @@
         color: $textPrimary;
         padding: 0.5rem 1rem;
 
-        font-family: $secondaryFont;
+        font-family: $primaryFont;
         cursor: pointer;
         transition: background-color 0.3s ease;
 
@@ -56,7 +56,7 @@
       }
 
       .file-upload-text {
-        font-family: $secondaryFont;
+        font-family: $primaryFont;
         color: $textPrimary;
         font-size: 14px;
         white-space: nowrap;
@@ -66,11 +66,11 @@
     }
 
     .submit-button {
-      font-family: $secondaryFont;
+      font-family: $primaryFont;
       font-weight: 400;
       color: $textPrimary;
       font-size: 15px;
-      background-color: #009cdf8c;
+      background-color: $textSecondary;
       border: none;
       padding: 0.6rem 1.4rem;
       cursor: pointer;

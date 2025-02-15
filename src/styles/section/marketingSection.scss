@@ -1,0 +1,46 @@
+@use "../config/base" as *;
+
+.marketing-section {
+  color: $textPrimary;
+  text-align: flex-start;
+  padding: 10%;
+  position: relative;
+  overflow: hidden;
+  font-family: $primaryFont;
+
+  .marketing-content {
+  }
+
+  .marketing-title {
+    font-size: 50px;
+    font-weight: 600;
+  }
+
+  .marketing-subtitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: $textSecondary;
+    padding-top: 5px;
+    padding-bottom: 2rem;
+    text-transform: capitalize;
+  }
+
+  .marketing-text {
+    font-size: 18px;
+    font-weight: 300;
+    padding-bottom: 4rem;
+  }
+
+  .marketing-cta {
+    font-size: 24px;
+    color: $textPrimary;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid $textSecondary;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      border-bottom-color: $textTertiary;
+    }
+  }
+}

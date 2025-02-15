@@ -21,22 +21,28 @@
         display: flex;
         flex-direction: column;
 
-        .service-subtitle {
-          font-weight: 600;
-          font-size: 50px;
-          color: $textSecondary;
+        .service-title,
+        .service-subtitle,
+        .service-description {
           font-family: $primaryFont;
+          font-weight: 600;
+          color: $textPrimary;
+        }
+        .service-title {
+          font-size: 50px;
+          padding-bottom: 5px;
+        }
+        .service-subtitle {
+          font-size: 24px;
           margin-bottom: 1rem;
+          color: $textSecondary;
         }
 
         .service-description {
-          font-family: $secondaryFont;
-          font-size: 20px;
-          font-style: italic;
+          font-size: 18px;
           line-height: 1.4;
-          color: $textPrimary;
           margin: 1rem 0;
-          font-weight: 400;
+          font-weight: 300;
         }
       }
     }
@@ -58,11 +64,11 @@
         height: 5px; // Border thickness
         background: linear-gradient(
           to right,
-          #ff6f91,
-          #ff9671,
-          #ffd571,
-          #47bbed,
-          #9d47ed
+          #ccdcff,
+          #44adf3,
+          #037dd1,
+          #03568d,
+          #012d4a
         );
         background-size: 200% 100%;
         animation: gradientBorder 3s linear infinite;
@@ -92,7 +98,7 @@
 
         .card-title {
           font-size: 24px;
-          font-family: $secondaryFont;
+          font-family: $primaryFont;
           font-weight: 600;
           color: $textPrimary;
           margin-bottom: 1rem;
@@ -100,9 +106,9 @@
 
         .card-details {
           font-size: 18px;
-          font-family: $secondaryFont;
-          font-weight: 400;
-          color: $textLightContrast;
+          font-family: $primaryFont;
+          font-weight: 300;
+          color: $textPrimary;
         }
       }
     }

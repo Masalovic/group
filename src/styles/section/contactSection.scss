@@ -14,15 +14,15 @@
     margin-bottom: 6rem;
 
     .contact-title {
-      font-size: 60px;
-      font-weight: bold;
-      color: $textTertiary;
+      font-size: 50px;
+      font-weight: 600;
+      color: $textPrimary;
       margin-bottom: 1rem;
     }
 
     .contact-description {
       font-size: 20px;
-      font-family: $secondaryFont;
+      font-family: $primaryFont;
       max-width: 600px;
       margin: 0 auto;
       color: $textPrimary;
