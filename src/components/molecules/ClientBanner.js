@@ -9,6 +9,8 @@ import aki from "../../assets/logos/aki.png";
 import nineLives from "../../assets/logos/nineLives.png";
 import bacioNero from "../../assets/logos/bacioNero.png";
 import paradiseBay from "../../assets/logos/paradiseBay.png";
+import vojo from "../../assets/logos/vojo.png";
+import fyrBear from "../../assets/logos/fyrBear.png";
 import LogoList from "../../components/atoms/LogoList";
 import "../../styles/components/_clientBanner.scss";
 
@@ -25,6 +27,8 @@ const ClientBanner = () => {
     nineLives,
     bacioNero,
     paradiseBay,
+    vojo,
+    fyrBear,
   ];
   return (
     <div className="banner-section">

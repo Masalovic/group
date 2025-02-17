@@ -3,7 +3,7 @@
 .marketing-section {
   color: $textPrimary;
   text-align: flex-start;
-  padding: 10%;
+  padding: 2rem 10%;
   position: relative;
   overflow: hidden;
   font-family: $primaryFont;
@@ -61,7 +61,7 @@
 
 @media screen and (max-width: 550px) {
   .marketing-section {
-    margin-top: 2rem;
+    padding: 1rem 10%;
     .marketing-title {
       font-size: 30px;
     }

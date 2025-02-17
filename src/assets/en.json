@@ -38,6 +38,24 @@
     "subtext": "Let's build, scale, and grow — together!",
     "button": "Book a Free Consultation"
   },
+  "about": {
+    "subtitle": "Who We Are?",
+    "text": "Universe Force is a team of problem solvers, strategists and technology enthusiasts who believe every business deserves the tools and expertise to thrive. We work with you to solve challenges, simplify your business and open up new opportunities for growth. With years of experience in business development, marketing and IT services, we understand the real challenges businesses face. Whether it's refining your strategy, improving efficiency or upgrading your technology, we're here to make things simpler and better.",
+    "reasons": [
+      {
+        "title": "Simplicity",
+        "text": "We keep things simple: no jargon, no overcomplications — just clear, effective solutions."
+      },
+      {
+        "title": "Uniqueness",
+        "text": "We tailor everything to your needs, so you get exactly what works for your business."
+      },
+      {
+        "title": "Support",
+        "text": "We're with you every step of the way, offering guidance and support whenever you need it."
+      }
+    ]
+  },
  "services": [
     {
       "id": "it-services",
@@ -45,6 +63,10 @@
       "subtitle": "Smart, Scalable, and Secure IT Solutions",
       "text": "Technology should make your business easier, not more complicated. We create websites, apps, e-commerce platforms, and manage your IT infrastructure, security, and digital transformation so you can focus on what really matters – the growth of your business.",
       "cardList": [
+        {
+          "title": "Software Development and SaaS Solutions",
+          "text": "We create custom apps and software solutions tailored to your business."
+        },
         {
           "title": "Digital Transformation",
           "text": "Move your business to the cloud, automate processes, and adopt new technologies for greater efficiency."
@@ -56,10 +78,6 @@
         {
           "title": "Cybersecurity and Data Protection",
           "text": "Firewall protection, encryption, and real-time monitoring – everything you need to protect your data from cyber threats."
-        },
-        {
-          "title": "Software Development and SaaS Solutions",
-          "text": "We create custom apps and software solutions tailored to your business."
         },
         {
           "title": "Analytics and Business Intelligence",
@@ -103,6 +121,27 @@
           "text": "In-depth market analysis, consumer trends, and competitor research to help you make informed decisions."
         }
       ]
+    }
+  ],
+  "portfolio": {
+    "marquee": "IT - Consulting - Marketing"
+  },
+  "workflow": [
+    {
+      "title": "Free Consultation",
+      "text": "Let's start with a conversation! We'll learn about your challenges, explore solutions, and share how we can help—all at no cost. It's all about understanding your goals and laying the groundwork for success."
+    },
+    {
+      "title": "Contract",
+      "text": "Once we're on the same page, we'll outline the plan in a simple, clear contract. This includes everything you need to know—deliverables, timelines, and costs—so we can get started with confidence."
+    },
+    {
+      "title": "Prototype",
+      "text": "See your ideas take shape! We'll create a first version for you to review, refine, and perfect together. Your feedback ensures the final result matches your vision."
+    },
+    {
+      "title": "Launch",
+      "text": "It's go time! We'll bring your project to life and make sure everything runs smoothly. After launch, we'll stick around to support you and explore new ways to help you grow."
     }
   ],
   "brochuresSection": {

@@ -32,14 +32,31 @@
   },
   "home": {
     "title": "Vaš Sveobuhvatni Centar Za Poslovni Rast",
-  "subtitle": "U Universe Force Group-u pomažemo preduzećima da skaliraju, inoviraju i rastu brže uz naše IT, marketing i konsultantske usluge — sve na jednom mestu.",
-  "text1": "➤ Trebate Optimizovati Operacije Pametnim IT Rešenjima? Tu Smo Za Vas.",
+  "subtitle": "U Universe Force Group-u pomažemo preduzećima u razvoju, inovaciji i rastu, uz naše IT, marketing i konsultantske usluge dobijate sve na jednom mestu.",
+  "text1": "➤ Želite Optimizovati Operacije Pametnim IT Rešenjima? Tu Smo Za Vas.",
   "text2": "➤ Tražite Poslovno Savetovanje Za Sledeću Fazu Rasta? Hajde Da To Ostvarimo.",
-  "text3": "➤ Želite Besprekornu Marketinšku Strategiju I Realizaciju Koja Donosi Rezultate? I To Radimo.",
-  "subtext": "Hajde Da Gradimo, Skaliramo I Rastemo — Zajedno!",
+  "text3": "➤ Potrebna Vam Je Besprekorna Marketinška Strategija I Realizacija Koja Donosi Rezultate? I To Radimo.",
+  "subtext": "Hajde Da Gradimo, Razvijamo Se I Rastemo - Zajedno!",
   "button": "Zakažite Besplatne Konsultacije"
   },
-
+  "about": {
+    "subtitle": "Ko Smo Mi?",
+    "text": "Universe Force je tim koji rešava probleme, stratezi i tehnološki entuzijasti koji veruju da svaki posao zaslužuje alate i stručnost za napredovanje. Radimo sa vama na rešavanju izazova, pojednostavljivanju poslovanja i otvaranju novih mogućnosti za rast. Sa dugogodišnjim iskustvom u poslovnom razvoju, marketingu i IT uslugama, razumemo prave izazove sa kojima se preduzeća suočavaju. Bilo da se radi o usavršavanju vaše strategije, poboljšanju efikasnosti ili nadogradnji vaše tehnologije, mi smo tu da stvari učinimo jednostavnijim i boljim.",
+    "reasons": [
+      {
+        "title": "Jednostavnost",
+        "text": "Držimo stvari jednostavnim: bez žargona, bez prekomernih komplikacija — samo jasna, efikasna rešenja."
+      },
+      {
+        "title": "Jedinstvenost",
+        "text": "Sve prilagođavamo vašim potrebama, tako da dobijate upravo ono što odgovara vašem poslu."
+      },
+      {
+        "title": "Podrška",
+        "text": "Uz vas smo na svakom koraku, nudeći smernice i podršku kad god vam zatreba."
+      }
+    ]
+  },
   "services": [
     {
       "id": "it-services",
@@ -47,6 +64,10 @@
       "subtitle": "Pametna, skalabilna i bezbedna IT rešenja",
       "text": "Tehnologija bi trebalo da vam olakša poslovanje, a ne da ga komplikuje. Kreiramo web sajtove, aplikacije, e-commerce platforme i brinemo se o vašoj IT infrastrukturi, bezbednosti i digitalnoj transformaciji, kako biste mogli da se fokusirate na ono što je zaista važno – rast vašeg biznisa.",
       "cardList": [
+        {
+          "title": "Razvoj Softvera i SaaS Rešenja",
+          "text": "Kreiramo prilagođene aplikacije i softverska rešenja koja odgovaraju vašem poslovanju."
+        },
         {
           "title": "Digitalna Transformacija",
           "text": "Premestite svoje poslovanje u cloud, automatizujte procese i usvojite nove tehnologije za veću efikasnost."
@@ -58,10 +79,6 @@
         {
           "title": "Sajber Bezbednost i Zaštita Podataka",
           "text": "Firewall zaštita, enkripcija i monitoring u realnom vremenu – sve što vam je potrebno da zaštitite svoje podatke od sajber pretnji."
-        },
-        {
-          "title": "Razvoj Softvera i SaaS Rešenja",
-          "text": "Kreiramo prilagođene aplikacije i softverska rešenja koja odgovaraju vašem poslovanju."
         },
         {
           "title": "Analitika i Poslovna Inteligencija",
@@ -83,7 +100,7 @@
       "id": "consulting-services",
       "title": "Konsultantske Usluge",
       "subtitle": "Strateško vođenje za pametan rast",
-      "text": "Bez obzira da li pokrećete, skalirate ili optimizujete biznis, naši eksperti pružaju podatke, uvide i rešenja za donošenje pravih odluka.",
+      "text": "Bez obzira da li pokrećete, razvijate ili optimizujete biznis, naši eksperti pružaju podatke, uvide i rešenja za donošenje pravih odluka.",
       "cardList": [
         {
           "title": "Razvoj Biznisa i Strategija",
@@ -106,6 +123,27 @@
           "text": "Detaljna analiza tržišta, potrošačkih trendova i konkurencije kako biste donosili informisane odluke."
         }
       ]
+    }
+  ],
+  "portfolio": {
+    "marquee": "IT - Konsalting - Marketing"
+  },
+  "workflow": [
+    {
+      "title": "Besplatne Konsultacije",
+      "text": "Počnimo sa razgovorom! Naučićemo o vašim izazovima, istražiti rešenja i objasniti kako možemo da vam pomognemo - sve to, besplatno. Sve je u razumevanju vaših ciljeva i postavljanju temelja za uspeh."
+    },
+    {
+      "title": "Ugovor",
+      "text": "Kada budemo na istoj stranici, izložićemo plan u jednostavnom, jasnom ugovoru. Ovo uključuje sve što treba da znate - isporuke, rokove i troškove; kako bismo mogli da počnemo sa poverenjem."
+    },
+    {
+      "title": "Prototip",
+      "text": "Pogledajte kako se vaše ideje oblikuju! Napravićemo prvu verziju za vas da pregledate i usavršite. Vaše povratne informacije osiguravaju da konačni rezultat odgovara vašoj viziji."
+    },
+    {
+      "title": "Lansiranje",
+      "text": "Vreme je za pokret! Oživećemo vaš projekat i postaraćemo se da sve teče glatko. Nakon lansiranja, mi ćemo ostati tu da vas podržimo i istražimo nove načine da vam pomognemo u rastu."
     }
   ],
   "brochuresSection": {
