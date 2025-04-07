@@ -3,30 +3,39 @@ import { HashLink } from "react-router-hash-link";
 import "../../styles/components/_dropdownBanner.scss";
 
 const DropdownBanner = ({ data }) => {
-  const [isExpanded, setIsExpanded] = useState(true); // Default to closed
+  const [isExpanded, setIsExpanded] = useState(true);
 
   const toggleBanner = () => {
     setIsExpanded(!isExpanded);
   };
 
+  const closeBanner = () => {
+    setIsExpanded(false);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       if (isExpanded) {
-        setIsExpanded(false); // Smoothly close the banner on scroll
+        setIsExpanded(false);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [isExpanded]);
 
   return (
     <div className={`dropdown-banner ${isExpanded ? "expanded" : "stacked"}`}>
       {isExpanded && (
         <div className="banner-content">
+          <button
+            className="close-button"
+            onClick={closeBanner}
+            aria-label="Close banner"
+          >
+            &times;
+          </button>
+
           <h2 className="headline">{data.dropdownBanner.headline}</h2>
           <p className="subheadline">{data.dropdownBanner.subheadline}</p>
           <HashLink to="/#contact">
@@ -40,7 +49,7 @@ const DropdownBanner = ({ data }) => {
         <button
           className="toggle-button"
           onClick={toggleBanner}
-          aria-label={isExpanded ? "Collapse banner" : "Expand banner"}
+          aria-label="Expand banner"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

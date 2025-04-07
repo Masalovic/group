@@ -18,7 +18,7 @@ import Overlay from "../screens/sections/Overlay";
 
 class MainPage extends React.PureComponent {
   state = {
-    language: "sr", // Default language is Serbian
+    language: "en", // Default language is English
   };
 
   switchLanguage = (lang) => {

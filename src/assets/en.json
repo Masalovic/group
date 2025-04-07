@@ -17,6 +17,10 @@
       "path": "/#consulting-services"
     },
     {
+      "name": "GottaGo",
+      "path": "/gottago"
+    },
+    {
       "name": "More",
       "path": "/#more"
     },
@@ -30,12 +34,16 @@
     "subheadline": "Got a business idea and need help in launching it? Reach out!",
     "button": "Contact Us" },
   "home": {
-    "title": "Your One-Stop Shop for Business Growth",
-    "subtitle": "At Universe Force Group, we help businesses scale, innovate, and grow faster with our IT, marketing and consulting solutions — all under one roof.",
-    "text1": "➤ Need to optimize operations with smart IT solutions? We've got you.",
-    "text2": "➤ Looking for business consulting to fuel your next phase of growth? Let's make it happen.",
-    "text3": "➤ Want seamless marketing strategies and execution that actually drive results? We do that too.",
-    "subtext": "Let's build, scale, and grow — together!",
+    "title": "Digital solutions tailored to your business — all in one place",
+    "subtitle": "We support business growth and transformation through strategic IT solutions, AI, and digital marketing.",
+    "text1": "Trending solutions:",
+    "text2": "Software Development",
+    "text3": "AI Agents",
+    "text4": "HubSpot CRM Solutions",
+    "text5": "Business Databases worldwide",
+    "text6": "End-to-end Digital Marketing",
+    "text7": "Market entry strategies",
+    "subtext": "Get in touch to learn how technology can unlock growth beyond what you ever imagined!",
     "button": "Book a Free Consultation"
   },
   "about": {
@@ -156,10 +164,10 @@
         "downloadEn": "/passets/AllServices.pdf"
       },
       {
-        "name": "Presentations",
-        "text": "Dive into our presentations for in-depth insights and strategies tailored to your business needs.",
-        "downloadSr": "/passets/UFGPresentationSR.pdf",
-        "downloadEn": "/passets/UFGPresentationEN.pdf"
+        "name": "Portfolio",
+        "text": "Learn who we are, what we offer, and how we can support your business.",
+        "downloadSr": "/passets/PortfolioSR.pdf",
+        "downloadEn": "/passets/PortfolioEN.pdf"
       }
     ]
   },

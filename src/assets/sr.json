@@ -17,6 +17,10 @@
       "path": "/#consulting-services"
     },
     {
+      "name": "GottaGo",
+      "path": "/gottago"
+    },
+    {
       "name": "Više",
       "path": "/#more"
     },
@@ -31,12 +35,16 @@
     "button": "Kontakt"
   },
   "home": {
-    "title": "Vaš Sveobuhvatni Centar Za Poslovni Rast",
-  "subtitle": "U Universe Force Group-u pomažemo preduzećima u razvoju, inovaciji i rastu, uz naše IT, marketing i konsultantske usluge dobijate sve na jednom mestu.",
-  "text1": "➤ Želite Optimizovati Operacije Pametnim IT Rešenjima? Tu Smo Za Vas.",
-  "text2": "➤ Tražite Poslovno Savetovanje Za Sledeću Fazu Rasta? Hajde Da To Ostvarimo.",
-  "text3": "➤ Potrebna Vam Je Besprekorna Marketinška Strategija I Realizacija Koja Donosi Rezultate? I To Radimo.",
-  "subtext": "Hajde Da Gradimo, Razvijamo Se I Rastemo - Zajedno!",
+    "title": "Digitalne solucije za Vaš biznis na jednom mestu",
+  "subtitle": "Pomažemo preduzećima u razvoju, inovaciji i rastu, uz naše IT, AI i marketing usluge.",
+ "text1": "➤ Aktuelna rešenja:",
+"text2": "Razvoj softvera",
+"text3": "AI agenti",
+"text4": "HubSpot CRM rešenja",
+"text5": "Poslovne baze podataka širom sveta",
+"text6": "Digitalni marketing od početka do kraja",
+"text7": "Strategije ulaska na tržište",
+  "subtext": "Javite nam se da saznate više o tome kako tehnologija moze da vam obezbedi rast o kom niste mogli ni da sanjate!",
   "button": "Zakažite Besplatne Konsultacije"
   },
   "about": {
@@ -61,7 +69,7 @@
     {
       "id": "it-services",
       "title": "IT Usluge",
-      "subtitle": "Pametna, skalabilna i bezbedna IT rešenja",
+      "subtitle": "Pametna i bezbedna IT resenja koja su prilagodjena Vama!",
       "text": "Tehnologija bi trebalo da vam olakša poslovanje, a ne da ga komplikuje. Kreiramo web sajtove, aplikacije, e-commerce platforme i brinemo se o vašoj IT infrastrukturi, bezbednosti i digitalnoj transformaciji, kako biste mogli da se fokusirate na ono što je zaista važno – rast vašeg biznisa.",
       "cardList": [
         {
@@ -157,10 +165,10 @@
         "downloadEn": "/passets/AllServices.pdf"
       },
       {
-        "name": "Prezentacije",
-        "text": "Zaronite u naše prezentacije za duboke uvide i strategije prilagođene vašem poslovanju.",
-        "downloadSr": "/passets/UFGPresentationSR.pdf",
-        "downloadEn": "/passets/UFGPresentationEN.pdf"
+        "name": "Portfolio",
+        "text": "Saznajte ko smo mi i na koje načine možemo da unapredimo vaše poslovanje.",
+        "downloadSr": "/passets/PortfolioSR.pdf",
+        "downloadEn": "/passets/PortfolioEN.pdf"
       }
     ]
   },

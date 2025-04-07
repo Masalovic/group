@@ -5,6 +5,7 @@ import PrivacyPolicy from "../molecules/PrivacyPolicy";
 import TermsOfService from "../molecules/TermsOfService";
 import CookiePolicy from "../molecules/CookiePolicy";
 import CookiesNotification from "../atoms/CookiesNotification"; // Import CookiesNotification
+import GottaGo from "../../screens/sections/GottaGo";
 import homeDataSr from "../../assets/sr.json";
 import homeDataEn from "../../assets/en.json";
 
@@ -21,6 +22,7 @@ export default function App() {
           path="/"
           element={<MainPage language={language} setLanguage={setLanguage} />}
         />
+        <Route path="/gottago" element={<GottaGo />} />
         <Route
           path="/privacy-policy"
           element={<PrivacyPolicy data={data} onLanguageChange={setLanguage} />}

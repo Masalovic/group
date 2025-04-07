@@ -44,7 +44,12 @@ const Navigation = ({ data, onLanguageChange }) => {
         {/* Navigation Links */}
         <div className={`nav-box-sections ${isMobileMenuOpen ? "open" : ""}`}>
           {data.navbar.map((item) => (
-            <a href={item.path} key={item.name} onClick={handleCloseMenu}>
+            <a
+              href={item.path}
+              key={item.name}
+              onClick={handleCloseMenu}
+              className={item.name === "GottaGo" ? "gottago-link" : ""}
+            >
               {item.name}
             </a>
           ))}
@@ -62,7 +67,7 @@ const Navigation = ({ data, onLanguageChange }) => {
           </a>
         </div>
 
-        {/* Language Box */}
+        {/* Language Selector */}
         <div className="nav-box-languages">
           <button onClick={() => handleLanguageChange("sr")}>
             <img src={sr} alt="Serbian" />

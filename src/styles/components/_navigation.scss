@@ -50,7 +50,24 @@
         font-size: 13px;
         font-family: $primaryFont;
         position: relative;
+
+        &.gottago-link {
+          color: #ffe240; // bright yellow
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: #ffa200;
+            transition: transform 0.25s ease-out;
+          }
+        }
       }
+
       a::after {
         content: "";
         position: absolute;

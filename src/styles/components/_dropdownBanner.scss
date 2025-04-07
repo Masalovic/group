@@ -11,7 +11,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  z-index: 1001; // Ensure it's above the navigation
+  z-index: 1001;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, height 0.3s ease;
   font-family: $primaryFont;
@@ -24,7 +24,10 @@
     .banner-content {
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 0.5rem;
+      position: relative;
+      width: 500px;
 
       .headline {
         font-size: 22px;
@@ -35,6 +38,7 @@
       .subheadline {
         font-size: 16px;
         font-weight: 400;
+        width: 400px;
         padding-bottom: 15px;
       }
 
@@ -52,6 +56,23 @@
           background: rgba(68, 135, 186, 0.414);
           backdrop-filter: blur(15px);
           border-color: rgba(255, 255, 255, 0.6);
+        }
+      }
+
+      .close-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: transparent;
+        border: none;
+        color: $textPrimary;
+        font-size: 26px;
+        cursor: pointer;
+        padding: 0;
+        line-height: 1;
+
+        &:hover {
+          color: lighten($textPrimary, 10%);
         }
       }
     }
@@ -75,7 +96,7 @@
       cursor: pointer;
 
       svg {
-        width: 24px; // Adjust arrow size
+        width: 24px;
         height: 24px;
         color: $textPrimary;
       }
@@ -87,17 +108,25 @@
   .dropdown-banner {
     &.expanded {
       .banner-content {
+        width: 300px;
         .headline {
-          font-size: 18px;
+          font-size: 16px;
         }
 
         .subheadline {
-          font-size: 14px;
+          font-size: 12px;
+          width: 270px;
         }
 
         .banner-button {
           font-size: 12px;
           padding: 0.5rem 1rem;
+        }
+
+        .close-button {
+          font-size: 18px;
+          top: 0;
+          right: 0;
         }
       }
     }
@@ -107,7 +136,7 @@
         font-size: 16px;
 
         .arrow-icon {
-          width: 20px; // Adjust SVG size for smaller screens
+          width: 20px;
           height: 20px;
         }
       }

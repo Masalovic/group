@@ -10,6 +10,10 @@ const HomeSection = ({ data }) => {
     }
   };
 
+  const trendingTexts = Object.entries(data?.home || {})
+    .filter(([key]) => key.startsWith("text") && key !== "text1")
+    .sort(([a], [b]) => a.localeCompare(b));
+
   return (
     <div className="home-section">
       {/* Video Background */}
@@ -30,15 +34,16 @@ const HomeSection = ({ data }) => {
         <div className="home-divider"></div>
         <h3 className="home-subtitle">{data?.home?.subtitle}</h3>
 
-        {/* Map through texts dynamically */}
+        {/* Trending Section */}
         <div className="home-texts">
-          {Object.keys(data?.home || {})
-            .filter((key) => key.startsWith("text"))
-            .map((key) => (
-              <p key={key} className="home-text">
-                {data.home[key]}
-              </p>
+          <p className="home-text home-trending-title">{data?.home?.text1}</p>
+          <ul className="home-text-list">
+            {trendingTexts.map(([key, value]) => (
+              <li key={key} className="home-text-item">
+                {value}
+              </li>
             ))}
+          </ul>
         </div>
 
         <p className="home-subtext">{data?.home?.subtext}</p>
