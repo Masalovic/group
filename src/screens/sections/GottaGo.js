@@ -1,109 +1,112 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState } from "react";
 import data from "../../assets/en.json";
-import "../../styles/section/gottago.scss";
 import Navigation from "../../components/molecules/Navigation";
-
-// Importing all 12 images
-import slide1 from "../../assets/images/slide1.png";
-import slide2 from "../../assets/images/slide2.png";
-import slide3 from "../../assets/images/slide3.png";
-import slide4 from "../../assets/images/slide4.png";
-import slide5 from "../../assets/images/slide5.png";
-import slide6 from "../../assets/images/slide6.png";
-import slide7 from "../../assets/images/slide7.png";
-import slide8 from "../../assets/images/slide8.png";
-import slide9 from "../../assets/images/slide9.png";
-import slide10 from "../../assets/images/slide10.png";
-import slide11 from "../../assets/images/slide11.png";
-import slide12 from "../../assets/images/slide12.png";
-
-const imageList = [
-  slide1,
-  slide2,
-  slide3,
-  slide4,
-  slide5,
-  slide6,
-  slide7,
-  slide8,
-  slide9,
-  slide10,
-  slide11,
-  slide12,
-];
+import NtpbgLogo from "../../assets/images/ntpbgLogo.jpg";
+import GottagoLogo from "../../assets/images/gottagoLogo.png";
+import GottaGoPresentation from "./GottaGoPresentation";
+import ContactForm from "../../components/molecules/ContactForm";
 
 const GottaGo = () => {
-  const scrollRef = useRef(null);
-  const [fullscreenImg, setFullscreenImg] = useState(null);
-  const [isMobile, setIsMobile] = useState(false);
+    const [showPresentation, setShowPresentation] = useState(false);
+    const [showContactForm, setShowContactForm] = useState(false);
 
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
+    const handleSeeMore = () => {
+        setShowPresentation(true);
     };
 
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
+    const handleClosePresentation = () => {
+        setShowPresentation(false);
+    };
 
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
+    const handleTalkToUs = () => {
+        setShowContactForm(true);
+    };
 
-  const scroll = (offset) => {
-    if (isMobile) {
-      scrollRef.current?.scrollBy({ top: offset, behavior: "smooth" });
-    } else {
-      scrollRef.current?.scrollBy({ left: offset, behavior: "smooth" });
-    }
-  };
+    const handleCloseContactForm = () => {
+        setShowContactForm(false);
+    };
 
-  const handleWheel = (e) => {
-    if (!isMobile) {
-      e.preventDefault();
-      scrollRef.current?.scrollBy({ left: e.deltaY, behavior: "smooth" });
-    }
-  };
+    return (
+        <div className="gottago-page">
+            <Navigation data={data} />
+            <div className="gottago-content">
+                <div className="left-section">
+                    <div className="info-block">
+                        <p className="text-highlight">
+                            Plus, our social platform connects you with locals and fellow travellers, so you can share experiences, ask questions, and get insider advice.
+                        </p>
+                    </div>
 
-  const openFullscreen = (src) => setFullscreenImg(src);
-  const closeFullscreen = () => setFullscreenImg(null);
+                    <div className="info-block">
+                        <p className="text-highlight">
+                            Our AI engine adjust itinerary as you wish and as you move, so you'll always have the latest local tips at your fingertips.
+                        </p>
+                    </div>
 
-  return (
-    <div className="gottago-section">
-      <Navigation data={data} />
+                    <div className="info-block">
+                        <p className="text-highlight">
+                            Now, we're looking to team up with investors, tourism boards, advisors, and tech partners to keep growing. Hit that button and reach out to us.
+                        </p>
+                    </div>
+                </div>
 
-      {!isMobile && (
-        <div className="scroll-buttons">
-          <button onClick={() => scroll(-300)}>&larr;</button>
-          <button onClick={() => scroll(300)}>&rarr;</button>
+                <div className="center-section">
+                    <h2 className="description">
+                        GottaGo is designed to make exploring new places easy, authentic, and fun.
+                    </h2>
+
+                    <p className="description">
+                        Developed by Universe Force Group DOO, GottaGo is backed by a team of tourism marketing and technology experts who understand what it is like to navigate a destination.
+                    </p>
+
+                    <div className="key-partner">
+                        <h3>Key partner</h3>
+                        <div className="partner-logo">
+                            <img src={NtpbgLogo} alt="Science Technology Park Belgrade" />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="right-section">
+                    <div className="logo-section">
+                        <div className="logo">
+                            <img src={GottagoLogo} alt="GottaGo Logo" />
+                        </div>
+                        <h1 className="tagline">Explore like a local, in a real time anywhere in the world.</h1>
+                    </div>
+
+                    <div className="cta-buttons">
+                        <button className="cta-button" onClick={handleTalkToUs}>TALK TO US</button>
+                        <button className="cta-button" onClick={handleSeeMore}>SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+            <footer className="footer">
+                <p>©2025 Universe Force Group. All Rights Reserved.</p>
+            </footer>
+
+            {showPresentation && (
+                <div className="modal-overlay" onClick={handleClosePresentation}>
+                    <div className="modal-content presentation-modal" onClick={e => e.stopPropagation()}>
+                        <button className="modal-close" onClick={handleClosePresentation}>×</button>
+                        <GottaGoPresentation />
+                    </div>
+                </div>
+            )}
+
+            {showContactForm && (
+                <div className="modal-overlay" onClick={handleCloseContactForm}>
+                    <div className="modal-content contact-form-modal" onClick={e => e.stopPropagation()}>
+                        <button className="modal-close" onClick={handleCloseContactForm}>×</button>
+                        <div className="contact-form-wrapper">
+                            <h2>Contact Us</h2>
+                            <ContactForm data={data} />
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
-      )}
-
-      <div
-        className="scroll-wrapper"
-        onWheel={handleWheel}
-        ref={scrollRef}
-      >
-        {imageList.map((src, index) => (
-          <img
-            key={index}
-            src={src}
-            alt={`Slide ${index + 1}`}
-            className="scroll-image"
-            onClick={() => openFullscreen(src)}
-          />
-        ))}
-      </div>
-
-      {fullscreenImg && (
-        <div className="fullscreen-overlay" onClick={closeFullscreen}>
-          <img
-            src={fullscreenImg}
-            alt="Fullscreen View"
-            className="fullscreen-img"
-          />
-        </div>
-      )}
-    </div>
-  );
+    );
 };
 
 export default GottaGo;
