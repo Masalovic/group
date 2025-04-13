@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import data from "../../assets/en.json";
 import "../../styles/section/gottago.scss";
 import Navigation from "../../components/molecules/Navigation";
@@ -35,14 +35,32 @@ const imageList = [
 const GottaGo = () => {
   const scrollRef = useRef(null);
   const [fullscreenImg, setFullscreenImg] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const scroll = (offset) => {
-    scrollRef.current?.scrollBy({ left: offset, behavior: "smooth" });
+    if (isMobile) {
+      scrollRef.current?.scrollBy({ top: offset, behavior: "smooth" });
+    } else {
+      scrollRef.current?.scrollBy({ left: offset, behavior: "smooth" });
+    }
   };
 
   const handleWheel = (e) => {
-    e.preventDefault();
-    scrollRef.current?.scrollBy({ left: e.deltaY, behavior: "smooth" });
+    if (!isMobile) {
+      e.preventDefault();
+      scrollRef.current?.scrollBy({ left: e.deltaY, behavior: "smooth" });
+    }
   };
 
   const openFullscreen = (src) => setFullscreenImg(src);
@@ -52,12 +70,18 @@ const GottaGo = () => {
     <div className="gottago-section">
       <Navigation data={data} />
 
-      <div className="scroll-buttons">
-        <button onClick={() => scroll(-300)}>&larr;</button>
-        <button onClick={() => scroll(300)}>&rarr;</button>
-      </div>
+      {!isMobile && (
+        <div className="scroll-buttons">
+          <button onClick={() => scroll(-300)}>&larr;</button>
+          <button onClick={() => scroll(300)}>&rarr;</button>
+        </div>
+      )}
 
-      <div className="scroll-wrapper" onWheel={handleWheel} ref={scrollRef}>
+      <div
+        className="scroll-wrapper"
+        onWheel={handleWheel}
+        ref={scrollRef}
+      >
         {imageList.map((src, index) => (
           <img
             key={index}
