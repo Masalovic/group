@@ -32,7 +32,8 @@
   "dropdownBanner": {
     "headline": "We help start-ups!",
     "subheadline": "Got a business idea and need help in launching it? Reach out!",
-    "button": "Contact Us" },
+    "button": "Contact Us"
+  },
   "home": {
     "title": "Digital solutions tailored to your business — all in one place",
     "subtitle": "We support business growth and transformation through strategic IT solutions, AI, and digital marketing.",
@@ -44,7 +45,8 @@
     "text6": "End-to-end Digital Marketing",
     "text7": "Market entry strategies",
     "subtext": "Get in touch to learn how technology can unlock growth beyond what you ever imagined!",
-    "button": "Book a Free Consultation"
+    "button": "Book a Free Consultation",
+    "logoText": "Key Partners"
   },
   "about": {
     "subtitle": "Who We Are?",
@@ -64,7 +66,7 @@
       }
     ]
   },
- "services": [
+  "services": [
     {
       "id": "it-services",
       "title": "IT Services",
@@ -172,11 +174,11 @@
     ]
   },
   "download": "Download",
-  
+
   "contact": {
     "title": "Contact",
     "description": "Discover how we can transform your brand and help you achieve your business goals. Our first consultation is completely free!",
-   
+
     "form": {
       "name": "Name",
       "companyName": "Company Name",
@@ -196,70 +198,70 @@
       }
     }
   },
- "footer": {
-  "moto": "Transforming brands, building futures.",
-  "copy": "© 2025 Universe Force. All rights reserved.",
-  "legalLinks": {
-    "privacyPolicy": "Privacy Policy",
-    "termsConditions": "Terms & Conditions",
-    "termsService": "Terms of Service",
-    "cookiePolicy": "Cookie Policy"
-  },
-  "contact": {
+  "footer": {
+    "moto": "Transforming brands, building futures.",
+    "copy": "© 2025 Universe Force. All rights reserved.",
+    "legalLinks": {
+      "privacyPolicy": "Privacy Policy",
+      "termsConditions": "Terms & Conditions",
+      "termsService": "Terms of Service",
+      "cookiePolicy": "Cookie Policy"
+    },
+    "contact": {
       "title": "Contact Us",
       "phone": "+381 69 300 13 15",
       "email": "office@universeforcegroup.com",
       "address": "Bistricka 39, 11010, Belgrade, Serbia"
     },
-  "socialMedia": {
-    "title": "Follow Us",
-    "socialIcons": [
+    "socialMedia": {
+      "title": "Follow Us",
+      "socialIcons": [
+        {
+          "img": "FacebookIcon",
+          "url": "https://www.facebook.com/",
+          "alt": "Facebook"
+        },
+        {
+          "img": "LinkedInIcon",
+          "url": "https://www.linkedin.com/company/universe-force-entertainment/",
+          "alt": "LinkedIn"
+        },
+        {
+          "img": "InstagramIcon",
+          "url": "https://www.instagram.com/universeforcemarketing/",
+          "alt": "Instagram"
+        },
+        {
+          "img": "WhatsAppIcon",
+          "url": "https://wa.me/066380847",
+          "alt": "WhatsApp"
+        },
+        {
+          "img": "EmailIcon",
+          "url": "mailto:office@universeforcegroup.com",
+          "alt": "Email"
+        }
+      ]
+    },
+    "navbar": [
       {
-        "img": "FacebookIcon",
-        "url": "https://www.facebook.com/",
-        "alt": "Facebook"
+        "name": "Početna",
+        "path": "/"
       },
       {
-        "img": "LinkedInIcon",
-        "url": "https://www.linkedin.com/company/universe-force-entertainment/",
-        "alt": "LinkedIn"
+        "name": "Usluge",
+        "path": "/#services"
+      },
+
+      {
+        "name": "How We Work",
+        "path": "/#workflow"
       },
       {
-        "img": "InstagramIcon",
-        "url": "https://www.instagram.com/universeforcemarketing/",
-        "alt": "Instagram"
-      },
-      {
-        "img": "WhatsAppIcon",
-        "url": "https://wa.me/066380847",
-        "alt": "WhatsApp"
-      },
-      {
-        "img": "EmailIcon",
-        "url": "mailto:office@universeforcegroup.com",
-        "alt": "Email"
+        "name": "Kontakt",
+        "path": "/#contact"
       }
-    ]
-  },
-  "navbar": [
-    {
-      "name": "Početna",
-      "path": "/"
-    },
-    {
-      "name": "Usluge",
-      "path": "/#services"
-    },
-  
-    {
-      "name": "How We Work",
-      "path": "/#workflow"
-    },
-    {
-      "name": "Kontakt",
-      "path": "/#contact"
-    }
-  ],
+    ],
     "termsOfService": {
       "title": "Terms of Service",
       "effectiveDateLabel": "Effective Date",
@@ -435,7 +437,6 @@
       "consent": "By continuing to use our site, you consent to the use of cookies as outlined in this policy. You can manage or disable cookies through your browser settings; however, this may impact certain functionalities of the site.",
       "additionalInfo": "For more information, please refer to our Privacy Policy.",
       "footer": "Universe Force Group DOO Beograd®"
-    } 
+    }
   }
 }
-
